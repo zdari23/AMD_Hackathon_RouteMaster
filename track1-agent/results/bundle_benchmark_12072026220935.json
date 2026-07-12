@@ -1,0 +1,1417 @@
+{
+  "dataset": "data/input/track1_balanced_40_tasks_v5.json",
+  "model": "accounts/fireworks/models/kimi-k2p6",
+  "judge_model": "accounts/fireworks/models/glm-5p2",
+  "tiers": [
+    "safe",
+    "cautious"
+  ],
+  "max_bundle_size": 5,
+  "min_accuracy": 80.0,
+  "max_accuracy_drop": 0.0,
+  "summary": {
+    "knowledge_qa": {
+      "tasks": 2,
+      "individual_calls": 2,
+      "bundled_calls": 1,
+      "individual_tokens": 324,
+      "bundled_tokens": 0,
+      "individual_correct": 1,
+      "individual_judged": 2,
+      "bundled_correct": 0,
+      "bundled_judged": 0,
+      "individual_validation_passed": 1,
+      "bundled_validation_passed": 0,
+      "token_savings_pct": 100.0,
+      "individual_accuracy_pct": 50.0,
+      "bundled_accuracy_pct": null,
+      "accuracy_delta_pct_points": null,
+      "recommendation": "insufficient_accuracy_data"
+    },
+    "math_solving": {
+      "tasks": 4,
+      "individual_calls": 4,
+      "bundled_calls": 1,
+      "individual_tokens": 618,
+      "bundled_tokens": 267,
+      "individual_correct": 4,
+      "individual_judged": 4,
+      "bundled_correct": 1,
+      "bundled_judged": 4,
+      "individual_validation_passed": 4,
+      "bundled_validation_passed": 4,
+      "token_savings_pct": 56.8,
+      "individual_accuracy_pct": 100.0,
+      "bundled_accuracy_pct": 25.0,
+      "accuracy_delta_pct_points": -75.0,
+      "recommendation": "reject_below_accuracy_gate"
+    },
+    "entity_extraction": {
+      "tasks": 5,
+      "individual_calls": 5,
+      "bundled_calls": 2,
+      "individual_tokens": 986,
+      "bundled_tokens": 0,
+      "individual_correct": 5,
+      "individual_judged": 5,
+      "bundled_correct": 0,
+      "bundled_judged": 0,
+      "individual_validation_passed": 5,
+      "bundled_validation_passed": 0,
+      "token_savings_pct": 100.0,
+      "individual_accuracy_pct": 100.0,
+      "bundled_accuracy_pct": null,
+      "accuracy_delta_pct_points": null,
+      "recommendation": "insufficient_accuracy_data"
+    }
+  },
+  "eligibility": [
+    {
+      "task_id": "factual_v5_01",
+      "eligible": false,
+      "reason": "knowledge_qa/explanation is not bundle-safe"
+    },
+    {
+      "task_id": "factual_v5_02",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "factual_v5_03",
+      "eligible": false,
+      "reason": "knowledge_qa/explanation is not bundle-safe"
+    },
+    {
+      "task_id": "factual_v5_04",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "factual_v5_05",
+      "eligible": false,
+      "reason": "knowledge_qa/explanation is not bundle-safe"
+    },
+    {
+      "task_id": "math_v5_01",
+      "eligible": true,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "math_v5_02",
+      "eligible": true,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "math_v5_03",
+      "eligible": true,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "math_v5_04",
+      "eligible": false,
+      "reason": "router confidence below bundle threshold"
+    },
+    {
+      "task_id": "math_v5_05",
+      "eligible": true,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "sentiment_v5_01",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "sentiment_v5_02",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "sentiment_v5_03",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "sentiment_v5_04",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "sentiment_v5_05",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "summary_v5_01",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "summary_v5_02",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "summary_v5_03",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "summary_v5_04",
+      "eligible": false,
+      "reason": "summarization/general_summary is not bundle-safe"
+    },
+    {
+      "task_id": "summary_v5_05",
+      "eligible": false,
+      "reason": "summarization/general_summary is not bundle-safe"
+    },
+    {
+      "task_id": "ner_v5_01",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "ner_v5_02",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "ner_v5_03",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "ner_v5_04",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "ner_v5_05",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "debug_v5_01",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "debug_v5_02",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "debug_v5_03",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "debug_v5_04",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "debug_v5_05",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "logic_v5_01",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "logic_v5_02",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "logic_v5_03",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "logic_v5_04",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "logic_v5_05",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "codegen_v5_01",
+      "eligible": false,
+      "reason": "code_authoring/single_function is not bundle-safe"
+    },
+    {
+      "task_id": "codegen_v5_02",
+      "eligible": false,
+      "reason": "list or table output is unsafe inside a shared envelope"
+    },
+    {
+      "task_id": "codegen_v5_03",
+      "eligible": false,
+      "reason": "list or table output is unsafe inside a shared envelope"
+    },
+    {
+      "task_id": "codegen_v5_04",
+      "eligible": false,
+      "reason": "list or table output is unsafe inside a shared envelope"
+    },
+    {
+      "task_id": "codegen_v5_05",
+      "eligible": false,
+      "reason": "code_authoring/single_function is not bundle-safe"
+    }
+  ],
+  "excluded_reasons": {
+    "knowledge_qa/explanation is not bundle-safe": 3,
+    "router confidence below bundle threshold": 1,
+    "explanation or steps require isolated execution": 10,
+    "summarization/general_summary is not bundle-safe": 2,
+    "code_authoring/single_function is not bundle-safe": 2,
+    "list or table output is unsafe inside a shared envelope": 3
+  },
+  "bundles": [
+    {
+      "bundle_index": 0,
+      "task_type": "knowledge_qa",
+      "task_ids": [
+        "factual_v5_02",
+        "factual_v5_04"
+      ],
+      "max_tokens": 76,
+      "total_tokens": 0,
+      "error": "bundle response is not valid JSON: Expecting value"
+    },
+    {
+      "bundle_index": 1,
+      "task_type": "math_solving",
+      "task_ids": [
+        "math_v5_01",
+        "math_v5_02",
+        "math_v5_03",
+        "math_v5_05"
+      ],
+      "max_tokens": 76,
+      "total_tokens": 267,
+      "error": null
+    },
+    {
+      "bundle_index": 2,
+      "task_type": "entity_extraction",
+      "task_ids": [
+        "ner_v5_01",
+        "ner_v5_02",
+        "ner_v5_03"
+      ],
+      "max_tokens": 173,
+      "total_tokens": 0,
+      "error": "bundle response is not valid JSON: Expecting value"
+    },
+    {
+      "bundle_index": 3,
+      "task_type": "entity_extraction",
+      "task_ids": [
+        "ner_v5_04",
+        "ner_v5_05"
+      ],
+      "max_tokens": 117,
+      "total_tokens": 0,
+      "error": "bundle response is not valid JSON: Expecting value"
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "factual_v5_02",
+      "task_type": "knowledge_qa",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "A database index speeds up data retrieval by allowing the database engine to locate rows without scanning the entire table, similar to an index in a book.\n\nThe trade-off of adding many indexes is slower write performance (INSERT, UPDATE, DELETE operations) and increased storage space, because each index must be maintained and updated whenever the underlying data changes.",
+          "finish_reason": "stop",
+          "prompt_tokens": 83,
+          "completion_tokens": 68,
+          "total_tokens": 151,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='A database index speeds up data retrieval by allowing the database engine to locate rows without scanning the entire table, similar to an index in a book.\\n\\nThe trade-off of adding many indexes is slower write performance (INSERT, UPDATE, DELETE operations) and increased storage space, because each index must be maintained and updated whenever the underlying data changes.')",
+          "optimization": {
+            "task_type": "knowledge_qa",
+            "confidence": 0.825,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Answer the factual question directly and accurately. Use only the detail necessary to fully answer the request. Do not add unrelated facts. Follow any requested length or format exactly.",
+            "max_tokens": 96,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 8,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "knowledge_qa": [
+                  "what_is_intent"
+                ]
+              },
+              "mode": "direct",
+              "token_policy_reason": "direct factual answer",
+              "min_tokens": 48,
+              "category_max_tokens": 96,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 23,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: The answer correctly identifies the purpose of a database index (faster data retrieval) and accurately describes the trade-offs of adding many indexes (slower write performance and increased storage space).",
+          "tokens": 188
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "bundle response is not valid JSON: Expecting value",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "factual_v5_04",
+      "task_type": "knowledge_qa",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "**Authentication** verifies *who you are* — it confirms your identity. Examples: entering a password, using a fingerprint, or completing MFA.\n\n**Authorization** determines *what you can do* — it controls access to resources after identity is established. Examples: checking role-based permissions, deciding if a user can view or edit a specific file.\n\n**Key distinction**: Authentication happens first (login), authorization follows (access control). You must prove identity before the system can grant or deny",
+          "finish_reason": "length",
+          "prompt_tokens": 77,
+          "completion_tokens": 96,
+          "total_tokens": 173,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=False, errors=['truncated response'], repaired_output='**Authentication** verifies *who you are* — it confirms your identity. Examples: entering a password, using a fingerprint, or completing MFA.\\n\\n**Authorization** determines *what you can do* — it controls access to resources after identity is established. Examples: checking role-based permissions, deciding if a user can view or edit a specific file.\\n\\n**Key distinction**: Authentication happens first (login), authorization follows (access control). You must prove identity before the system can grant or deny')",
+          "optimization": {
+            "task_type": "knowledge_qa",
+            "confidence": 0.869,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Answer the factual question directly and accurately. Use only the detail necessary to fully answer the request. Do not add unrelated facts. Follow any requested length or format exactly.",
+            "max_tokens": 96,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 10,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "knowledge_qa": [
+                  "what_is_intent",
+                  "concept_topic"
+                ]
+              },
+              "mode": "direct",
+              "token_policy_reason": "direct factual answer",
+              "min_tokens": 48,
+              "category_max_tokens": 96,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 22,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "incorrect",
+          "reason": "INCORRECT The candidate answer is substantively correct but is cut off mid-sentence at the end (\"grant or deny\"), making it incomplete.",
+          "tokens": 203
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "bundle response is not valid JSON: Expecting value",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "math_v5_01",
+      "task_type": "math_solving",
+      "safety_tier": "safe",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "1,200 × 0.35 = 420 boxes shipped in the morning\n\n1,200 - 420 = 780 boxes remaining after morning\n\n780 - 180 = 600 boxes remaining after afternoon\n\nAnswer: 600",
+          "finish_reason": "stop",
+          "prompt_tokens": 107,
+          "completion_tokens": 48,
+          "total_tokens": 155,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='1,200 × 0.35 = 420 boxes shipped in the morning\\n\\n1,200 - 420 = 780 boxes remaining after morning\\n\\n780 - 180 = 600 boxes remaining after afternoon\\n\\nAnswer: 600')",
+          "optimization": {
+            "task_type": "math_solving",
+            "confidence": 0.99,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Solve accurately. Preserve units, percentages, rounding instructions, and constraints. If steps are not requested, return only the concise final result. If no format is specified, end with 'Answer: <value>'.",
+            "max_tokens": 80,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 16,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "math_solving": [
+                  "trailing_quantity_question",
+                  "numeric_structure",
+                  "multiple_quantities"
+                ]
+              },
+              "mode": "final_only",
+              "token_policy_reason": "percentage calculation",
+              "min_tokens": 48,
+              "category_max_tokens": 128,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 33,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The calculations are accurate and the final answer of 600 is correct.",
+          "tokens": 163
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "math_v5_01",
+          "text": "600",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='600')"
+        },
+        "bundle": {
+          "task_type": "math_solving",
+          "safety_tier": "safe",
+          "max_tokens": 76,
+          "prompt_tokens": 228,
+          "completion_tokens": 39,
+          "total_tokens": 267,
+          "finish_reason": "stop",
+          "outputs": [
+            {
+              "task_id": "math_v5_01",
+              "text": "600",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='600')"
+            },
+            {
+              "task_id": "math_v5_02",
+              "text": "360",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='360')"
+            },
+            {
+              "task_id": "math_v5_03",
+              "text": "129.60",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='129.60')"
+            },
+            {
+              "task_id": "math_v5_05",
+              "text": "84.62",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='84.62')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "incorrect",
+          "reason": "INCORRECT The correct remaining boxes are 600, but the answer lacks the required explanation or format.",
+          "tokens": 120
+        }
+      }
+    },
+    {
+      "task_id": "math_v5_02",
+      "task_type": "math_solving",
+      "safety_tier": "safe",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "18 × 25 = 450 liters filled\n450 - 90 = 360 liters remain\n\nAnswer: 360 liters",
+          "finish_reason": "stop",
+          "prompt_tokens": 103,
+          "completion_tokens": 26,
+          "total_tokens": 129,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='18 × 25 = 450 liters filled\\n450 - 90 = 360 liters remain\\n\\nAnswer: 360 liters')",
+          "optimization": {
+            "task_type": "math_solving",
+            "confidence": 0.99,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Solve accurately. Preserve units, percentages, rounding instructions, and constraints. If steps are not requested, return only the concise final result. If no format is specified, end with 'Answer: <value>'.",
+            "max_tokens": 128,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 17,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "math_solving": [
+                  "trailing_quantity_question",
+                  "quantitative_units",
+                  "multiple_quantities"
+                ]
+              },
+              "mode": "final_only",
+              "token_policy_reason": "multi-step mathematical problem; capped at previous-version maximum",
+              "min_tokens": 80,
+              "category_max_tokens": 128,
+              "aggressive": false,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": [
+                  "person"
+                ]
+              },
+              "instruction_tokens_estimate": 30,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The calculation is accurate and the answer is properly formatted.",
+          "tokens": 132
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "math_v5_02",
+          "text": "360",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='360')"
+        },
+        "bundle": {
+          "task_type": "math_solving",
+          "safety_tier": "safe",
+          "max_tokens": 76,
+          "prompt_tokens": 228,
+          "completion_tokens": 39,
+          "total_tokens": 267,
+          "finish_reason": "stop",
+          "outputs": [
+            {
+              "task_id": "math_v5_01",
+              "text": "600",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='600')"
+            },
+            {
+              "task_id": "math_v5_02",
+              "text": "360",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='360')"
+            },
+            {
+              "task_id": "math_v5_03",
+              "text": "129.60",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='129.60')"
+            },
+            {
+              "task_id": "math_v5_05",
+              "text": "84.62",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='84.62')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "incorrect",
+          "reason": "INCORRECT The calculation 18*25=450 and 450-90=360 is correct, but the requested format requires a short reason and the candidate answer only contains the number.",
+          "tokens": 133
+        }
+      }
+    },
+    {
+      "task_id": "math_v5_03",
+      "task_type": "math_solving",
+      "safety_tier": "safe",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Discounted price: $160 × (1 - 0.25) = $160 × 0.75 = $120\n\nFinal price with tax: $120 × (1 + 0.08) = $120 × 1.08 = $129.60\n\nAnswer: $129.60",
+          "finish_reason": "stop",
+          "prompt_tokens": 105,
+          "completion_tokens": 64,
+          "total_tokens": 169,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Discounted price: $160 × (1 - 0.25) = $160 × 0.75 = $120\\n\\nFinal price with tax: $120 × (1 + 0.08) = $120 × 1.08 = $129.60\\n\\nAnswer: $129.60')",
+          "optimization": {
+            "task_type": "math_solving",
+            "confidence": 0.75,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Solve accurately. Preserve units, percentages, rounding instructions, and constraints. If steps are not requested, return only the concise final result. If no format is specified, end with 'Answer: <value>'.",
+            "max_tokens": 80,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 8,
+                "math_solving": 13,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "knowledge_qa": [
+                  "what_is_intent"
+                ],
+                "math_solving": [
+                  "math_operation",
+                  "numeric_structure",
+                  "multiple_quantities"
+                ]
+              },
+              "mode": "final_only",
+              "token_policy_reason": "percentage calculation",
+              "min_tokens": 48,
+              "category_max_tokens": 128,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 32,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The calculation correctly applies the 25% discount and 8% tax to arrive at the final price of $129.60.",
+          "tokens": 187
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "math_v5_03",
+          "text": "129.60",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='129.60')"
+        },
+        "bundle": {
+          "task_type": "math_solving",
+          "safety_tier": "safe",
+          "max_tokens": 76,
+          "prompt_tokens": 228,
+          "completion_tokens": 39,
+          "total_tokens": 267,
+          "finish_reason": "stop",
+          "outputs": [
+            {
+              "task_id": "math_v5_01",
+              "text": "600",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='600')"
+            },
+            {
+              "task_id": "math_v5_02",
+              "text": "360",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='360')"
+            },
+            {
+              "task_id": "math_v5_03",
+              "text": "129.60",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='129.60')"
+            },
+            {
+              "task_id": "math_v5_05",
+              "text": "84.62",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='84.62')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The discounted price is $160 * 0.75 = $120, and applying 8% tax gives $120 * 1.08 = $129.60.",
+          "tokens": 136
+        }
+      }
+    },
+    {
+      "task_id": "math_v5_05",
+      "task_type": "math_solving",
+      "safety_tier": "safe",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Total students after 4 more take the test: 18 + 6 + 4 = 28\n\nTotal passed: 18 + 4 = 22\n\nPercentage passed: 22/28 × 100 = 78.57%\n\nAnswer: 78.57%",
+          "finish_reason": "stop",
+          "prompt_tokens": 107,
+          "completion_tokens": 58,
+          "total_tokens": 165,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Total students after 4 more take the test: 18 + 6 + 4 = 28\\n\\nTotal passed: 18 + 4 = 22\\n\\nPercentage passed: 22/28 × 100 = 78.57%\\n\\nAnswer: 78.57%')",
+          "optimization": {
+            "task_type": "math_solving",
+            "confidence": 0.727,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Solve accurately. Preserve units, percentages, rounding instructions, and constraints. If steps are not requested, return only the concise final result. If no format is specified, end with 'Answer: <value>'.",
+            "max_tokens": 80,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 11,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 6
+              },
+              "matched_signals": {
+                "math_solving": [
+                  "math_operation",
+                  "multiple_quantities"
+                ],
+                "code_authoring": [
+                  "signature_structure"
+                ]
+              },
+              "mode": "final_only",
+              "token_policy_reason": "percentage calculation",
+              "min_tokens": 48,
+              "category_max_tokens": 128,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 36,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The calculation is accurate and the final percentage is correct.",
+          "tokens": 167
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "math_v5_05",
+          "text": "84.62",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='84.62')"
+        },
+        "bundle": {
+          "task_type": "math_solving",
+          "safety_tier": "safe",
+          "max_tokens": 76,
+          "prompt_tokens": 228,
+          "completion_tokens": 39,
+          "total_tokens": 267,
+          "finish_reason": "stop",
+          "outputs": [
+            {
+              "task_id": "math_v5_01",
+              "text": "600",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='600')"
+            },
+            {
+              "task_id": "math_v5_02",
+              "text": "360",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='360')"
+            },
+            {
+              "task_id": "math_v5_03",
+              "text": "129.60",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='129.60')"
+            },
+            {
+              "task_id": "math_v5_05",
+              "text": "84.62",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='84.62')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "incorrect",
+          "reason": "INCORRECT The correct percentage is (18+4)/(18+6+4)*100 = 22/26*100 ≈ 84.615, which rounds to 84.62, but the answer should include the percent sign or be formatted as requested.",
+          "tokens": 157
+        }
+      }
+    },
+    {
+      "task_id": "ner_v5_01",
+      "task_type": "entity_extraction",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "[{\"text\":\"Priya Nair\",\"type\":\"PERSON\"},{\"text\":\"Northstar Robotics\",\"type\":\"ORG\"},{\"text\":\"Singapore\",\"type\":\"LOCATION\"},{\"text\":\"12 August 2025\",\"type\":\"DATE\"}]",
+          "finish_reason": "stop",
+          "prompt_tokens": 134,
+          "completion_tokens": 69,
+          "total_tokens": 203,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='[{\"text\":\"Priya Nair\",\"type\":\"PERSON\"},{\"text\":\"Northstar Robotics\",\"type\":\"ORG\"},{\"text\":\"Singapore\",\"type\":\"LOCATION\"},{\"text\":\"12 August 2025\",\"type\":\"DATE\"}]')",
+          "optimization": {
+            "task_type": "entity_extraction",
+            "confidence": 0.99,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Extract only the requested entity types. Copy entity spans exactly as they appear in the source unless the user explicitly requests normalization or canonicalization. Do not infer, expand, or explain. Follow the requested output format exactly and include no extra prose.",
+            "max_tokens": 107,
+            "validator_name": "entity_schema",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 24,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "entity_extraction": [
+                  "extract_entities",
+                  "extract_entity_types"
+                ]
+              },
+              "mode": "json",
+              "token_policy_reason": "source length, schema, and entity density",
+              "min_tokens": 80,
+              "category_max_tokens": 200,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "json",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": [
+                  "person",
+                  "organization",
+                  "location",
+                  "date"
+                ]
+              },
+              "instruction_tokens_estimate": 57,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": true
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT All named entities are extracted with correct labels in order of appearance and valid JSON format.",
+          "tokens": 181
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "bundle response is not valid JSON: Expecting value",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "ner_v5_02",
+      "task_type": "entity_extraction",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "[{\"text\":\"Friday\",\"type\":\"DATE\"},{\"text\":\"Daniel Kim\",\"type\":\"PERSON\"},{\"text\":\"Horizon Foods\",\"type\":\"ORG\"},{\"text\":\"Seoul\",\"type\":\"LOCATION\"}]",
+          "finish_reason": "stop",
+          "prompt_tokens": 130,
+          "completion_tokens": 60,
+          "total_tokens": 190,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='[{\"text\":\"Friday\",\"type\":\"DATE\"},{\"text\":\"Daniel Kim\",\"type\":\"PERSON\"},{\"text\":\"Horizon Foods\",\"type\":\"ORG\"},{\"text\":\"Seoul\",\"type\":\"LOCATION\"}]')",
+          "optimization": {
+            "task_type": "entity_extraction",
+            "confidence": 0.99,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Extract only the requested entity types. Copy entity spans exactly as they appear in the source unless the user explicitly requests normalization or canonicalization. Do not infer, expand, or explain. Follow the requested output format exactly and include no extra prose.",
+            "max_tokens": 108,
+            "validator_name": "entity_schema",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 24,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "entity_extraction": [
+                  "extract_entities",
+                  "extract_entity_types"
+                ]
+              },
+              "mode": "json",
+              "token_policy_reason": "source length, schema, and entity density",
+              "min_tokens": 80,
+              "category_max_tokens": 200,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "json",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": [
+                  "person",
+                  "organization",
+                  "location",
+                  "date"
+                ]
+              },
+              "instruction_tokens_estimate": 58,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": true
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT All named entities are extracted with correct labels in order of appearance and the output is a valid JSON array.",
+          "tokens": 176
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "bundle response is not valid JSON: Expecting value",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "ner_v5_03",
+      "task_type": "entity_extraction",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "[{\"text\":\"The Meridian Foundation\",\"type\":\"ORG\"},{\"text\":\"Sofia Alvarez\",\"type\":\"PERSON\"},{\"text\":\"Madrid\",\"type\":\"LOCATION\"},{\"text\":\"January\",\"type\":\"DATE\"}]",
+          "finish_reason": "stop",
+          "prompt_tokens": 131,
+          "completion_tokens": 64,
+          "total_tokens": 195,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='[{\"text\":\"The Meridian Foundation\",\"type\":\"ORG\"},{\"text\":\"Sofia Alvarez\",\"type\":\"PERSON\"},{\"text\":\"Madrid\",\"type\":\"LOCATION\"},{\"text\":\"January\",\"type\":\"DATE\"}]')",
+          "optimization": {
+            "task_type": "entity_extraction",
+            "confidence": 0.99,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Extract only the requested entity types. Copy entity spans exactly as they appear in the source unless the user explicitly requests normalization or canonicalization. Do not infer, expand, or explain. Follow the requested output format exactly and include no extra prose.",
+            "max_tokens": 109,
+            "validator_name": "entity_schema",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 24,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "entity_extraction": [
+                  "extract_entities",
+                  "extract_entity_types"
+                ]
+              },
+              "mode": "json",
+              "token_policy_reason": "source length, schema, and entity density",
+              "min_tokens": 80,
+              "category_max_tokens": 200,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "json",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": [
+                  "person",
+                  "organization",
+                  "location",
+                  "date"
+                ]
+              },
+              "instruction_tokens_estimate": 60,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": true
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT All named entities are extracted, correctly labeled, in order of appearance, and returned as a valid JSON array with the required keys.",
+          "tokens": 185
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "bundle response is not valid JSON: Expecting value",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "ner_v5_04",
+      "task_type": "entity_extraction",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "[{\"text\":\"Marcus Lee\",\"type\":\"PERSON\"},{\"text\":\"Atlas Energy\",\"type\":\"ORG\"},{\"text\":\"Calgary\",\"type\":\"LOCATION\"},{\"text\":\"next Monday\",\"type\":\"DATE\"}]",
+          "finish_reason": "stop",
+          "prompt_tokens": 128,
+          "completion_tokens": 65,
+          "total_tokens": 193,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='[{\"text\":\"Marcus Lee\",\"type\":\"PERSON\"},{\"text\":\"Atlas Energy\",\"type\":\"ORG\"},{\"text\":\"Calgary\",\"type\":\"LOCATION\"},{\"text\":\"next Monday\",\"type\":\"DATE\"}]')",
+          "optimization": {
+            "task_type": "entity_extraction",
+            "confidence": 0.99,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Extract only the requested entity types. Copy entity spans exactly as they appear in the source unless the user explicitly requests normalization or canonicalization. Do not infer, expand, or explain. Follow the requested output format exactly and include no extra prose.",
+            "max_tokens": 105,
+            "validator_name": "entity_schema",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 24,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "entity_extraction": [
+                  "extract_entities",
+                  "extract_entity_types"
+                ]
+              },
+              "mode": "json",
+              "token_policy_reason": "source length, schema, and entity density",
+              "min_tokens": 80,
+              "category_max_tokens": 200,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "json",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": [
+                  "person",
+                  "organization",
+                  "location",
+                  "date"
+                ]
+              },
+              "instruction_tokens_estimate": 54,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": true
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT All named entities are extracted with correct labels in order of appearance and the output is a valid JSON array with the requested keys.",
+          "tokens": 177
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "bundle response is not valid JSON: Expecting value",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "ner_v5_05",
+      "task_type": "entity_extraction",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "[{\"text\":\"2023\",\"type\":\"DATE\"},{\"text\":\"Aurora Medical Center\",\"type\":\"ORG\"},{\"text\":\"Dr. Elias Novak\",\"type\":\"PERSON\"},{\"text\":\"Prague\",\"type\":\"LOCATION\"}]",
+          "finish_reason": "stop",
+          "prompt_tokens": 134,
+          "completion_tokens": 71,
+          "total_tokens": 205,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='[{\"text\":\"2023\",\"type\":\"DATE\"},{\"text\":\"Aurora Medical Center\",\"type\":\"ORG\"},{\"text\":\"Dr. Elias Novak\",\"type\":\"PERSON\"},{\"text\":\"Prague\",\"type\":\"LOCATION\"}]')",
+          "optimization": {
+            "task_type": "entity_extraction",
+            "confidence": 0.99,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Extract only the requested entity types. Copy entity spans exactly as they appear in the source unless the user explicitly requests normalization or canonicalization. Do not infer, expand, or explain. Follow the requested output format exactly and include no extra prose.",
+            "max_tokens": 106,
+            "validator_name": "entity_schema",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 24,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "entity_extraction": [
+                  "extract_entities",
+                  "extract_entity_types"
+                ]
+              },
+              "mode": "json",
+              "token_policy_reason": "source length, schema, and entity density",
+              "min_tokens": 80,
+              "category_max_tokens": 200,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "json",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": [
+                  "person",
+                  "organization",
+                  "location",
+                  "date"
+                ]
+              },
+              "instruction_tokens_estimate": 56,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": true
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT All named entities are extracted, correctly labeled, in order of appearance, and returned as a valid JSON array with the requested keys.",
+          "tokens": 190
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "bundle response is not valid JSON: Expecting value",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    }
+  ]
+}

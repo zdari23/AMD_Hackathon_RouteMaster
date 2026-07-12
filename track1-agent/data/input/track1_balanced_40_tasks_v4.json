@@ -1,0 +1,162 @@
+[
+  {
+    "task_id": "factual_v4_01",
+    "prompt": "Why does a mirror reverse an image left-to-right in everyday descriptions but not top-to-bottom? Explain what the mirror actually changes."
+  },
+  {
+    "task_id": "factual_v4_02",
+    "prompt": "What is the difference between encryption and hashing, and give one common use for each?"
+  },
+  {
+    "task_id": "factual_v4_03",
+    "prompt": "Why can a sealed bag of chips appear swollen when taken to a high-altitude location?"
+  },
+  {
+    "task_id": "factual_v4_04",
+    "prompt": "In version control, what is the difference between merging and rebasing two branches?"
+  },
+  {
+    "task_id": "factual_v4_05",
+    "prompt": "Why does the Moon show nearly the same face to Earth even though it rotates?"
+  },
+  {
+    "task_id": "math_v4_01",
+    "prompt": "A factory produces 840 parts. Quality control rejects 7.5% of them. Of the remaining parts, 48 are reserved for testing. How many usable parts are available for shipment?"
+  },
+  {
+    "task_id": "math_v4_02",
+    "prompt": "A cyclist rides 24 km uphill at 12 km/h and returns along the same route at 24 km/h. What is the cyclist's average speed for the full trip?"
+  },
+  {
+    "task_id": "math_v4_03",
+    "prompt": "A recipe for 8 servings uses 600 grams of flour. You need 14 servings, but you decide to reduce the scaled flour amount by 10%. How many grams of flour should you use?"
+  },
+  {
+    "task_id": "math_v4_04",
+    "prompt": "A subscription costs $30 per month for the first 4 months and then increases by 20% for the next 8 months. What is the total cost for the full year?"
+  },
+  {
+    "task_id": "math_v4_05",
+    "prompt": "A rectangular garden is 18 meters long and 12 meters wide. A path 1 meter wide is built inside the garden along all four edges. What area remains for planting?"
+  },
+  {
+    "task_id": "sentiment_v4_01",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify the label in one sentence: \"The setup took longer than expected, but once installed the router has been fast and completely reliable.\""
+  },
+  {
+    "task_id": "sentiment_v4_02",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify the label in one sentence: \"The report lists quarterly revenue, operating costs, and headcount without offering any recommendation.\""
+  },
+  {
+    "task_id": "sentiment_v4_03",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify the label in one sentence: \"I expected an ordinary workshop, yet the instructor made every difficult topic clear and engaging.\""
+  },
+  {
+    "task_id": "sentiment_v4_04",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify the label in one sentence: \"The update removed the feature I used most, introduced crashes, and made the menus harder to navigate.\""
+  },
+  {
+    "task_id": "sentiment_v4_05",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify the label in one sentence: \"The room was spotless and quiet, although the breakfast selection was disappointingly small.\""
+  },
+  {
+    "task_id": "summary_v4_01",
+    "prompt": "Summarize the passage in exactly one sentence of no more than 23 words:\n\nA small manufacturer replaced fixed maintenance intervals with sensors that monitor vibration and temperature. During the first quarter, the system detected two failing bearings before they stopped production. Unplanned downtime fell by 30%, although technicians required additional training to interpret alerts."
+  },
+  {
+    "task_id": "summary_v4_02",
+    "prompt": "Summarize the passage in exactly two bullet points, with no more than 10 words per bullet:\n\nA school introduced reusable lunch containers and installed water refill stations. Cafeteria waste dropped substantially within three months. However, some families reported that replacing lost containers created an unexpected expense."
+  },
+  {
+    "task_id": "summary_v4_03",
+    "prompt": "Summarize the passage in one paragraph of at most 27 words:\n\nA software company tested a four-day workweek without reducing salaries. Completed work remained stable, sick days declined, and employee satisfaction improved. Customer support coverage became uneven on Fridays, so managers began rotating teams."
+  },
+  {
+    "task_id": "summary_v4_04",
+    "prompt": "Write a short headline followed by exactly two bullet points labeled Outcome and Limitation:\n\nA coastal town restored dunes and planted native grasses to reduce storm damage. After a severe storm, protected sections experienced less flooding than nearby untreated areas. The project cannot protect buildings located directly on the most exposed shoreline."
+  },
+  {
+    "task_id": "summary_v4_05",
+    "prompt": "Summarize the incident using exactly three bullet points labeled Problem, Response, and Status:\n\nA payment service slowed after a database connection pool reached its limit during a promotional sale. Engineers temporarily increased the pool size and disabled a nonessential analytics job. Transaction speed returned to normal, and the team is reviewing application queries before the next campaign."
+  },
+  {
+    "task_id": "ner_v4_01",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance, using objects with keys `text` and `type`: \"On 14 February 2025, Elena Rossi presented NovaGrid's results in Milan.\""
+  },
+  {
+    "task_id": "ner_v4_02",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance, using objects with keys `text` and `type`: \"Haruto Sato joined Blue Lantern Labs in Kyoto last September.\""
+  },
+  {
+    "task_id": "ner_v4_03",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance, using objects with keys `text` and `type`: \"The Alpine Research Council sent Dr. Amara Okafor to Nairobi on Monday.\""
+  },
+  {
+    "task_id": "ner_v4_04",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance, using objects with keys `text` and `type`: \"Marta Silva will meet Orion Health representatives in Lisbon on 3 June.\""
+  },
+  {
+    "task_id": "ner_v4_05",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance, using objects with keys `text` and `type`: \"In 2024, Cedar Bank appointed Lucas Meyer to lead its Zurich office.\""
+  },
+  {
+    "task_id": "debug_v4_01",
+    "prompt": "The function should return a list containing the squares of all even values without stopping at the first odd value. Identify the bug and provide a corrected implementation.\n\n```python\ndef even_squares(values):\n    result = []\n    for value in values:\n        if value % 2:\n            break\n        result.append(value * value)\n    return result\n```"
+  },
+  {
+    "task_id": "debug_v4_02",
+    "prompt": "The function should return the index of the first occurrence of `target`, or `-1` when absent. It currently returns the final matching index. Identify the bug and provide a corrected implementation.\n\n```python\ndef first_index(values, target):\n    found = -1\n    for i, value in enumerate(values):\n        if value == target:\n            found = i\n    return found\n```"
+  },
+  {
+    "task_id": "debug_v4_03",
+    "prompt": "The function should return a dictionary mapping each word to its length. It raises an error because it modifies the dictionary while iterating over it. Identify the bug and provide a corrected implementation.\n\n```python\ndef word_lengths(words):\n    result = {word: None for word in words}\n    for word in result:\n        result[word + \"!\"] = len(word)\n        del result[word]\n    return result\n```"
+  },
+  {
+    "task_id": "debug_v4_04",
+    "prompt": "The function should return the number of vowels in a string, treating uppercase and lowercase letters equally. Identify the bug and provide a corrected implementation.\n\n```python\ndef count_vowels(text):\n    vowels = \"aeiou\"\n    count = 0\n    for ch in text:\n        if ch in vowels:\n            count += 1\n        return count\n```"
+  },
+  {
+    "task_id": "debug_v4_05",
+    "prompt": "The function should return a new list with each nested row copied independently. Changing one returned row must not affect another. Identify the bug and provide a corrected implementation.\n\n```python\ndef make_grid(rows, cols, value=0):\n    row = [value] * cols\n    return [row] * rows\n```"
+  },
+  {
+    "task_id": "logic_v4_01",
+    "prompt": "Aria, Bruno, Chen, and Dina each choose a different fruit: apple, banana, orange, or pear.\n- Aria does not choose apple or pear.\n- Bruno chooses banana.\n- Chen does not choose orange.\n- Dina chooses pear.\nWho chooses each fruit?"
+  },
+  {
+    "task_id": "logic_v4_02",
+    "prompt": "Four presentations—W, X, Y, and Z—are scheduled in slots 1 through 4, one per slot.\n- Y is immediately after W.\n- Z is in slot 1.\n- X is after Y.\nWhat is the complete order?"
+  },
+  {
+    "task_id": "logic_v4_03",
+    "prompt": "Lena, Milo, and Noor each own a different vehicle: bicycle, scooter, or car.\n- Lena does not own the car.\n- Milo does not own the bicycle.\n- Noor owns the scooter.\nWho owns each vehicle?"
+  },
+  {
+    "task_id": "logic_v4_04",
+    "prompt": "Five books—A, B, C, D, and E—stand on a shelf from left to right.\n- C is in the middle.\n- A is immediately left of B.\n- E is at the far right.\n- D is immediately right of C.\nWhat is the order?"
+  },
+  {
+    "task_id": "logic_v4_05",
+    "prompt": "Four employees—Gita, Hugo, Ivan, and June—arrive in positions 1 through 4.\n- June arrives last.\n- Hugo arrives before Ivan.\n- Gita arrives immediately after Ivan.\nWhat is the arrival order?"
+  },
+  {
+    "task_id": "codegen_v4_01",
+    "prompt": "Write a Python function `flatten_once(items)` that returns a new list in which elements that are lists are expanded by one level, while non-list elements are copied unchanged. Do not recursively flatten deeper lists. Example: `[1, [2, [3]], 4]` becomes `[1, 2, [3], 4]`."
+  },
+  {
+    "task_id": "codegen_v4_02",
+    "prompt": "Write a Python function `count_by_length(words)` that returns a dictionary mapping each word length to the number of words with that length. Treat repeated words as separate occurrences. Example: `[\"a\", \"to\", \"be\", \"cat\"]` returns `{1: 1, 2: 2, 3: 1}`."
+  },
+  {
+    "task_id": "codegen_v4_03",
+    "prompt": "Write a Python function `split_on_value(items, separator)` that divides a list into sublists whenever `separator` appears. Do not include the separator, and preserve empty groups. Example: `[1, 0, 2, 0, 0, 3]` with separator `0` returns `[[1], [2], [], [3]]`."
+  },
+  {
+    "task_id": "codegen_v4_04",
+    "prompt": "Write a Python function `common_keys(left, right)` that returns a new dictionary containing only keys present in both input dictionaries and whose values are equal. Preserve the iteration order of `left` and do not modify either input."
+  },
+  {
+    "task_id": "codegen_v4_05",
+    "prompt": "Write a Python function `longest_word(words)` that returns the first longest string in a non-empty list. If several strings share the maximum length, return the earliest one. Example: `[\"red\", \"blue\", \"gold\"]` returns `\"blue\"`."
+  }
+]

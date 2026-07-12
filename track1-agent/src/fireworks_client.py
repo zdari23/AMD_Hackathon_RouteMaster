@@ -1,0 +1,63 @@
+"""Thin wrapper around the Fireworks chat completions API.
+
+Reads FIREWORKS_API_KEY / FIREWORKS_BASE_URL from the environment. All model
+calls in this project go through here so token usage is tracked in one place,
+matching how the hackathon's judging proxy records tokens centrally.
+"""
+import os
+import re
+
+import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_KEY = os.environ.get("FIREWORKS_API_KEY", "")
+BASE_URL = os.environ.get("FIREWORKS_BASE_URL", "https://api.fireworks.ai/inference/v1")
+
+
+def chat(model: str, prompt: str, max_tokens: int = 800, temperature: float = 0.0, api_key: str = None, response_format: dict = None, extra_params: dict = None, system_prompt: str = None) -> dict:
+    """Send exactly one request. Returns {"text": str, "prompt_tokens": int,
+    "completion_tokens": int, "total_tokens": int, "finish_reason": str}."""
+    base_url = os.environ.get("FIREWORKS_BASE_URL", BASE_URL).rstrip("/")
+    url = f"{base_url}/chat/completions"
+    key_to_use = api_key or os.environ.get("FIREWORKS_API_KEY", API_KEY)
+    if not key_to_use:
+        raise RuntimeError("FIREWORKS_API_KEY environment variable is not set.")
+    headers = {"Authorization": f"Bearer {key_to_use}", "Content-Type": "application/json"}
+    messages = []
+    if system_prompt:
+        messages.append({"role": "system", "content": system_prompt})
+    messages.append({"role": "user", "content": prompt})
+    
+    payload = {
+        "model": model,
+        "messages": messages,
+        "max_tokens": max_tokens,
+        "temperature": temperature,
+    }
+    if response_format:
+        payload["response_format"] = response_format
+    if extra_params:
+        payload.update(extra_params)
+    try:
+        resp = requests.post(url, headers=headers, json=payload, timeout=120)
+        resp.raise_for_status()
+        data = resp.json()
+    except Exception as exc:
+        raise RuntimeError(f"Fireworks call to {model} failed: {exc}") from exc
+
+    choice_obj = data["choices"][0]
+    choice = choice_obj["message"]
+    text = choice.get("content") or ""
+    # Strip emitted reasoning text from the returned answer without another call.
+    text = re.sub(r"<think>.*?</think>\s*", "", text, flags=re.DOTALL)
+    finish_reason = choice_obj.get("finish_reason")
+    usage = data.get("usage", {})
+    return {
+        "text": text.strip(),
+        "prompt_tokens": usage.get("prompt_tokens", 0),
+        "completion_tokens": usage.get("completion_tokens", 0),
+        "total_tokens": usage.get("total_tokens", 0),
+        "finish_reason": finish_reason,
+    }

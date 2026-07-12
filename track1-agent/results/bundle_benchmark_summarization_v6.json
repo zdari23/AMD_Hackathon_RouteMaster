@@ -1,0 +1,737 @@
+{
+  "dataset": "data/input/track1_balanced_40_tasks_v6.json",
+  "model": "accounts/fireworks/models/kimi-k2p6",
+  "judge_model": "accounts/fireworks/models/glm-5p2",
+  "tiers": [
+    "experimental"
+  ],
+  "max_bundle_size": 5,
+  "min_accuracy": 80.0,
+  "max_accuracy_drop": 0.0,
+  "force_ineligible": true,
+  "summary": {
+    "summarization": {
+      "tasks": 5,
+      "individual_calls": 5,
+      "bundled_calls": 1,
+      "individual_tokens": 816,
+      "bundled_tokens": 535,
+      "individual_correct": 5,
+      "individual_judged": 5,
+      "individual_judge_tokens": 869,
+      "bundled_correct": 5,
+      "bundled_judged": 5,
+      "bundled_judge_tokens": 813,
+      "individual_validation_passed": 5,
+      "bundled_validation_passed": 5,
+      "bundle_failures": 0,
+      "token_savings_pct": 34.44,
+      "individual_accuracy_pct": 100.0,
+      "bundled_accuracy_pct": 100.0,
+      "accuracy_delta_pct_points": 0.0,
+      "recommendation": "candidate_for_larger_sample"
+    }
+  },
+  "eligibility": [
+    {
+      "task_id": "summary_v6_01",
+      "dataset_category": "summarization",
+      "task_type": "summarization",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "summary_v6_02",
+      "dataset_category": "summarization",
+      "task_type": "summarization",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "summary_v6_03",
+      "dataset_category": "summarization",
+      "task_type": "summarization",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "summary_v6_04",
+      "dataset_category": "summarization",
+      "task_type": "summarization",
+      "eligible": false,
+      "forced": true,
+      "reason": "summarization/general_summary is not bundle-safe"
+    },
+    {
+      "task_id": "summary_v6_05",
+      "dataset_category": "summarization",
+      "task_type": "summarization",
+      "eligible": false,
+      "forced": true,
+      "reason": "summarization/general_summary is not bundle-safe"
+    }
+  ],
+  "excluded_reasons": {
+    "excluded by category filter": 35
+  },
+  "bundles": [
+    {
+      "bundle_index": 0,
+      "task_type": "summarization",
+      "task_ids": [
+        "summary_v6_01",
+        "summary_v6_02",
+        "summary_v6_03",
+        "summary_v6_04",
+        "summary_v6_05"
+      ],
+      "max_tokens": 496,
+      "prompt_tokens": 381,
+      "completion_tokens": 154,
+      "total_tokens": 535,
+      "finish_reason": "stop",
+      "raw_response": "```json\n{\n  \"0\": \"Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.\",\n  \"1\": \"• LEDs reduced electricity and maintenance.\\n• Some workers found lights too bright.\",\n  \"2\": \"Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.\",\n  \"3\": \"Museum Timed-Entry Tickets Ease Crowding\\n• Improvement: Shorter waits, easier gallery navigation.\\n• Drawback: Late arrivals sometimes lost reservations.\",\n  \"4\": \"• Trigger: Expired credential blocked image storage.\\n• Fix: Engineers replaced credential, restarted proxy.\\n• Outcome: Images restored; automated alert added.\"\n}\n```",
+      "error": null
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "summary_v6_01",
+      "prompt": "Summarize the passage in exactly one sentence of no more than 22 words:\n\nA hospital introduced text-message appointment reminders. Missed appointments fell by 24% over four months, freeing more slots for patients. Some patients with outdated phone numbers did not receive the messages.",
+      "task_type": "summarization",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Text-message reminders reduced missed hospital appointments by 24% in four months, though some patients with outdated numbers were unreachable.",
+          "finish_reason": "stop",
+          "prompt_tokens": 129,
+          "completion_tokens": 25,
+          "total_tokens": 154,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Text-message reminders reduced missed hospital appointments by 24% in four months, though some patients with outdated numbers were unreachable.')",
+          "optimization": {
+            "task_type": "summarization",
+            "confidence": 0.865,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Summarize the source faithfully and concisely. Preserve the main point, key facts, names, numbers, dates, decisions, deadlines, and constraints. Do not add unsupported information. Follow the requested length and format exactly.",
+            "max_tokens": 55,
+            "validator_name": "summary_constraints",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 2,
+                "sentiment_analysis": 0,
+                "summarization": 13,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 3,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "math_solving": [
+                  "numeric_structure"
+                ],
+                "summarization": [
+                  "summarize_intent"
+                ],
+                "logical_puzzles": [
+                  "constraint_structure"
+                ]
+              },
+              "mode": "one_sentence",
+              "token_policy_reason": "explicit one_sentence constraint",
+              "min_tokens": 32,
+              "category_max_tokens": 768,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": 22,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": 1,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 72,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The candidate answer is a single sentence of 19 words that accurately summarizes the passage.",
+          "tokens": 161
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "summary_v6_01",
+          "text": "Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.')"
+        },
+        "bundle": {
+          "task_type": "summarization",
+          "safety_tier": "experimental",
+          "max_tokens": 496,
+          "prompt_tokens": 381,
+          "completion_tokens": 154,
+          "total_tokens": 535,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.\",\n  \"1\": \"• LEDs reduced electricity and maintenance.\\n• Some workers found lights too bright.\",\n  \"2\": \"Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.\",\n  \"3\": \"Museum Timed-Entry Tickets Ease Crowding\\n• Improvement: Shorter waits, easier gallery navigation.\\n• Drawback: Late arrivals sometimes lost reservations.\",\n  \"4\": \"• Trigger: Expired credential blocked image storage.\\n• Fix: Engineers replaced credential, restarted proxy.\\n• Outcome: Images restored; automated alert added.\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "summary_v6_01",
+              "text": "Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.')"
+            },
+            {
+              "task_id": "summary_v6_02",
+              "text": "• LEDs reduced electricity and maintenance.\n• Some workers found lights too bright.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='• LEDs reduced electricity and maintenance.\\n• Some workers found lights too bright.')"
+            },
+            {
+              "task_id": "summary_v6_03",
+              "text": "Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.')"
+            },
+            {
+              "task_id": "summary_v6_04",
+              "text": "Museum Timed-Entry Tickets Ease Crowding\n• Improvement: Shorter waits, easier gallery navigation.\n• Drawback: Late arrivals sometimes lost reservations.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Museum Timed-Entry Tickets Ease Crowding\\n• Improvement: Shorter waits, easier gallery navigation.\\n• Drawback: Late arrivals sometimes lost reservations.')"
+            },
+            {
+              "task_id": "summary_v6_05",
+              "text": "• Trigger: Expired credential blocked image storage.\n• Fix: Engineers replaced credential, restarted proxy.\n• Outcome: Images restored; automated alert added.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='• Trigger: Expired credential blocked image storage.\\n• Fix: Engineers replaced credential, restarted proxy.\\n• Outcome: Images restored; automated alert added.')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The candidate answer is a single sentence of 15 words that accurately summarizes the passage.",
+          "tokens": 156
+        }
+      }
+    },
+    {
+      "task_id": "summary_v6_02",
+      "prompt": "Summarize the passage in exactly two bullet points, with no more than 10 words per bullet:\n\nA factory replaced fluorescent lights with LEDs. Electricity use declined and maintenance calls became less frequent. Workers in one section said the new lighting initially felt too bright.",
+      "task_type": "summarization",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "• LED upgrade cut electricity and maintenance.\n• One section found new lights too bright.",
+          "finish_reason": "stop",
+          "prompt_tokens": 126,
+          "completion_tokens": 18,
+          "total_tokens": 144,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='• LED upgrade cut electricity and maintenance.\\n• One section found new lights too bright.')",
+          "optimization": {
+            "task_type": "summarization",
+            "confidence": 0.934,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Summarize the source faithfully and concisely. Preserve the main point, key facts, names, numbers, dates, decisions, deadlines, and constraints. Do not add unsupported information. Follow the requested length and format exactly.",
+            "max_tokens": 36,
+            "validator_name": "summary_constraints",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 13,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "summarization": [
+                  "summarize_intent"
+                ]
+              },
+              "mode": "word_limited",
+              "token_policy_reason": "explicit word_limited constraint",
+              "min_tokens": 32,
+              "category_max_tokens": 768,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": 10,
+                "exact_word_count": false,
+                "word_limit_per_bullet": true,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": [
+                  "person"
+                ]
+              },
+              "instruction_tokens_estimate": 71,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The summary has exactly two bullet points, each under 10 words, and captures the passage accurately.",
+          "tokens": 154
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "summary_v6_02",
+          "text": "• LEDs reduced electricity and maintenance.\n• Some workers found lights too bright.",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='• LEDs reduced electricity and maintenance.\\n• Some workers found lights too bright.')"
+        },
+        "bundle": {
+          "task_type": "summarization",
+          "safety_tier": "experimental",
+          "max_tokens": 496,
+          "prompt_tokens": 381,
+          "completion_tokens": 154,
+          "total_tokens": 535,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.\",\n  \"1\": \"• LEDs reduced electricity and maintenance.\\n• Some workers found lights too bright.\",\n  \"2\": \"Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.\",\n  \"3\": \"Museum Timed-Entry Tickets Ease Crowding\\n• Improvement: Shorter waits, easier gallery navigation.\\n• Drawback: Late arrivals sometimes lost reservations.\",\n  \"4\": \"• Trigger: Expired credential blocked image storage.\\n• Fix: Engineers replaced credential, restarted proxy.\\n• Outcome: Images restored; automated alert added.\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "summary_v6_01",
+              "text": "Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.')"
+            },
+            {
+              "task_id": "summary_v6_02",
+              "text": "• LEDs reduced electricity and maintenance.\n• Some workers found lights too bright.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='• LEDs reduced electricity and maintenance.\\n• Some workers found lights too bright.')"
+            },
+            {
+              "task_id": "summary_v6_03",
+              "text": "Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.')"
+            },
+            {
+              "task_id": "summary_v6_04",
+              "text": "Museum Timed-Entry Tickets Ease Crowding\n• Improvement: Shorter waits, easier gallery navigation.\n• Drawback: Late arrivals sometimes lost reservations.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Museum Timed-Entry Tickets Ease Crowding\\n• Improvement: Shorter waits, easier gallery navigation.\\n• Drawback: Late arrivals sometimes lost reservations.')"
+            },
+            {
+              "task_id": "summary_v6_05",
+              "text": "• Trigger: Expired credential blocked image storage.\n• Fix: Engineers replaced credential, restarted proxy.\n• Outcome: Images restored; automated alert added.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='• Trigger: Expired credential blocked image storage.\\n• Fix: Engineers replaced credential, restarted proxy.\\n• Outcome: Images restored; automated alert added.')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The summary has exactly two bullet points, each under 10 words, and captures the passage accurately.",
+          "tokens": 152
+        }
+      }
+    },
+    {
+      "task_id": "summary_v6_03",
+      "prompt": "Summarize the passage in one paragraph of at most 26 words:\n\nA delivery company tested electric vans on urban routes. Fuel spending and local emissions fell, while drivers liked the quieter vehicles. Limited charging capacity prevented the company from expanding the trial immediately.",
+      "task_type": "summarization",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Electric van trials cut fuel costs and emissions, pleased drivers with quieter rides, but limited charging infrastructure blocked immediate expansion.",
+          "finish_reason": "stop",
+          "prompt_tokens": 125,
+          "completion_tokens": 24,
+          "total_tokens": 149,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Electric van trials cut fuel costs and emissions, pleased drivers with quieter rides, but limited charging infrastructure blocked immediate expansion.')",
+          "optimization": {
+            "task_type": "summarization",
+            "confidence": 0.934,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Summarize the source faithfully and concisely. Preserve the main point, key facts, names, numbers, dates, decisions, deadlines, and constraints. Do not add unsupported information. Follow the requested length and format exactly.",
+            "max_tokens": 61,
+            "validator_name": "summary_constraints",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 13,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "summarization": [
+                  "summarize_intent"
+                ]
+              },
+              "mode": "word_limited",
+              "token_policy_reason": "explicit word_limited constraint",
+              "min_tokens": 32,
+              "category_max_tokens": 768,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": 26,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 72,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The summary is accurate, captures all key points, and is 18 words long, which is within the 26-word limit.",
+          "tokens": 165
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "summary_v6_03",
+          "text": "Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.')"
+        },
+        "bundle": {
+          "task_type": "summarization",
+          "safety_tier": "experimental",
+          "max_tokens": 496,
+          "prompt_tokens": 381,
+          "completion_tokens": 154,
+          "total_tokens": 535,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.\",\n  \"1\": \"• LEDs reduced electricity and maintenance.\\n• Some workers found lights too bright.\",\n  \"2\": \"Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.\",\n  \"3\": \"Museum Timed-Entry Tickets Ease Crowding\\n• Improvement: Shorter waits, easier gallery navigation.\\n• Drawback: Late arrivals sometimes lost reservations.\",\n  \"4\": \"• Trigger: Expired credential blocked image storage.\\n• Fix: Engineers replaced credential, restarted proxy.\\n• Outcome: Images restored; automated alert added.\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "summary_v6_01",
+              "text": "Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.')"
+            },
+            {
+              "task_id": "summary_v6_02",
+              "text": "• LEDs reduced electricity and maintenance.\n• Some workers found lights too bright.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='• LEDs reduced electricity and maintenance.\\n• Some workers found lights too bright.')"
+            },
+            {
+              "task_id": "summary_v6_03",
+              "text": "Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.')"
+            },
+            {
+              "task_id": "summary_v6_04",
+              "text": "Museum Timed-Entry Tickets Ease Crowding\n• Improvement: Shorter waits, easier gallery navigation.\n• Drawback: Late arrivals sometimes lost reservations.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Museum Timed-Entry Tickets Ease Crowding\\n• Improvement: Shorter waits, easier gallery navigation.\\n• Drawback: Late arrivals sometimes lost reservations.')"
+            },
+            {
+              "task_id": "summary_v6_05",
+              "text": "• Trigger: Expired credential blocked image storage.\n• Fix: Engineers replaced credential, restarted proxy.\n• Outcome: Images restored; automated alert added.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='• Trigger: Expired credential blocked image storage.\\n• Fix: Engineers replaced credential, restarted proxy.\\n• Outcome: Images restored; automated alert added.')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The summary is accurate, captures all key points, and is 14 words long, which is within the 26-word limit.",
+          "tokens": 162
+        }
+      }
+    },
+    {
+      "task_id": "summary_v6_04",
+      "prompt": "Write a headline followed by exactly two bullet points labeled Improvement and Drawback:\n\nA museum launched timed-entry tickets to reduce crowding. Visitors spent less time waiting and galleries became easier to navigate. However, guests who arrived late sometimes lost their reserved slots.",
+      "task_type": "summarization",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Museum Timed-Entry System Cuts Wait Times but Penalizes Late Arrivals\n\n• Improvement: Visitors spent less time waiting and galleries became easier to navigate.\n\n• Drawback: Guests who arrived late sometimes lost their reserved slots.",
+          "finish_reason": "stop",
+          "prompt_tokens": 125,
+          "completion_tokens": 50,
+          "total_tokens": 175,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Museum Timed-Entry System Cuts Wait Times but Penalizes Late Arrivals\\n\\n• Improvement: Visitors spent less time waiting and galleries became easier to navigate.\\n\\n• Drawback: Guests who arrived late sometimes lost their reserved slots.')",
+          "optimization": {
+            "task_type": "summarization",
+            "confidence": 0.891,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Summarize the source faithfully and concisely. Preserve the main point, key facts, names, numbers, dates, decisions, deadlines, and constraints. Do not add unsupported information. Follow the requested length and format exactly.",
+            "max_tokens": 96,
+            "validator_name": "summary_constraints",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 11,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "summarization": [
+                  "headline_intent"
+                ]
+              },
+              "mode": "general_summary",
+              "token_policy_reason": "source-length summary ratio",
+              "min_tokens": 96,
+              "category_max_tokens": 768,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": [
+                  "time"
+                ]
+              },
+              "instruction_tokens_estimate": 73,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: The candidate answer includes a headline followed by exactly two bullet points labeled Improvement and Drawback, accurately reflecting the provided information.",
+          "tokens": 187
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "summary_v6_04",
+          "text": "Museum Timed-Entry Tickets Ease Crowding\n• Improvement: Shorter waits, easier gallery navigation.\n• Drawback: Late arrivals sometimes lost reservations.",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Museum Timed-Entry Tickets Ease Crowding\\n• Improvement: Shorter waits, easier gallery navigation.\\n• Drawback: Late arrivals sometimes lost reservations.')"
+        },
+        "bundle": {
+          "task_type": "summarization",
+          "safety_tier": "experimental",
+          "max_tokens": 496,
+          "prompt_tokens": 381,
+          "completion_tokens": 154,
+          "total_tokens": 535,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.\",\n  \"1\": \"• LEDs reduced electricity and maintenance.\\n• Some workers found lights too bright.\",\n  \"2\": \"Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.\",\n  \"3\": \"Museum Timed-Entry Tickets Ease Crowding\\n• Improvement: Shorter waits, easier gallery navigation.\\n• Drawback: Late arrivals sometimes lost reservations.\",\n  \"4\": \"• Trigger: Expired credential blocked image storage.\\n• Fix: Engineers replaced credential, restarted proxy.\\n• Outcome: Images restored; automated alert added.\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "summary_v6_01",
+              "text": "Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.')"
+            },
+            {
+              "task_id": "summary_v6_02",
+              "text": "• LEDs reduced electricity and maintenance.\n• Some workers found lights too bright.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='• LEDs reduced electricity and maintenance.\\n• Some workers found lights too bright.')"
+            },
+            {
+              "task_id": "summary_v6_03",
+              "text": "Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.')"
+            },
+            {
+              "task_id": "summary_v6_04",
+              "text": "Museum Timed-Entry Tickets Ease Crowding\n• Improvement: Shorter waits, easier gallery navigation.\n• Drawback: Late arrivals sometimes lost reservations.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Museum Timed-Entry Tickets Ease Crowding\\n• Improvement: Shorter waits, easier gallery navigation.\\n• Drawback: Late arrivals sometimes lost reservations.')"
+            },
+            {
+              "task_id": "summary_v6_05",
+              "text": "• Trigger: Expired credential blocked image storage.\n• Fix: Engineers replaced credential, restarted proxy.\n• Outcome: Images restored; automated alert added.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='• Trigger: Expired credential blocked image storage.\\n• Fix: Engineers replaced credential, restarted proxy.\\n• Outcome: Images restored; automated alert added.')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The candidate answer includes a headline followed by exactly two bullet points labeled Improvement and Drawback, accurately summarizing the information.",
+          "tokens": 171
+        }
+      }
+    },
+    {
+      "task_id": "summary_v6_05",
+      "prompt": "Summarize the incident using exactly three bullet points labeled Trigger, Fix, and Outcome:\n\nA news website stopped loading images after an expired access credential blocked its storage service. Engineers replaced the credential and restarted the image proxy. Images became available again, and an automated expiration alert was configured.",
+      "task_type": "summarization",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "• Trigger: An expired access credential blocked the news website's storage service, causing images to stop loading.\n\n• Fix: Engineers replaced the expired credential and restarted the image proxy to restore storage service connectivity.\n\n• Outcome: Images became available again, and an automated expiration alert was configured to prevent future recurrence.",
+          "finish_reason": "stop",
+          "prompt_tokens": 132,
+          "completion_tokens": 62,
+          "total_tokens": 194,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output=\"• Trigger: An expired access credential blocked the news website's storage service, causing images to stop loading.\\n\\n• Fix: Engineers replaced the expired credential and restarted the image proxy to restore storage service connectivity.\\n\\n• Outcome: Images became available again, and an automated expiration alert was configured to prevent future recurrence.\")",
+          "optimization": {
+            "task_type": "summarization",
+            "confidence": 0.934,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Summarize the source faithfully and concisely. Preserve the main point, key facts, names, numbers, dates, decisions, deadlines, and constraints. Do not add unsupported information. Follow the requested length and format exactly.",
+            "max_tokens": 96,
+            "validator_name": "summary_constraints",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 13,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "summarization": [
+                  "summarize_intent"
+                ]
+              },
+              "mode": "general_summary",
+              "token_policy_reason": "source-length summary ratio",
+              "min_tokens": 96,
+              "category_max_tokens": 768,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 85,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The candidate answer accurately summarizes the incident using exactly three bullet points labeled Trigger, Fix, and Outcome.",
+          "tokens": 202
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "summary_v6_05",
+          "text": "• Trigger: Expired credential blocked image storage.\n• Fix: Engineers replaced credential, restarted proxy.\n• Outcome: Images restored; automated alert added.",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='• Trigger: Expired credential blocked image storage.\\n• Fix: Engineers replaced credential, restarted proxy.\\n• Outcome: Images restored; automated alert added.')"
+        },
+        "bundle": {
+          "task_type": "summarization",
+          "safety_tier": "experimental",
+          "max_tokens": 496,
+          "prompt_tokens": 381,
+          "completion_tokens": 154,
+          "total_tokens": 535,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.\",\n  \"1\": \"• LEDs reduced electricity and maintenance.\\n• Some workers found lights too bright.\",\n  \"2\": \"Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.\",\n  \"3\": \"Museum Timed-Entry Tickets Ease Crowding\\n• Improvement: Shorter waits, easier gallery navigation.\\n• Drawback: Late arrivals sometimes lost reservations.\",\n  \"4\": \"• Trigger: Expired credential blocked image storage.\\n• Fix: Engineers replaced credential, restarted proxy.\\n• Outcome: Images restored; automated alert added.\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "summary_v6_01",
+              "text": "Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Text reminders cut missed hospital appointments by 24%, though outdated numbers left some patients uninformed.')"
+            },
+            {
+              "task_id": "summary_v6_02",
+              "text": "• LEDs reduced electricity and maintenance.\n• Some workers found lights too bright.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='• LEDs reduced electricity and maintenance.\\n• Some workers found lights too bright.')"
+            },
+            {
+              "task_id": "summary_v6_03",
+              "text": "Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Electric vans cut fuel costs and emissions, pleased drivers with quiet operation, but charging limits stalled expansion.')"
+            },
+            {
+              "task_id": "summary_v6_04",
+              "text": "Museum Timed-Entry Tickets Ease Crowding\n• Improvement: Shorter waits, easier gallery navigation.\n• Drawback: Late arrivals sometimes lost reservations.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Museum Timed-Entry Tickets Ease Crowding\\n• Improvement: Shorter waits, easier gallery navigation.\\n• Drawback: Late arrivals sometimes lost reservations.')"
+            },
+            {
+              "task_id": "summary_v6_05",
+              "text": "• Trigger: Expired credential blocked image storage.\n• Fix: Engineers replaced credential, restarted proxy.\n• Outcome: Images restored; automated alert added.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='• Trigger: Expired credential blocked image storage.\\n• Fix: Engineers replaced credential, restarted proxy.\\n• Outcome: Images restored; automated alert added.')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The candidate answer is accurate, complete, and follows the requested format with exactly three labeled bullet points.",
+          "tokens": 172
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,739 @@
+{
+  "dataset": "data/input/track1_balanced_40_tasks_v6.json",
+  "model": "accounts/fireworks/models/kimi-k2p6",
+  "judge_model": "accounts/fireworks/models/glm-5p2",
+  "tiers": [
+    "experimental"
+  ],
+  "max_bundle_size": 5,
+  "min_accuracy": 80.0,
+  "max_accuracy_drop": 0.0,
+  "force_ineligible": true,
+  "summary": {
+    "sentiment_analysis": {
+      "tasks": 5,
+      "individual_calls": 5,
+      "bundled_calls": 1,
+      "individual_tokens": 556,
+      "bundled_tokens": 416,
+      "individual_correct": 5,
+      "individual_judged": 5,
+      "individual_judge_tokens": 754,
+      "bundled_correct": 5,
+      "bundled_judged": 5,
+      "bundled_judge_tokens": 700,
+      "individual_validation_passed": 5,
+      "bundled_validation_passed": 5,
+      "bundle_failures": 0,
+      "token_savings_pct": 25.18,
+      "individual_accuracy_pct": 100.0,
+      "bundled_accuracy_pct": 100.0,
+      "accuracy_delta_pct_points": 0.0,
+      "recommendation": "candidate_for_larger_sample"
+    }
+  },
+  "eligibility": [
+    {
+      "task_id": "sentiment_v6_01",
+      "dataset_category": "sentiment_analysis",
+      "task_type": "sentiment_analysis",
+      "eligible": false,
+      "forced": true,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "sentiment_v6_02",
+      "dataset_category": "sentiment_analysis",
+      "task_type": "sentiment_analysis",
+      "eligible": false,
+      "forced": true,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "sentiment_v6_03",
+      "dataset_category": "sentiment_analysis",
+      "task_type": "sentiment_analysis",
+      "eligible": false,
+      "forced": true,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "sentiment_v6_04",
+      "dataset_category": "sentiment_analysis",
+      "task_type": "sentiment_analysis",
+      "eligible": false,
+      "forced": true,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "sentiment_v6_05",
+      "dataset_category": "sentiment_analysis",
+      "task_type": "sentiment_analysis",
+      "eligible": false,
+      "forced": true,
+      "reason": "explanation or steps require isolated execution"
+    }
+  ],
+  "excluded_reasons": {
+    "excluded by category filter": 35
+  },
+  "bundles": [
+    {
+      "bundle_index": 0,
+      "task_type": "sentiment_analysis",
+      "task_ids": [
+        "sentiment_v6_01",
+        "sentiment_v6_02",
+        "sentiment_v6_03",
+        "sentiment_v6_04",
+        "sentiment_v6_05"
+      ],
+      "max_tokens": 392,
+      "prompt_tokens": 301,
+      "completion_tokens": 115,
+      "total_tokens": 416,
+      "finish_reason": "stop",
+      "raw_response": "```json\n{\n  \"0\": \"Mixed: the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.\",\n  \"1\": \"Neutral: the sentence is a factual statement about a future action with no evaluative language.\",\n  \"2\": \"Positive: the review expresses satisfaction with usability, speed, and improved report comprehension.\",\n  \"3\": \"Negative: the review lists multiple functional failures and frustrations with the printer's performance.\",\n  \"4\": \"Mixed: the review compliments the location and staff but expresses disappointment about room size.\"\n}\n```",
+      "error": null
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "sentiment_v6_01",
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The headphones are comfortable and clear, but the wireless connection drops occasionally.\"",
+      "task_type": "sentiment_analysis",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Mixed — The review contains both positive aspects (comfort and sound clarity) and a negative aspect (unreliable wireless connection).",
+          "finish_reason": "stop",
+          "prompt_tokens": 82,
+          "completion_tokens": 26,
+          "total_tokens": 108,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — The review contains both positive aspects (comfort and sound clarity) and a negative aspect (unreliable wireless connection).')",
+          "optimization": {
+            "task_type": "sentiment_analysis",
+            "confidence": 0.978,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Use only labels requested by the user and give exactly the requested concise justification.",
+            "max_tokens": 48,
+            "validator_name": "sentiment",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 15,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "sentiment_analysis": [
+                  "classify_sentiment",
+                  "sentiment_topic"
+                ]
+              },
+              "mode": "label_reason",
+              "token_policy_reason": "label with concise reason",
+              "min_tokens": 24,
+              "category_max_tokens": 128,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": 1,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": true,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Mixed",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 47,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": true
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — The candidate answer correctly classifies the sentiment as mixed and provides a one-sentence justification noting both the positive and negative aspects.",
+          "tokens": 152
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "sentiment_v6_01",
+          "text": "Mixed — the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.')"
+        },
+        "bundle": {
+          "task_type": "sentiment_analysis",
+          "safety_tier": "experimental",
+          "max_tokens": 392,
+          "prompt_tokens": 301,
+          "completion_tokens": 115,
+          "total_tokens": 416,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"Mixed: the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.\",\n  \"1\": \"Neutral: the sentence is a factual statement about a future action with no evaluative language.\",\n  \"2\": \"Positive: the review expresses satisfaction with usability, speed, and improved report comprehension.\",\n  \"3\": \"Negative: the review lists multiple functional failures and frustrations with the printer's performance.\",\n  \"4\": \"Mixed: the review compliments the location and staff but expresses disappointment about room size.\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "sentiment_v6_01",
+              "text": "Mixed — the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.')"
+            },
+            {
+              "task_id": "sentiment_v6_02",
+              "text": "Neutral — the sentence is a factual statement about a future action with no evaluative language.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Neutral — the sentence is a factual statement about a future action with no evaluative language.')"
+            },
+            {
+              "task_id": "sentiment_v6_03",
+              "text": "Positive — the review expresses satisfaction with usability, speed, and improved report comprehension.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Positive — the review expresses satisfaction with usability, speed, and improved report comprehension.')"
+            },
+            {
+              "task_id": "sentiment_v6_04",
+              "text": "Negative — the review lists multiple functional failures and frustrations with the printer's performance.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output=\"Negative — the review lists multiple functional failures and frustrations with the printer's performance.\")"
+            },
+            {
+              "task_id": "sentiment_v6_05",
+              "text": "Mixed — the review compliments the location and staff but expresses disappointment about room size.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — the review compliments the location and staff but expresses disappointment about room size.')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — the candidate correctly identifies the sentiment as mixed and provides a one-sentence justification noting both positive and negative aspects.",
+          "tokens": 140
+        }
+      }
+    },
+    {
+      "task_id": "sentiment_v6_02",
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The committee will publish its decision after the meeting on Thursday.\"",
+      "task_type": "sentiment_analysis",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Neutral — The sentence is a factual statement about a future event with no evaluative or emotional language.",
+          "finish_reason": "stop",
+          "prompt_tokens": 80,
+          "completion_tokens": 22,
+          "total_tokens": 102,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Neutral — The sentence is a factual statement about a future event with no evaluative or emotional language.')",
+          "optimization": {
+            "task_type": "sentiment_analysis",
+            "confidence": 0.978,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Use only labels requested by the user and give exactly the requested concise justification.",
+            "max_tokens": 48,
+            "validator_name": "sentiment",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 15,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "sentiment_analysis": [
+                  "classify_sentiment",
+                  "sentiment_topic"
+                ]
+              },
+              "mode": "label_reason",
+              "token_policy_reason": "label with concise reason",
+              "min_tokens": 24,
+              "category_max_tokens": 128,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": 1,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": true,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Mixed",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 43,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": true
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — The candidate correctly classifies the sentiment as neutral and provides a valid one-sentence justification.",
+          "tokens": 138
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "sentiment_v6_02",
+          "text": "Neutral — the sentence is a factual statement about a future action with no evaluative language.",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Neutral — the sentence is a factual statement about a future action with no evaluative language.')"
+        },
+        "bundle": {
+          "task_type": "sentiment_analysis",
+          "safety_tier": "experimental",
+          "max_tokens": 392,
+          "prompt_tokens": 301,
+          "completion_tokens": 115,
+          "total_tokens": 416,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"Mixed: the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.\",\n  \"1\": \"Neutral: the sentence is a factual statement about a future action with no evaluative language.\",\n  \"2\": \"Positive: the review expresses satisfaction with usability, speed, and improved report comprehension.\",\n  \"3\": \"Negative: the review lists multiple functional failures and frustrations with the printer's performance.\",\n  \"4\": \"Mixed: the review compliments the location and staff but expresses disappointment about room size.\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "sentiment_v6_01",
+              "text": "Mixed — the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.')"
+            },
+            {
+              "task_id": "sentiment_v6_02",
+              "text": "Neutral — the sentence is a factual statement about a future action with no evaluative language.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Neutral — the sentence is a factual statement about a future action with no evaluative language.')"
+            },
+            {
+              "task_id": "sentiment_v6_03",
+              "text": "Positive — the review expresses satisfaction with usability, speed, and improved report comprehension.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Positive — the review expresses satisfaction with usability, speed, and improved report comprehension.')"
+            },
+            {
+              "task_id": "sentiment_v6_04",
+              "text": "Negative — the review lists multiple functional failures and frustrations with the printer's performance.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output=\"Negative — the review lists multiple functional failures and frustrations with the printer's performance.\")"
+            },
+            {
+              "task_id": "sentiment_v6_05",
+              "text": "Mixed — the review compliments the location and staff but expresses disappointment about room size.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — the review compliments the location and staff but expresses disappointment about room size.')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — the candidate answer correctly classifies the sentiment as neutral and provides a valid one-sentence justification.",
+          "tokens": 137
+        }
+      }
+    },
+    {
+      "task_id": "sentiment_v6_03",
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The new dashboard is intuitive, loads quickly, and finally makes the reports easy to understand.\"",
+      "task_type": "sentiment_analysis",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Positive — The statement contains exclusively favorable descriptors (\"intuitive,\" \"loads quickly,\" \"finally makes...easy to understand\") with no negative elements.",
+          "finish_reason": "stop",
+          "prompt_tokens": 86,
+          "completion_tokens": 30,
+          "total_tokens": 116,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Positive — The statement contains exclusively favorable descriptors (\"intuitive,\" \"loads quickly,\" \"finally makes...easy to understand\") with no negative elements.')",
+          "optimization": {
+            "task_type": "sentiment_analysis",
+            "confidence": 0.978,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Use only labels requested by the user and give exactly the requested concise justification.",
+            "max_tokens": 48,
+            "validator_name": "sentiment",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 15,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "sentiment_analysis": [
+                  "classify_sentiment",
+                  "sentiment_topic"
+                ]
+              },
+              "mode": "label_reason",
+              "token_policy_reason": "label with concise reason",
+              "min_tokens": 24,
+              "category_max_tokens": 128,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": 1,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": true,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Mixed",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 49,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": true
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — The candidate correctly classifies the sentiment as positive and provides a one-sentence justification highlighting the exclusively favorable descriptors.",
+          "tokens": 157
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "sentiment_v6_03",
+          "text": "Positive — the review expresses satisfaction with usability, speed, and improved report comprehension.",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Positive — the review expresses satisfaction with usability, speed, and improved report comprehension.')"
+        },
+        "bundle": {
+          "task_type": "sentiment_analysis",
+          "safety_tier": "experimental",
+          "max_tokens": 392,
+          "prompt_tokens": 301,
+          "completion_tokens": 115,
+          "total_tokens": 416,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"Mixed: the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.\",\n  \"1\": \"Neutral: the sentence is a factual statement about a future action with no evaluative language.\",\n  \"2\": \"Positive: the review expresses satisfaction with usability, speed, and improved report comprehension.\",\n  \"3\": \"Negative: the review lists multiple functional failures and frustrations with the printer's performance.\",\n  \"4\": \"Mixed: the review compliments the location and staff but expresses disappointment about room size.\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "sentiment_v6_01",
+              "text": "Mixed — the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.')"
+            },
+            {
+              "task_id": "sentiment_v6_02",
+              "text": "Neutral — the sentence is a factual statement about a future action with no evaluative language.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Neutral — the sentence is a factual statement about a future action with no evaluative language.')"
+            },
+            {
+              "task_id": "sentiment_v6_03",
+              "text": "Positive — the review expresses satisfaction with usability, speed, and improved report comprehension.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Positive — the review expresses satisfaction with usability, speed, and improved report comprehension.')"
+            },
+            {
+              "task_id": "sentiment_v6_04",
+              "text": "Negative — the review lists multiple functional failures and frustrations with the printer's performance.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output=\"Negative — the review lists multiple functional failures and frustrations with the printer's performance.\")"
+            },
+            {
+              "task_id": "sentiment_v6_05",
+              "text": "Mixed — the review compliments the location and staff but expresses disappointment about room size.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — the review compliments the location and staff but expresses disappointment about room size.')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — the candidate answer correctly classifies the sentiment as positive and provides a one-sentence justification covering the key points.",
+          "tokens": 144
+        }
+      }
+    },
+    {
+      "task_id": "sentiment_v6_04",
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The printer jams constantly, wastes paper, and takes several attempts to connect.\"",
+      "task_type": "sentiment_analysis",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Negative — The statement lists multiple functional failures and frustrations without any redeeming qualities.",
+          "finish_reason": "stop",
+          "prompt_tokens": 83,
+          "completion_tokens": 17,
+          "total_tokens": 100,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Negative — The statement lists multiple functional failures and frustrations without any redeeming qualities.')",
+          "optimization": {
+            "task_type": "sentiment_analysis",
+            "confidence": 0.978,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Use only labels requested by the user and give exactly the requested concise justification.",
+            "max_tokens": 48,
+            "validator_name": "sentiment",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 15,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "sentiment_analysis": [
+                  "classify_sentiment",
+                  "sentiment_topic"
+                ]
+              },
+              "mode": "label_reason",
+              "token_policy_reason": "label with concise reason",
+              "min_tokens": 24,
+              "category_max_tokens": 128,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": 1,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": true,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Mixed",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 45,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": true
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — The candidate correctly classifies the sentiment as negative and provides a one-sentence justification.",
+          "tokens": 136
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "sentiment_v6_04",
+          "text": "Negative — the review lists multiple functional failures and frustrations with the printer's performance.",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output=\"Negative — the review lists multiple functional failures and frustrations with the printer's performance.\")"
+        },
+        "bundle": {
+          "task_type": "sentiment_analysis",
+          "safety_tier": "experimental",
+          "max_tokens": 392,
+          "prompt_tokens": 301,
+          "completion_tokens": 115,
+          "total_tokens": 416,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"Mixed: the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.\",\n  \"1\": \"Neutral: the sentence is a factual statement about a future action with no evaluative language.\",\n  \"2\": \"Positive: the review expresses satisfaction with usability, speed, and improved report comprehension.\",\n  \"3\": \"Negative: the review lists multiple functional failures and frustrations with the printer's performance.\",\n  \"4\": \"Mixed: the review compliments the location and staff but expresses disappointment about room size.\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "sentiment_v6_01",
+              "text": "Mixed — the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.')"
+            },
+            {
+              "task_id": "sentiment_v6_02",
+              "text": "Neutral — the sentence is a factual statement about a future action with no evaluative language.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Neutral — the sentence is a factual statement about a future action with no evaluative language.')"
+            },
+            {
+              "task_id": "sentiment_v6_03",
+              "text": "Positive — the review expresses satisfaction with usability, speed, and improved report comprehension.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Positive — the review expresses satisfaction with usability, speed, and improved report comprehension.')"
+            },
+            {
+              "task_id": "sentiment_v6_04",
+              "text": "Negative — the review lists multiple functional failures and frustrations with the printer's performance.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output=\"Negative — the review lists multiple functional failures and frustrations with the printer's performance.\")"
+            },
+            {
+              "task_id": "sentiment_v6_05",
+              "text": "Mixed — the review compliments the location and staff but expresses disappointment about room size.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — the review compliments the location and staff but expresses disappointment about room size.')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — the candidate answer correctly classifies the sentiment as negative and provides a one-sentence justification.",
+          "tokens": 137
+        }
+      }
+    },
+    {
+      "task_id": "sentiment_v6_05",
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The hotel has an excellent location and helpful staff, although the rooms are smaller than advertised.\"",
+      "task_type": "sentiment_analysis",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Mixed — Justification: The review contains both strong praise (excellent location, helpful staff) and a notable complaint (rooms smaller than advertised), creating balanced positive and negative elements without one clearly dominating.",
+          "finish_reason": "stop",
+          "prompt_tokens": 86,
+          "completion_tokens": 44,
+          "total_tokens": 130,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — Justification: The review contains both strong praise (excellent location, helpful staff) and a notable complaint (rooms smaller than advertised), creating balanced positive and negative elements without one clearly dominating.')",
+          "optimization": {
+            "task_type": "sentiment_analysis",
+            "confidence": 0.978,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Use only labels requested by the user and give exactly the requested concise justification.",
+            "max_tokens": 48,
+            "validator_name": "sentiment",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 0,
+                "sentiment_analysis": 15,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "sentiment_analysis": [
+                  "classify_sentiment",
+                  "sentiment_topic"
+                ]
+              },
+              "mode": "label_reason",
+              "token_policy_reason": "label with concise reason",
+              "min_tokens": 24,
+              "category_max_tokens": 128,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": 1,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": true,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Mixed",
+                  "Neutral"
+                ],
+                "requested_entity_types": [
+                  "location"
+                ]
+              },
+              "instruction_tokens_estimate": 51,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": true
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — The candidate correctly classifies the sentiment as mixed and provides a one-sentence justification that addresses both the positive and negative elements.",
+          "tokens": 171
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "sentiment_v6_05",
+          "text": "Mixed — the review compliments the location and staff but expresses disappointment about room size.",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — the review compliments the location and staff but expresses disappointment about room size.')"
+        },
+        "bundle": {
+          "task_type": "sentiment_analysis",
+          "safety_tier": "experimental",
+          "max_tokens": 392,
+          "prompt_tokens": 301,
+          "completion_tokens": 115,
+          "total_tokens": 416,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"Mixed: the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.\",\n  \"1\": \"Neutral: the sentence is a factual statement about a future action with no evaluative language.\",\n  \"2\": \"Positive: the review expresses satisfaction with usability, speed, and improved report comprehension.\",\n  \"3\": \"Negative: the review lists multiple functional failures and frustrations with the printer's performance.\",\n  \"4\": \"Mixed: the review compliments the location and staff but expresses disappointment about room size.\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "sentiment_v6_01",
+              "text": "Mixed — the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — the review praises comfort and sound clarity but criticizes unreliable wireless connectivity.')"
+            },
+            {
+              "task_id": "sentiment_v6_02",
+              "text": "Neutral — the sentence is a factual statement about a future action with no evaluative language.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Neutral — the sentence is a factual statement about a future action with no evaluative language.')"
+            },
+            {
+              "task_id": "sentiment_v6_03",
+              "text": "Positive — the review expresses satisfaction with usability, speed, and improved report comprehension.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Positive — the review expresses satisfaction with usability, speed, and improved report comprehension.')"
+            },
+            {
+              "task_id": "sentiment_v6_04",
+              "text": "Negative — the review lists multiple functional failures and frustrations with the printer's performance.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output=\"Negative — the review lists multiple functional failures and frustrations with the printer's performance.\")"
+            },
+            {
+              "task_id": "sentiment_v6_05",
+              "text": "Mixed — the review compliments the location and staff but expresses disappointment about room size.",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='Mixed — the review compliments the location and staff but expresses disappointment about room size.')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — the candidate correctly identifies the sentiment as mixed and provides a one-sentence justification matching the requested format.",
+          "tokens": 142
+        }
+      }
+    }
+  ]
+}

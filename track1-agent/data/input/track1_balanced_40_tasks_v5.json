@@ -1,0 +1,162 @@
+[
+  {
+    "task_id": "factual_v5_01",
+    "prompt": "Why does metal usually feel colder than wood at the same room temperature?"
+  },
+  {
+    "task_id": "factual_v5_02",
+    "prompt": "What is the purpose of a database index, and what trade-off does adding many indexes create?"
+  },
+  {
+    "task_id": "factual_v5_03",
+    "prompt": "Why do stars appear to twinkle more than planets when viewed from Earth?"
+  },
+  {
+    "task_id": "factual_v5_04",
+    "prompt": "What is the difference between authentication and authorization in a software system?"
+  },
+  {
+    "task_id": "factual_v5_05",
+    "prompt": "Why does adding salt to icy roads help melt the ice?"
+  },
+  {
+    "task_id": "math_v5_01",
+    "prompt": "A warehouse has 1,200 boxes. It ships 35% of them in the morning and then ships 180 more in the afternoon. How many boxes remain?"
+  },
+  {
+    "task_id": "math_v5_02",
+    "prompt": "A tank is filled at 18 liters per minute for 25 minutes, then 90 liters are drained. How many liters remain in the tank?"
+  },
+  {
+    "task_id": "math_v5_03",
+    "prompt": "A jacket marked at $160 is discounted by 25%, and then 8% sales tax is applied to the discounted price. What is the final price?"
+  },
+  {
+    "task_id": "math_v5_04",
+    "prompt": "A train travels 150 km at 75 km/h, waits for 30 minutes, and then travels another 90 km at 60 km/h. What is the total elapsed time?"
+  },
+  {
+    "task_id": "math_v5_05",
+    "prompt": "A class has 18 students who passed and 6 who failed. After 4 more students take the test and all pass, what percentage of the class has passed?"
+  },
+  {
+    "task_id": "sentiment_v5_01",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The camera produces beautiful photos, but its battery rarely lasts through a full day.\""
+  },
+  {
+    "task_id": "sentiment_v5_02",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The package arrived on Tuesday and contained the three items listed on the invoice.\""
+  },
+  {
+    "task_id": "sentiment_v5_03",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"I was impressed by how quickly support solved the issue and explained the cause clearly.\""
+  },
+  {
+    "task_id": "sentiment_v5_04",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The app freezes every few minutes, loses saved work, and offers no useful error message.\""
+  },
+  {
+    "task_id": "sentiment_v5_05",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The restaurant was affordable and the staff were friendly, although the food took nearly an hour to arrive.\""
+  },
+  {
+    "task_id": "summary_v5_01",
+    "prompt": "Summarize the passage in exactly one sentence of no more than 22 words:\n\nA city library extended its weekend hours and added self-service checkout machines. Visitor numbers rose by 18% over two months, while average waiting time at the checkout desk fell. Some older visitors requested more staff assistance with the machines."
+  },
+  {
+    "task_id": "summary_v5_02",
+    "prompt": "Summarize the passage in exactly two bullet points, with no more than 11 words per bullet:\n\nA farm installed drip irrigation across half its fields. Water consumption fell sharply, and crop yields remained stable. The initial installation cost was higher than expected, delaying expansion to the remaining fields."
+  },
+  {
+    "task_id": "summary_v5_03",
+    "prompt": "Summarize the passage in one paragraph of at most 25 words:\n\nA retailer introduced electronic shelf labels in three stores. Staff spent less time updating prices, and pricing errors declined. Customers initially complained that some labels were difficult to read from an angle."
+  },
+  {
+    "task_id": "summary_v5_04",
+    "prompt": "Write a headline followed by exactly two bullet points labeled Benefit and Concern:\n\nA university replaced printed course packets with digital materials. Students gained faster access and printing expenses fell. Several students reported eye strain and difficulty studying when internet access was unreliable."
+  },
+  {
+    "task_id": "summary_v5_05",
+    "prompt": "Summarize the incident using exactly three bullet points labeled Cause, Action, and Result:\n\nAn online store became slow because a background image-processing job consumed most available CPU. Engineers limited the job's resource usage and restarted affected services. Page response times returned to normal, and monitoring alerts were added."
+  },
+  {
+    "task_id": "ner_v5_01",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"Priya Nair visited Northstar Robotics in Singapore on 12 August 2025.\""
+  },
+  {
+    "task_id": "ner_v5_02",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"On Friday, Daniel Kim represented Horizon Foods at a conference in Seoul.\""
+  },
+  {
+    "task_id": "ner_v5_03",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"The Meridian Foundation hired Sofia Alvarez to manage its Madrid office in January.\""
+  },
+  {
+    "task_id": "ner_v5_04",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"Marcus Lee will join Atlas Energy in Calgary next Monday.\""
+  },
+  {
+    "task_id": "ner_v5_05",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"In 2023, Aurora Medical Center appointed Dr. Elias Novak in Prague.\""
+  },
+  {
+    "task_id": "debug_v5_01",
+    "prompt": "The function should return the sum of all numbers in the list, but it skips the first value. Identify the bug and provide a corrected implementation.\n\n```python\ndef total(values):\n    result = 0\n    for i in range(1, len(values)):\n        result += values[i]\n    return result\n```"
+  },
+  {
+    "task_id": "debug_v5_02",
+    "prompt": "The function should remove duplicates while preserving the original order, but it returns values in arbitrary order. Identify the bug and provide a corrected implementation.\n\n```python\ndef unique_in_order(values):\n    return list(set(values))\n```"
+  },
+  {
+    "task_id": "debug_v5_03",
+    "prompt": "The function should return `True` when all characters in `text` are digits and `False` otherwise. It incorrectly returns `True` after checking only the first character. Identify the bug and provide a corrected implementation.\n\n```python\ndef all_digits(text):\n    for ch in text:\n        if not ch.isdigit():\n            return False\n        return True\n```"
+  },
+  {
+    "task_id": "debug_v5_04",
+    "prompt": "The function should return the smallest value in a non-empty list, but it fails when every value is positive. Identify the bug and provide a corrected implementation.\n\n```python\ndef smallest(values):\n    result = 0\n    for value in values:\n        if value < result:\n            result = value\n    return result\n```"
+  },
+  {
+    "task_id": "debug_v5_05",
+    "prompt": "The function should create independent dictionaries for each requested record. Updating one record must not change the others. Identify the bug and provide a corrected implementation.\n\n```python\ndef make_records(count):\n    template = {\"active\": False}\n    return [template] * count\n```"
+  },
+  {
+    "task_id": "logic_v5_01",
+    "prompt": "Evan, Farah, Grace, and Henry each choose a different drink: coffee, tea, juice, or water.\n- Evan does not choose coffee or water.\n- Farah chooses juice.\n- Grace does not choose tea.\n- Henry chooses water.\nWho chooses each drink?"
+  },
+  {
+    "task_id": "logic_v5_02",
+    "prompt": "Four runners—J, K, L, and M—finish in positions 1 through 4.\n- K finishes immediately before L.\n- M finishes first.\n- J finishes after L.\nWhat is the complete order?"
+  },
+  {
+    "task_id": "logic_v5_03",
+    "prompt": "Nora, Omar, and Pia each work in a different department: design, finance, or sales.\n- Nora does not work in finance.\n- Omar works in sales.\n- Pia does not work in design.\nWho works in each department?"
+  },
+  {
+    "task_id": "logic_v5_04",
+    "prompt": "Five tasks—P, Q, R, S, and T—are performed in positions 1 through 5.\n- R is third.\n- P is immediately before Q.\n- T is last.\n- S is immediately after R.\nWhat is the order?"
+  },
+  {
+    "task_id": "logic_v5_05",
+    "prompt": "Four meetings—A, B, C, and D—occur from Monday through Thursday, one per day.\n- D occurs on Thursday.\n- B occurs before C.\n- A occurs immediately after C.\nWhat is the schedule?"
+  },
+  {
+    "task_id": "codegen_v5_01",
+    "prompt": "Write a Python function `rotate_left(items, steps)` that returns a new list rotated left by `steps` positions. Handle empty lists and values of `steps` larger than the list length. Do not modify the input."
+  },
+  {
+    "task_id": "codegen_v5_02",
+    "prompt": "Write a Python function `group_by_first_letter(words)` that returns a dictionary mapping each lowercase first letter to a list of original words in input order. Ignore empty strings."
+  },
+  {
+    "task_id": "codegen_v5_03",
+    "prompt": "Write a Python function `running_totals(numbers)` that returns a list of cumulative sums. Example: `[3, -1, 4]` returns `[3, 2, 6]`."
+  },
+  {
+    "task_id": "codegen_v5_04",
+    "prompt": "Write a Python function `invert_mapping(mapping)` that returns a dictionary mapping each original value to a list of keys that had that value. Preserve the input dictionary's iteration order within each list."
+  },
+  {
+    "task_id": "codegen_v5_05",
+    "prompt": "Write a Python function `chunk_list(items, size)` that splits a list into consecutive chunks of at most `size` elements. Raise `ValueError` when `size` is not positive. Do not modify the input."
+  }
+]

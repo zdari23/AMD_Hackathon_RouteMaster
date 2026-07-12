@@ -1,0 +1,677 @@
+{
+  "dataset": "data/input/track1_balanced_40_tasks_v5.json",
+  "model": "accounts/fireworks/models/kimi-k2p6",
+  "judge_model": "accounts/fireworks/models/glm-5p2",
+  "tiers": [
+    "safe",
+    "cautious",
+    "experimental"
+  ],
+  "max_bundle_size": 5,
+  "min_accuracy": 80.0,
+  "max_accuracy_drop": 0.0,
+  "summary": {
+    "knowledge_qa": {
+      "tasks": 5,
+      "individual_calls": 5,
+      "bundled_calls": 1,
+      "individual_tokens": 818,
+      "bundled_tokens": 682,
+      "individual_correct": 2,
+      "individual_judged": 5,
+      "bundled_correct": 0,
+      "bundled_judged": 0,
+      "individual_validation_passed": 2,
+      "bundled_validation_passed": 0,
+      "bundle_failures": 1,
+      "token_savings_pct": null,
+      "individual_accuracy_pct": 40.0,
+      "bundled_accuracy_pct": null,
+      "accuracy_delta_pct_points": null,
+      "recommendation": "reject_bundle_execution_failure"
+    }
+  },
+  "eligibility": [
+    {
+      "task_id": "factual_v5_01",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "factual_v5_02",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "factual_v5_03",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "factual_v5_04",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "factual_v5_05",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "math_v5_01",
+      "eligible": true,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "math_v5_02",
+      "eligible": true,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "math_v5_03",
+      "eligible": true,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "math_v5_04",
+      "eligible": false,
+      "reason": "router confidence below bundle threshold"
+    },
+    {
+      "task_id": "math_v5_05",
+      "eligible": true,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "sentiment_v5_01",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "sentiment_v5_02",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "sentiment_v5_03",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "sentiment_v5_04",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "sentiment_v5_05",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "summary_v5_01",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "summary_v5_02",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "summary_v5_03",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "summary_v5_04",
+      "eligible": false,
+      "reason": "summarization/general_summary is not bundle-safe"
+    },
+    {
+      "task_id": "summary_v5_05",
+      "eligible": false,
+      "reason": "summarization/general_summary is not bundle-safe"
+    },
+    {
+      "task_id": "ner_v5_01",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "ner_v5_02",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "ner_v5_03",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "ner_v5_04",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "ner_v5_05",
+      "eligible": true,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "debug_v5_01",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "debug_v5_02",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "debug_v5_03",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "debug_v5_04",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "debug_v5_05",
+      "eligible": false,
+      "reason": "explanation or steps require isolated execution"
+    },
+    {
+      "task_id": "logic_v5_01",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "logic_v5_02",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "logic_v5_03",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "logic_v5_04",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "logic_v5_05",
+      "eligible": true,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "codegen_v5_01",
+      "eligible": false,
+      "reason": "code_authoring/single_function is not bundle-safe"
+    },
+    {
+      "task_id": "codegen_v5_02",
+      "eligible": false,
+      "reason": "list or table output is unsafe inside a shared envelope"
+    },
+    {
+      "task_id": "codegen_v5_03",
+      "eligible": false,
+      "reason": "list or table output is unsafe inside a shared envelope"
+    },
+    {
+      "task_id": "codegen_v5_04",
+      "eligible": false,
+      "reason": "list or table output is unsafe inside a shared envelope"
+    },
+    {
+      "task_id": "codegen_v5_05",
+      "eligible": false,
+      "reason": "code_authoring/single_function is not bundle-safe"
+    }
+  ],
+  "excluded_reasons": {
+    "excluded by category filter": 17,
+    "router confidence below bundle threshold": 1,
+    "explanation or steps require isolated execution": 10,
+    "summarization/general_summary is not bundle-safe": 2,
+    "code_authoring/single_function is not bundle-safe": 2,
+    "list or table output is unsafe inside a shared envelope": 3
+  },
+  "bundles": [
+    {
+      "bundle_index": 0,
+      "task_type": "knowledge_qa",
+      "task_ids": [
+        "factual_v5_01",
+        "factual_v5_02",
+        "factual_v5_03",
+        "factual_v5_04",
+        "factual_v5_05"
+      ],
+      "max_tokens": 504,
+      "prompt_tokens": 178,
+      "completion_tokens": 504,
+      "total_tokens": 682,
+      "finish_reason": "length",
+      "raw_response": "```json\n{\n  \"0\": \"Metal feels colder than wood at the same room temperature because metal is a much better thermal conductor. When you touch metal, heat rapidly flows from your warmer skin into the metal, creating a steep temperature drop at your skin's surface that your nerves perceive as cold. Wood is a poor conductor (thermal insulator), so heat transfer from your skin happens much more slowly, making it feel closer to your body temperature even though both materials are actually at identical room temperature.\",\n  \"1\": \"A database index speeds up read queries (especially SELECT, WHERE, JOIN, and ORDER BY operations) by allowing the database to quickly locate data without scanning every row in a table, similar to how a book's index lets you find information without reading the entire book. The trade-off of adding many indexes is increased overhead for write operations (INSERT, UPDATE, DELETE) because each index must be updated whenever the underlying data changes. Additional trade-offs include increased storage space consumption and potential performance degradation for the query optimizer, which may spend more time choosing between multiple indexes.\",\n  \"2\": \"Stars appear to twinkle more than planets because stars are extremely distant point sources of light, so their light arrives as virtually parallel rays that are easily bent and distorted by turbulent air pockets in Earth's atmosphere. Planets are much closer and appear as tiny disks (not points) to our eyes; the light from different parts of a planet's disk passes through slightly different atmospheric paths, so the distortions average out and partially cancel each other, making planets appear much steadier.\",\n  \"3\": \"Authentication verifies who you are—confirming a user's identity through credentials like passwords, biometrics, or security tokens (answering \\\"Are you who you claim to be?\\\"). Authorization determines what you can do—granting or restricting access to specific resources, actions, or data after identity is established (answering \\\"What are you allowed to do?\\\"). A user can be successfully authenticated (proven identity) but still denied authorization (blocked from accessing certain files or functions).\",\n  \"4\": \"Adding salt to icy roads helps melt ice through freezing point depression. Salt (sodium chloride or other compounds) dissolves into water on the ice surface, creating a salt solution that has a lower freezing point than pure water. For example, a 23% salt solution freezes at about -21°C (-6°F) instead of 0°C (32°F). This means ice can",
+      "error": "bundle response is not valid JSON: Expecting value"
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "factual_v5_01",
+      "task_type": "knowledge_qa",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Metal feels colder than wood at the same room temperature because it has higher thermal conductivity. When you touch metal, it rapidly draws heat away from your skin, causing a faster drop in skin temperature and a stronger sensation of cold. Wood, being a poor thermal conductor, transfers heat away from your skin much more slowly, so it doesn't feel as cold.",
+          "finish_reason": "stop",
+          "prompt_tokens": 78,
+          "completion_tokens": 71,
+          "total_tokens": 149,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output=\"Metal feels colder than wood at the same room temperature because it has higher thermal conductivity. When you touch metal, it rapidly draws heat away from your skin, causing a faster drop in skin temperature and a stronger sensation of cold. Wood, being a poor thermal conductor, transfers heat away from your skin much more slowly, so it doesn't feel as cold.\")",
+          "optimization": {
+            "task_type": "knowledge_qa",
+            "confidence": 0.803,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Answer the factual question directly and accurately. Use only the detail necessary to fully answer the request. Do not add unrelated facts. Follow any requested length or format exactly.",
+            "max_tokens": 96,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 7,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "knowledge_qa": [
+                  "why_how_intent"
+                ]
+              },
+              "mode": "explanation",
+              "token_policy_reason": "how/why/explanation request; capped at previous-version maximum",
+              "min_tokens": 96,
+              "category_max_tokens": 96,
+              "aggressive": false,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 19,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: The candidate answer accurately explains that metal feels colder due to its higher thermal conductivity, which draws heat away from the skin faster than wood.",
+          "tokens": 178
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "bundle response is not valid JSON: Expecting value",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "factual_v5_02",
+      "task_type": "knowledge_qa",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "A database index speeds up data retrieval by allowing the database engine to locate rows without scanning the entire table, similar to an index in a book.\n\nThe trade-off of adding many indexes is slower write performance (INSERT, UPDATE, DELETE operations) and increased storage space, because each index must be maintained whenever the underlying data changes.",
+          "finish_reason": "stop",
+          "prompt_tokens": 83,
+          "completion_tokens": 66,
+          "total_tokens": 149,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='A database index speeds up data retrieval by allowing the database engine to locate rows without scanning the entire table, similar to an index in a book.\\n\\nThe trade-off of adding many indexes is slower write performance (INSERT, UPDATE, DELETE operations) and increased storage space, because each index must be maintained whenever the underlying data changes.')",
+          "optimization": {
+            "task_type": "knowledge_qa",
+            "confidence": 0.825,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Answer the factual question directly and accurately. Use only the detail necessary to fully answer the request. Do not add unrelated facts. Follow any requested length or format exactly.",
+            "max_tokens": 96,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 8,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "knowledge_qa": [
+                  "what_is_intent"
+                ]
+              },
+              "mode": "direct",
+              "token_policy_reason": "direct factual answer",
+              "min_tokens": 48,
+              "category_max_tokens": 96,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 23,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The answer correctly identifies the purpose of an index (faster data retrieval) and the trade-offs of adding many (slower writes and increased storage).",
+          "tokens": 179
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "bundle response is not valid JSON: Expecting value",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "factual_v5_03",
+      "task_type": "knowledge_qa",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Stars twinkle more than planets because they are much farther away, appearing as point sources of light. Their light travels through Earth's atmosphere, where air pockets of varying temperature and density act like lenses, bending the light and causing rapid fluctuations in brightness and position—this is scintillation.\n\nPlanets are closer and appear as small disks rather than points. While light from one edge of a planet's disk may be bent one way, light from the opposite edge bends another way. These",
+          "finish_reason": "length",
+          "prompt_tokens": 79,
+          "completion_tokens": 96,
+          "total_tokens": 175,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=False, errors=['truncated response'], repaired_output=\"Stars twinkle more than planets because they are much farther away, appearing as point sources of light. Their light travels through Earth's atmosphere, where air pockets of varying temperature and density act like lenses, bending the light and causing rapid fluctuations in brightness and position—this is scintillation.\\n\\nPlanets are closer and appear as small disks rather than points. While light from one edge of a planet's disk may be bent one way, light from the opposite edge bends another way. These\")",
+          "optimization": {
+            "task_type": "knowledge_qa",
+            "confidence": 0.803,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Answer the factual question directly and accurately. Use only the detail necessary to fully answer the request. Do not add unrelated facts. Follow any requested length or format exactly.",
+            "max_tokens": 96,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 7,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "knowledge_qa": [
+                  "why_how_intent"
+                ]
+              },
+              "mode": "explanation",
+              "token_policy_reason": "how/why/explanation request; capped at previous-version maximum",
+              "min_tokens": 96,
+              "category_max_tokens": 96,
+              "aggressive": false,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 18,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "incorrect",
+          "reason": "INCORRECT The candidate answer is cut off mid-sentence and does not provide a complete explanation.",
+          "tokens": 196
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "bundle response is not valid JSON: Expecting value",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "factual_v5_04",
+      "task_type": "knowledge_qa",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "**Authentication** verifies *who you are* — it confirms your identity. Examples: entering a password, using a fingerprint, or completing multi-factor verification.\n\n**Authorization** determines *what you can do* — it controls access to resources after identity is established. Examples: checking if a user can view an admin dashboard, edit a file, or delete a record.\n\n**Key distinction**: Authentication happens first (login), then authorization applies (permissions). You can be authenticated (logged in",
+          "finish_reason": "length",
+          "prompt_tokens": 77,
+          "completion_tokens": 96,
+          "total_tokens": 173,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=False, errors=['truncated response'], repaired_output='**Authentication** verifies *who you are* — it confirms your identity. Examples: entering a password, using a fingerprint, or completing multi-factor verification.\\n\\n**Authorization** determines *what you can do* — it controls access to resources after identity is established. Examples: checking if a user can view an admin dashboard, edit a file, or delete a record.\\n\\n**Key distinction**: Authentication happens first (login), then authorization applies (permissions). You can be authenticated (logged in')",
+          "optimization": {
+            "task_type": "knowledge_qa",
+            "confidence": 0.869,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Answer the factual question directly and accurately. Use only the detail necessary to fully answer the request. Do not add unrelated facts. Follow any requested length or format exactly.",
+            "max_tokens": 96,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 10,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "knowledge_qa": [
+                  "what_is_intent",
+                  "concept_topic"
+                ]
+              },
+              "mode": "direct",
+              "token_policy_reason": "direct factual answer",
+              "min_tokens": 48,
+              "category_max_tokens": 96,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 22,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "incorrect",
+          "reason": "INCORRECT The candidate answer is cut off mid-sentence at the end (\"logged in\") and is therefore incomplete.",
+          "tokens": 197
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "bundle response is not valid JSON: Expecting value",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "factual_v5_05",
+      "task_type": "knowledge_qa",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Adding salt to icy roads lowers the freezing point of water through a process called freezing point depression. When salt (sodium chloride) dissolves in water, it disrupts the formation of ice crystals, requiring temperatures below 0°C (32°F) for water to freeze. A 10% salt solution freezes at about -6°C (21°F), while a 20% solution freezes at roughly -16°C (3°F). This allows ice to melt at temperatures where pure",
+          "finish_reason": "length",
+          "prompt_tokens": 76,
+          "completion_tokens": 96,
+          "total_tokens": 172,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=False, errors=['truncated response'], repaired_output='Adding salt to icy roads lowers the freezing point of water through a process called freezing point depression. When salt (sodium chloride) dissolves in water, it disrupts the formation of ice crystals, requiring temperatures below 0°C (32°F) for water to freeze. A 10% salt solution freezes at about -6°C (21°F), while a 20% solution freezes at roughly -16°C (3°F). This allows ice to melt at temperatures where pure')",
+          "optimization": {
+            "task_type": "knowledge_qa",
+            "confidence": 0.803,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Answer the factual question directly and accurately. Use only the detail necessary to fully answer the request. Do not add unrelated facts. Follow any requested length or format exactly.",
+            "max_tokens": 96,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 7,
+                "math_solving": 0,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "knowledge_qa": [
+                  "why_how_intent"
+                ]
+              },
+              "mode": "explanation",
+              "token_policy_reason": "how/why/explanation request; capped at previous-version maximum",
+              "min_tokens": 96,
+              "category_max_tokens": 96,
+              "aggressive": false,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 13,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "incorrect",
+          "reason": "INCORRECT The candidate answer is cut off mid-sentence (\"...where pure\") and is therefore incomplete.",
+          "tokens": 194
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "bundle response is not valid JSON: Expecting value",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    }
+  ]
+}

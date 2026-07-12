@@ -1,0 +1,162 @@
+[
+  {
+    "task_id": "factual_v2_01",
+    "answer": "The main difference between HTTP and HTTPS is that HTTPS encrypts data transmitted between a browser and a website, while HTTP sends data in plain text.\n\nTLS (Transport Layer Security) protects this data through three mechanisms:\n\n1. **Encryption** \u2014 scrambles data so interceptors cannot read it\n2. **Authentication** \u2014 verifies the server's identity via digital certificates, preventing impostor websites\n3. **Integrity** \u2014 detects whether data was altered or tampered with during transmission\n\nTLS establishes this protection through a handshake process where the browser and server agree on encryption algorithms, authenticate the server (and optionally the client), and generate shared secret keys for the session."
+  },
+  {
+    "task_id": "factual_v2_02",
+    "answer": "Bridges and railway tracks include expansion joints or gaps to accommodate thermal expansion and contraction. Materials expand when heated and contract when cooled. Without these gaps, stress from temperature changes would cause:\n\n- **Buckling or warping** in hot weather as metal rails or bridge components push against each other with nowhere to expand\n- **Cracking or fracture** in cold weather as materials pull apart\n\nA continuous 1 km steel rail can expand or contract by roughly 12 cm across a 40\u00b0C temperature range. Expansion joints allow controlled movement, preventing structural damage and maintaining safety."
+  },
+  {
+    "task_id": "factual_v2_03",
+    "answer": "RAM (Random Access Memory) is volatile, high-speed temporary memory that the computer uses to hold currently running programs and active data for quick access by the processor. Long-term storage (such as SSDs, HDDs, or flash drives) is non-volatile memory used to permanently store files, applications, and the operating system.\n\nWhen the computer is turned off:\n- **RAM** loses all its contents completely\n- **Long-term storage** retains all data unchanged"
+  },
+  {
+    "task_id": "factual_v2_04",
+    "answer": "Sweating cools the body more effectively when sweat evaporates because evaporation is an endothermic process that requires latent heat of vaporization. When liquid sweat evaporates into water vapor, it absorbs approximately 2,260 joules per gram of heat energy directly from the skin surface. This heat transfer cools the body.\n\nIf sweat merely remains on the skin as liquid, it provides only minimal cooling through conduction to the surrounding air, which is far less efficient. Without evaporation, sweat largely fails to remove significant body heat, especially in humid conditions where evaporation is suppressed."
+  },
+  {
+    "task_id": "factual_v2_05",
+    "answer": "A **checksum** is a small, fixed-size value computed from a file's contents using a mathematical algorithm (such as MD5, SHA-256, or CRC32). It acts as a digital fingerprint unique to that specific data.\n\n**How it detects accidental corruption:**\n\n1. **Source generates checksum** \u2014 The original provider calculates and publishes the checksum of the authentic file.\n\n2. **User verifies after transfer** \u2014 After downloading or copying, the user runs the same algorithm on their local file to produce a new checksum.\n\n3. **Comparison** \u2014 If the two checksums match, the file is almost certainly intact. If they differ, even by a single bit, the checksums will differ dramatically, revealing that corruption or alteration occurred during transfer.\n\nChecksums catch errors caused by network glitches, storage faults, memory errors, or other unintentional changes. They do not protect against intentional tampering (for that, cryptographic signatures are needed), but they reliably detect accidental data corruption."
+  },
+  {
+    "task_id": "math_v2_01",
+    "answer": "Answer: 222"
+  },
+  {
+    "task_id": "math_v2_02",
+    "answer": "600 - 0.18 \u00d7 600 + 75 - 40 = 600 - 108 + 75 - 40 = 527\n\nAnswer: 527 liters"
+  },
+  {
+    "task_id": "math_v2_03",
+    "answer": "82"
+  },
+  {
+    "task_id": "math_v2_04",
+    "answer": "Answer: 3.43 hours"
+  },
+  {
+    "task_id": "math_v2_05",
+    "answer": "Customer pays: $210.00\nShop's profit before tax: $20.00"
+  },
+  {
+    "task_id": "sentiment_v2_01",
+    "answer": "Mixed \u2014 The review contains both a clearly positive aspect (spotless and quiet room) and a strongly negative aspect (uncomfortable mattress causing poor sleep)."
+  },
+  {
+    "task_id": "sentiment_v2_02",
+    "answer": "Neutral \u2014 The statement provides factual information about a train schedule without any evaluative or emotional language."
+  },
+  {
+    "task_id": "sentiment_v2_03",
+    "answer": "Positive \u2014 The review describes a seamless, helpful, and cost-free resolution to a problem, with no negative elements mentioned."
+  },
+  {
+    "task_id": "sentiment_v2_04",
+    "answer": "Negative \u2014 The review lists multiple complaints about slower performance, reduced usability, and decreased reliability without any positive aspects."
+  },
+  {
+    "task_id": "sentiment_v2_05",
+    "answer": "Mixed \u2014 The review contains both praise for the camera quality and criticism of the instructions and battery charger."
+  },
+  {
+    "task_id": "summary_v2_01",
+    "answer": "The grocery chain will expand its reusable delivery box program and add store return bins after a four-month pilot cut packaging waste by 31% despite some delays."
+  },
+  {
+    "task_id": "summary_v2_02",
+    "answer": "\u2022 Weekend trains tested more frequently for twelve weeks.\n\u2022 Officials will weigh ridership gains against added costs."
+  },
+  {
+    "task_id": "summary_v2_03",
+    "answer": "A university transformed an unused parking lot into a 60-plot community garden for students and residents, with a biology class monitoring soil and pollinators year-round."
+  },
+  {
+    "task_id": "summary_v2_04",
+    "answer": "**Bicycle-Sharing Pilot Succeeds but Faces Security Challenges**\n\n\u2022 **Result:** Six-month campus bicycle-sharing pilot doubled daily bicycle trips and cut short car journeys by 14%; administrators approved expansion\n\n\u2022 **Concern:** Theft and damaged locks rose during final two months; stronger locks and secure docking stations will be added for expansion"
+  },
+  {
+    "task_id": "summary_v2_05",
+    "answer": "An employee opened a fraudulent invoice attachment, allowing malware to access a shared finance folder. Security software isolated the computer within seven minutes, and investigators found no evidence that customer records were accessed. The company will conduct mandatory phishing training as its next action."
+  },
+  {
+    "task_id": "ner_v2_01",
+    "answer": "[{\"text\":\"9 November 2026\",\"type\":\"DATE\"},{\"text\":\"Daniel Cho\",\"type\":\"PERSON\"},{\"text\":\"Meridian Systems\",\"type\":\"ORG\"},{\"text\":\"Dublin\",\"type\":\"LOCATION\"}]"
+  },
+  {
+    "task_id": "ner_v2_02",
+    "answer": "[{\"text\":\"Sofia Alvarez\",\"type\":\"PERSON\"},{\"text\":\"UNESCO\",\"type\":\"ORG\"},{\"text\":\"Madrid\",\"type\":\"LOCATION\"},{\"text\":\"last Friday\",\"type\":\"DATE\"}]"
+  },
+  {
+    "task_id": "ner_v2_03",
+    "answer": "[{\"text\":\"Arctic Research Council\",\"type\":\"ORG\"},{\"text\":\"Lars Eriksen\",\"type\":\"PERSON\"},{\"text\":\"Troms\u00f8\",\"type\":\"LOCATION\"},{\"text\":\"January 2027\",\"type\":\"DATE\"}]"
+  },
+  {
+    "task_id": "ner_v2_04",
+    "answer": "[{\"text\":\"Tuesday\",\"type\":\"DATE\"},{\"text\":\"18 August\",\"type\":\"DATE\"},{\"text\":\"Aisha Rahman\",\"type\":\"PERSON\"},{\"text\":\"Cairo\",\"type\":\"LOCATION\"},{\"text\":\"BluePeak Energy\",\"type\":\"ORG\"},{\"text\":\"Abu Dhabi\",\"type\":\"LOCATION\"}]"
+  },
+  {
+    "task_id": "ner_v2_05",
+    "answer": "[{\"text\":\"Kyoto University\",\"type\":\"ORG\"},{\"text\":\"Emil Novak\",\"type\":\"PERSON\"},{\"text\":\"Prague\",\"type\":\"LOCATION\"},{\"text\":\"March 2028\",\"type\":\"DATE\"}]"
+  },
+  {
+    "task_id": "debug_v2_01",
+    "answer": "def average(nums):\n    if not nums:\n        raise ValueError(\"nums must not be empty\")\n    total = 0\n    for n in nums:\n        total += n\n    return total / len(nums)"
+  },
+  {
+    "task_id": "debug_v2_02",
+    "answer": "def transpose(matrix):\n    rows = len(matrix)\n    cols = len(matrix[0])\n    result = [[None] * rows for _ in range(cols)]\n    for r in range(rows):\n        for c in range(cols):\n            result[c][r] = matrix[r][c]\n    return result"
+  },
+  {
+    "task_id": "debug_v2_03",
+    "answer": "def is_prime(n):\n    if n < 2:\n        return False\n    if n % 2 == 0:\n        return n == 2\n    divisor = 3\n    while divisor * divisor <= n:\n        if n % divisor == 0:\n            return False\n        divisor += 2\n    return True"
+  },
+  {
+    "task_id": "debug_v2_04",
+    "answer": "def get_page(items, page, page_size):\n    if page < 0:\n        raise ValueError(\"page must be non-negative\")\n    if page_size <= 0:\n        raise ValueError(\"page_size must be positive\")\n    start = page * page_size\n    return items[start:start + page_size]"
+  },
+  {
+    "task_id": "debug_v2_05",
+    "answer": "def sort_by_score(records):\n    return sorted(records, key=lambda record: record[\"score\"], reverse=True)"
+  },
+  {
+    "task_id": "logic_v2_01",
+    "answer": "Iris: Cedar\nJonah: Beacon\nKira: Atlas\nLeon: Delta"
+  },
+  {
+    "task_id": "logic_v2_02",
+    "answer": "From the constraints:\n- R is immediately before S: RS\n- Q is immediately after S: RSQ (so RSQ is a consecutive block)\n- T is in slot 5\n- P is earlier than R\n\nThe block RSQ takes 3 consecutive slots. Since T is in slot 5, RSQ must fit in slots 1-4.\n\nPossible positions for RSQ: slots 1-3 or slots 2-4.\n\nIf RSQ is in slots 2-4: P would need to be in slot 1 (earlier than R in slot 2). This gives P, R, S, Q, T in slots 1-5. \u2713\n\nIf RSQ is in slots 1-3: P would need to be earlier than R (slot 1), but slot 1 is already R. No valid position for P. \u2717\n\nThe only valid schedule:\n\nSlot 1: P\nSlot 2: R\nSlot 3: S\nSlot 4: Q\nSlot 5: T"
+  },
+  {
+    "task_id": "logic_v2_03",
+    "answer": "Owen: red\nNoah: green\nMaya: blue"
+  },
+  {
+    "task_id": "logic_v2_04",
+    "answer": "1. Iris\n2. Eli\n3. Gabe\n4. Hana\n5. Farah"
+  },
+  {
+    "task_id": "logic_v2_05",
+    "answer": "Monday: Z\nTuesday: W\nWednesday: X\nThursday: Y"
+  },
+  {
+    "task_id": "codegen_v2_01",
+    "answer": "def rotate_left(items, k):\n    if not items:\n        return []\n    n = len(items)\n    k = k % n\n    return items[k:] + items[:k]"
+  },
+  {
+    "task_id": "codegen_v2_02",
+    "answer": "def group_anagrams(words):\n    groups = {}\n    first_occurrence = {}\n    \n    for word in words:\n        # Use sorted characters as signature (case-sensitive)\n        signature = tuple(sorted(word))\n        \n        if signature not in groups:\n            groups[signature] = []\n            first_occurrence[signature] = len(first_occurrence)\n        \n        groups[signature].append(word)\n    \n    # Sort groups by first occurrence and return\n    sorted_signatures = sorted(first_occurrence.keys(), key=lambda s: first_occurrence[s])\n    return [groups[sig] for sig in sorted_signatures]"
+  },
+  {
+    "task_id": "codegen_v2_03",
+    "answer": "def longest_streak(values):\n    if not values:\n        return 0\n    \n    max_streak = 1\n    current_streak = 1\n    \n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            current_streak += 1\n            max_streak = max(max_streak, current_streak)\n        else:\n            current_streak = 1\n    \n    return max_streak"
+  },
+  {
+    "task_id": "codegen_v2_04",
+    "answer": "def parse_settings(lines):\n    result = {}\n    for line in lines:\n        stripped = line.strip()\n        if not stripped:\n            continue\n        if '=' not in stripped:\n            raise ValueError(f\"Line without '=': {stripped!r}\")\n        key, sep, value = stripped.partition('=')\n        key = key.strip()\n        if not key:\n            raise ValueError(f\"Empty key in line: {stripped!r}\")\n        result[key] = value.strip()\n    return result"
+  },
+  {
+    "task_id": "codegen_v2_05",
+    "answer": "def top_k_frequent(nums, k):\n    if k < 0:\n        raise ValueError(\"k must be non-negative\")\n    if k == 0:\n        return []\n    \n    from collections import Counter\n    \n    freq = Counter(nums)\n    \n    # Sort by frequency descending, then by number ascending for ties\n    sorted_items = sorted(freq.items(), key=lambda x: (-x[1], x[0]))\n    \n    # Return up to k distinct numbers\n    return [num for num, count in sorted_items[:k]]"
+  }
+]

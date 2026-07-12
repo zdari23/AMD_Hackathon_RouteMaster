@@ -1,0 +1,162 @@
+[
+  {
+    "task_id": "factual_v3_01",
+    "prompt": "Why does food usually cook faster in a pressure cooker than in an uncovered pot, even when both are heated on the same stove?"
+  },
+  {
+    "task_id": "factual_v3_02",
+    "prompt": "Why can spreading salt on an icy road help melt the ice when the air temperature is only slightly below 0°C?"
+  },
+  {
+    "task_id": "factual_v3_03",
+    "prompt": "What is a database index, and why can adding many indexes improve some queries while making inserts and updates slower?"
+  },
+  {
+    "task_id": "factual_v3_04",
+    "prompt": "How does total internal reflection allow an optical fiber to carry light over long distances?"
+  },
+  {
+    "task_id": "factual_v3_05",
+    "prompt": "Why do antibiotics treat many bacterial infections but not viral infections such as influenza?"
+  },
+  {
+    "task_id": "math_v3_01",
+    "prompt": "A bookstore begins with 500 notebooks. It sells 18% of them, ships 65 more to a school, and later receives 30 returned notebooks in resalable condition. How many notebooks are available afterward?"
+  },
+  {
+    "task_id": "math_v3_02",
+    "prompt": "A service plan costs $80. A 12.5% discount is applied, then a $6 service fee is added, and finally 8% tax is charged on the discounted price plus the fee. What is the final amount?"
+  },
+  {
+    "task_id": "math_v3_03",
+    "prompt": "A coffee shop mixes 12 kilograms of beans costing $4.50 per kilogram with 8 kilograms costing $7.00 per kilogram. What is the average cost per kilogram of the mixture?"
+  },
+  {
+    "task_id": "math_v3_04",
+    "prompt": "One machine can complete a batch in 5 hours, and a second machine can complete the same batch in 7.5 hours. If both work together at constant rates, how long will one batch take?"
+  },
+  {
+    "task_id": "math_v3_05",
+    "prompt": "On a map with scale 1:50,000, a walking route measures 7.6 cm. What is the real distance in kilometers, and how many minutes would it take to walk at 4.75 km/h?"
+  },
+  {
+    "task_id": "sentiment_v3_01",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify the label in one sentence.\n\nReview: \"The headphones sound rich and detailed, but the tight headband becomes painful after half an hour.\""
+  },
+  {
+    "task_id": "sentiment_v3_02",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify the label in one sentence.\n\nReview: \"The technician arrived early, fixed the problem quickly, and explained how to prevent it from happening again.\""
+  },
+  {
+    "task_id": "sentiment_v3_03",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify the label in one sentence.\n\nReview: \"The new checkout process is confusing, repeatedly rejects valid cards, and offers no useful error message.\""
+  },
+  {
+    "task_id": "sentiment_v3_04",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify the label in one sentence.\n\nStatement: \"The warehouse opened at 6 a.m., processed 1,240 orders, and closed at 8 p.m.\""
+  },
+  {
+    "task_id": "sentiment_v3_05",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify the label in one sentence.\n\nReview: \"The apartment has a beautiful view and plenty of space, although traffic noise makes the bedroom difficult to use at night.\""
+  },
+  {
+    "task_id": "summary_v3_01",
+    "prompt": "Summarize the passage in exactly one sentence of no more than 22 words:\n\nAfter installing solar panels on three school roofs, the district's electricity purchases fell 18% over a year. Maintenance costs were lower than expected, but cloudy winter weeks still required full grid power. The district approved panels for two more schools."
+  },
+  {
+    "task_id": "summary_v3_02",
+    "prompt": "Summarize the passage in exactly two bullet points, with no more than 10 words per bullet:\n\nA museum tested staying open until 9 p.m. on Fridays for three months. Friday attendance increased by 40%, but evening lectures attracted fewer visitors than expected. The museum made the later closing time permanent while reducing the number of lectures."
+  },
+  {
+    "task_id": "summary_v3_03",
+    "prompt": "Summarize the passage in one paragraph of at most 26 words:\n\nA neighborhood composting pilot diverted 14 tons of food waste from landfill in six months. Residents supported expanding the program, although nearby households reported odors from two collection points. The city will add sites using sealed bins and more frequent pickups."
+  },
+  {
+    "task_id": "summary_v3_04",
+    "prompt": "Write a short headline followed by exactly two bullet points labeled Benefit and Risk:\n\nA health clinic's telemedicine trial reduced missed follow-up appointments by 23% and made specialist consultations easier for rural patients. However, some older patients struggled to install the video application or position their cameras. The clinic will continue the service and offer setup assistance."
+  },
+  {
+    "task_id": "summary_v3_05",
+    "prompt": "Summarize the incident in exactly three sentences. The final sentence must state the next action:\n\nDuring an overnight database migration, an incorrect timezone setting shifted timestamps in newly created records. Monitoring detected the mismatch after 19 minutes, and engineers restored the affected records from the audit log without losing transactions. The team plans to add timezone validation to the migration checklist and staging tests."
+  },
+  {
+    "task_id": "ner_v3_01",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array of objects with \"text\" and \"type\" fields.\n\nText: \"On 12 May 2027, Leila Haddad joined Orion Maritime in Rotterdam.\""
+  },
+  {
+    "task_id": "ner_v3_02",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array of objects with \"text\" and \"type\" fields.\n\nText: \"Marcus Reed represented Global Relief Network at a meeting in Lima last Wednesday.\""
+  },
+  {
+    "task_id": "ner_v3_03",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array of objects with \"text\" and \"type\" fields.\n\nText: \"Seoul National University invited Dr. Nia Okafor to Seoul for its October 2026 symposium.\""
+  },
+  {
+    "task_id": "ner_v3_04",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array of objects with \"text\" and \"type\" fields.\n\nText: \"On Monday, 4 January, Rafael Costa traveled from Lisbon to Munich for Helix Motors.\""
+  },
+  {
+    "task_id": "ner_v3_05",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array of objects with \"text\" and \"type\" fields.\n\nText: \"Aurora Bank appointed Mei Lin as regional director in Kuala Lumpur in March 2029.\""
+  },
+  {
+    "task_id": "debug_v3_01",
+    "prompt": "The function should return the sum of every integer from `start` through `end`, including both endpoints, and raise `ValueError` when `start > end`. It currently omits the final integer. Find the bug and provide a corrected implementation.\n\n```python\ndef sum_between(start, end):\n    total = 0\n    for number in range(start, end):\n        total += number\n    return total\n```"
+  },
+  {
+    "task_id": "debug_v3_02",
+    "prompt": "The function should remove duplicate hashable values while preserving the order of their first appearances. The current implementation can reorder the result. Find the bug and provide a corrected implementation.\n\n```python\ndef unique_in_order(items):\n    return list(set(items))\n```"
+  },
+  {
+    "task_id": "debug_v3_03",
+    "prompt": "The function should compute the factorial of a non-negative integer, including `factorial(0) == 1`, and raise `ValueError` for a negative input. The current implementation fails for zero and negative values. Find and fix the bug.\n\n```python\ndef factorial(n):\n    if n == 1:\n        return 1\n    return n * factorial(n - 1)\n```"
+  },
+  {
+    "task_id": "debug_v3_04",
+    "prompt": "The function should divide every number by `divisor`, return all results in a new list, and raise `ValueError` when the divisor is zero. It currently returns after processing only the first number. Find and fix the bug.\n\n```python\ndef divide_all(nums, divisor):\n    result = []\n    for number in nums:\n        result.append(number / divisor)\n        return result\n```"
+  },
+  {
+    "task_id": "debug_v3_05",
+    "prompt": "The function should return a new dictionary containing the combined counts from `left` and `right`, summing values for shared keys without modifying either input. It currently mutates `left` and overwrites shared counts. Find and fix the bug.\n\n```python\ndef merge_counts(left, right):\n    result = left\n    result.update(right)\n    return result\n```"
+  },
+  {
+    "task_id": "logic_v3_01",
+    "prompt": "Nina, Omar, Priya, and Quentin each use exactly one different way to commute: bus, bicycle, train, or walking.\n\n- Omar takes the train.\n- Nina uses neither the bus nor walking.\n- Priya uses neither the bicycle nor walking.\n- Quentin does not take the bus.\n\nDetermine each person's way of commuting."
+  },
+  {
+    "task_id": "logic_v3_02",
+    "prompt": "Five workshops—A, B, C, D, and E—are scheduled in slots 1 through 5, one per slot.\n\n- D is immediately after B.\n- A is immediately before C.\n- E is in slot 5.\n- B is earlier than A.\n\nWhat is the complete schedule?"
+  },
+  {
+    "task_id": "logic_v3_03",
+    "prompt": "Ivo, Jade, Kian, and Luz each have exactly one different locker color: red, blue, green, or yellow.\n\n- Jade has the yellow locker.\n- Ivo has neither the red nor the green locker.\n- Kian has neither the blue nor the yellow locker.\n- Luz does not have the green locker.\n\nWhich locker color belongs to each person?"
+  },
+  {
+    "task_id": "logic_v3_04",
+    "prompt": "Eva, Finn, Gia, Hugo, and Iris sit in a row of five seats.\n\n- Gia sits in the middle seat.\n- Eva sits immediately to the right of Finn.\n- Iris sits at the far left.\n- Hugo sits next to Gia.\n\nWhat is the seating order from left to right?"
+  },
+  {
+    "task_id": "logic_v3_05",
+    "prompt": "Four parcels—K, L, M, and N—are delivered from Tuesday through Friday, one per day.\n\n- L is delivered the day after K.\n- M is delivered before K.\n- N is delivered on Friday.\n\nOn which day is each parcel delivered?"
+  },
+  {
+    "task_id": "codegen_v3_01",
+    "prompt": "Write a Python function `chunk_list(items, size)` that returns a new list containing consecutive chunks of at most `size` items. The final chunk may be shorter. Raise `ValueError` when `size <= 0`, and return `[]` for an empty input. Example: `chunk_list([1, 2, 3, 4, 5], 2)` returns `[[1, 2], [3, 4], [5]]`."
+  },
+  {
+    "task_id": "codegen_v3_02",
+    "prompt": "Write a Python function `interleave(left, right)` that returns a new list alternating items from `left` and `right`, starting with `left`. When one list is longer, append its remaining items in order. Example: `interleave([1, 2, 3], [\"a\", \"b\"])` returns `[1, \"a\", 2, \"b\", 3]`."
+  },
+  {
+    "task_id": "codegen_v3_03",
+    "prompt": "Write a Python function `find_first_pair(nums, target)` that returns indices `(i, j)` with `i < j` and `nums[i] + nums[j] == target`. Choose the pair with the smallest `j`; if several have that `j`, choose the smallest `i`. Return `None` when no pair exists. Example: `find_first_pair([8, 1, 4, 9, 2], 6)` returns `(2, 4)`."
+  },
+  {
+    "task_id": "codegen_v3_04",
+    "prompt": "Write a Python function `is_balanced_brackets(text)` that returns `True` when every `()`, `[]`, and `{}` bracket in the string is correctly matched and nested. Ignore all non-bracket characters. Return `True` for a string containing no brackets."
+  },
+  {
+    "task_id": "codegen_v3_05",
+    "prompt": "Write a Python function `compress_ranges(nums)` that accepts a sorted list of unique integers and returns consecutive runs as strings. A run of at least two numbers should be written as `\"start-end\"`; a single number should be written alone. Return `[]` for empty input. Example: `compress_ranges([1, 2, 3, 5, 7, 8])` returns `[\"1-3\", \"5\", \"7-8\"]`."
+  }
+]

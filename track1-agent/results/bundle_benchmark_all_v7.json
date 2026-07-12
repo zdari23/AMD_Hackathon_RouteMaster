@@ -1,0 +1,1605 @@
+{
+  "dataset": "data/input/track1_balanced_40_tasks_v7.json",
+  "model": "accounts/fireworks/models/kimi-k2p6",
+  "judge_model": "accounts/fireworks/models/glm-5p2",
+  "tiers": [
+    "safe",
+    "cautious",
+    "experimental"
+  ],
+  "max_bundle_size": 5,
+  "min_accuracy": 80.0,
+  "max_accuracy_drop": 0.0,
+  "force_ineligible": false,
+  "summary": {
+    "knowledge_qa": {
+      "tasks": 7,
+      "individual_calls": 7,
+      "bundled_calls": 2,
+      "individual_tokens": 0,
+      "bundled_tokens": 0,
+      "individual_correct": 0,
+      "individual_judged": 0,
+      "individual_judge_tokens": 0,
+      "bundled_correct": 0,
+      "bundled_judged": 0,
+      "bundled_judge_tokens": 0,
+      "individual_validation_passed": 0,
+      "bundled_validation_passed": 0,
+      "bundle_failures": 2,
+      "token_savings_pct": null,
+      "individual_accuracy_pct": null,
+      "bundled_accuracy_pct": null,
+      "accuracy_delta_pct_points": null,
+      "recommendation": "reject_bundle_execution_failure"
+    },
+    "math_solving": {
+      "tasks": 3,
+      "individual_calls": 3,
+      "bundled_calls": 1,
+      "individual_tokens": 0,
+      "bundled_tokens": 0,
+      "individual_correct": 0,
+      "individual_judged": 0,
+      "individual_judge_tokens": 0,
+      "bundled_correct": 0,
+      "bundled_judged": 0,
+      "bundled_judge_tokens": 0,
+      "individual_validation_passed": 0,
+      "bundled_validation_passed": 0,
+      "bundle_failures": 1,
+      "token_savings_pct": null,
+      "individual_accuracy_pct": null,
+      "bundled_accuracy_pct": null,
+      "accuracy_delta_pct_points": null,
+      "recommendation": "reject_bundle_execution_failure"
+    },
+    "sentiment_analysis": {
+      "tasks": 5,
+      "individual_calls": 5,
+      "bundled_calls": 1,
+      "individual_tokens": 0,
+      "bundled_tokens": 0,
+      "individual_correct": 0,
+      "individual_judged": 0,
+      "individual_judge_tokens": 0,
+      "bundled_correct": 0,
+      "bundled_judged": 0,
+      "bundled_judge_tokens": 0,
+      "individual_validation_passed": 0,
+      "bundled_validation_passed": 0,
+      "bundle_failures": 1,
+      "token_savings_pct": null,
+      "individual_accuracy_pct": null,
+      "bundled_accuracy_pct": null,
+      "accuracy_delta_pct_points": null,
+      "recommendation": "reject_bundle_execution_failure"
+    },
+    "summarization": {
+      "tasks": 5,
+      "individual_calls": 5,
+      "bundled_calls": 1,
+      "individual_tokens": 0,
+      "bundled_tokens": 0,
+      "individual_correct": 0,
+      "individual_judged": 0,
+      "individual_judge_tokens": 0,
+      "bundled_correct": 0,
+      "bundled_judged": 0,
+      "bundled_judge_tokens": 0,
+      "individual_validation_passed": 0,
+      "bundled_validation_passed": 0,
+      "bundle_failures": 1,
+      "token_savings_pct": null,
+      "individual_accuracy_pct": null,
+      "bundled_accuracy_pct": null,
+      "accuracy_delta_pct_points": null,
+      "recommendation": "reject_bundle_execution_failure"
+    },
+    "entity_extraction": {
+      "tasks": 5,
+      "individual_calls": 5,
+      "bundled_calls": 1,
+      "individual_tokens": 0,
+      "bundled_tokens": 0,
+      "individual_correct": 0,
+      "individual_judged": 0,
+      "individual_judge_tokens": 0,
+      "bundled_correct": 0,
+      "bundled_judged": 0,
+      "bundled_judge_tokens": 0,
+      "individual_validation_passed": 0,
+      "bundled_validation_passed": 0,
+      "bundle_failures": 1,
+      "token_savings_pct": null,
+      "individual_accuracy_pct": null,
+      "bundled_accuracy_pct": null,
+      "accuracy_delta_pct_points": null,
+      "recommendation": "reject_bundle_execution_failure"
+    },
+    "bug_fixing": {
+      "tasks": 5,
+      "individual_calls": 5,
+      "bundled_calls": 1,
+      "individual_tokens": 0,
+      "bundled_tokens": 0,
+      "individual_correct": 0,
+      "individual_judged": 0,
+      "individual_judge_tokens": 0,
+      "bundled_correct": 0,
+      "bundled_judged": 0,
+      "bundled_judge_tokens": 0,
+      "individual_validation_passed": 0,
+      "bundled_validation_passed": 0,
+      "bundle_failures": 1,
+      "token_savings_pct": null,
+      "individual_accuracy_pct": null,
+      "bundled_accuracy_pct": null,
+      "accuracy_delta_pct_points": null,
+      "recommendation": "reject_bundle_execution_failure"
+    },
+    "logical_puzzles": {
+      "tasks": 4,
+      "individual_calls": 4,
+      "bundled_calls": 1,
+      "individual_tokens": 0,
+      "bundled_tokens": 0,
+      "individual_correct": 0,
+      "individual_judged": 0,
+      "individual_judge_tokens": 0,
+      "bundled_correct": 0,
+      "bundled_judged": 0,
+      "bundled_judge_tokens": 0,
+      "individual_validation_passed": 0,
+      "bundled_validation_passed": 0,
+      "bundle_failures": 1,
+      "token_savings_pct": null,
+      "individual_accuracy_pct": null,
+      "bundled_accuracy_pct": null,
+      "accuracy_delta_pct_points": null,
+      "recommendation": "reject_bundle_execution_failure"
+    },
+    "code_authoring": {
+      "tasks": 5,
+      "individual_calls": 5,
+      "bundled_calls": 1,
+      "individual_tokens": 0,
+      "bundled_tokens": 0,
+      "individual_correct": 0,
+      "individual_judged": 0,
+      "individual_judge_tokens": 0,
+      "bundled_correct": 0,
+      "bundled_judged": 0,
+      "bundled_judge_tokens": 0,
+      "individual_validation_passed": 0,
+      "bundled_validation_passed": 0,
+      "bundle_failures": 1,
+      "token_savings_pct": null,
+      "individual_accuracy_pct": null,
+      "bundled_accuracy_pct": null,
+      "accuracy_delta_pct_points": null,
+      "recommendation": "reject_bundle_execution_failure"
+    }
+  },
+  "eligibility": [
+    {
+      "task_id": "factual_v7_01",
+      "dataset_category": "knowledge_qa",
+      "task_type": "knowledge_qa",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "factual_v7_02",
+      "dataset_category": "knowledge_qa",
+      "task_type": "fallback",
+      "eligible": false,
+      "forced": false,
+      "reason": "router confidence below bundle threshold"
+    },
+    {
+      "task_id": "factual_v7_03",
+      "dataset_category": "knowledge_qa",
+      "task_type": "knowledge_qa",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "factual_v7_04",
+      "dataset_category": "knowledge_qa",
+      "task_type": "knowledge_qa",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "factual_v7_05",
+      "dataset_category": "knowledge_qa",
+      "task_type": "knowledge_qa",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "math_v7_01",
+      "dataset_category": "math_solving",
+      "task_type": "math_solving",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "math_v7_02",
+      "dataset_category": "math_solving",
+      "task_type": "math_solving",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "math_v7_03",
+      "dataset_category": "math_solving",
+      "task_type": "knowledge_qa",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "math_v7_04",
+      "dataset_category": "math_solving",
+      "task_type": "knowledge_qa",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "math_v7_05",
+      "dataset_category": "math_solving",
+      "task_type": "math_solving",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "sentiment_v7_01",
+      "dataset_category": "sentiment_analysis",
+      "task_type": "sentiment_analysis",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "sentiment_v7_02",
+      "dataset_category": "sentiment_analysis",
+      "task_type": "sentiment_analysis",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "sentiment_v7_03",
+      "dataset_category": "sentiment_analysis",
+      "task_type": "sentiment_analysis",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "sentiment_v7_04",
+      "dataset_category": "sentiment_analysis",
+      "task_type": "sentiment_analysis",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "sentiment_v7_05",
+      "dataset_category": "sentiment_analysis",
+      "task_type": "sentiment_analysis",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "summary_v7_01",
+      "dataset_category": "summarization",
+      "task_type": "summarization",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "summary_v7_02",
+      "dataset_category": "summarization",
+      "task_type": "summarization",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "summary_v7_03",
+      "dataset_category": "summarization",
+      "task_type": "summarization",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "summary_v7_04",
+      "dataset_category": "summarization",
+      "task_type": "summarization",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "summary_v7_05",
+      "dataset_category": "summarization",
+      "task_type": "summarization",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "ner_v7_01",
+      "dataset_category": "entity_extraction",
+      "task_type": "entity_extraction",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "ner_v7_02",
+      "dataset_category": "entity_extraction",
+      "task_type": "entity_extraction",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "ner_v7_03",
+      "dataset_category": "entity_extraction",
+      "task_type": "entity_extraction",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "ner_v7_04",
+      "dataset_category": "entity_extraction",
+      "task_type": "entity_extraction",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "ner_v7_05",
+      "dataset_category": "entity_extraction",
+      "task_type": "entity_extraction",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "debug_v7_01",
+      "dataset_category": "bug_fixing",
+      "task_type": "bug_fixing",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "debug_v7_02",
+      "dataset_category": "bug_fixing",
+      "task_type": "bug_fixing",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "debug_v7_03",
+      "dataset_category": "bug_fixing",
+      "task_type": "bug_fixing",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "debug_v7_04",
+      "dataset_category": "bug_fixing",
+      "task_type": "bug_fixing",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "debug_v7_05",
+      "dataset_category": "bug_fixing",
+      "task_type": "bug_fixing",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "logic_v7_01",
+      "dataset_category": "logical_puzzles",
+      "task_type": "logical_puzzles",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "logic_v7_02",
+      "dataset_category": "logical_puzzles",
+      "task_type": "logical_puzzles",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "logic_v7_03",
+      "dataset_category": "logical_puzzles",
+      "task_type": "logical_puzzles",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "logic_v7_04",
+      "dataset_category": "logical_puzzles",
+      "task_type": "knowledge_qa",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "logic_v7_05",
+      "dataset_category": "logical_puzzles",
+      "task_type": "logical_puzzles",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at cautious tier"
+    },
+    {
+      "task_id": "codegen_v7_01",
+      "dataset_category": "code_authoring",
+      "task_type": "code_authoring",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "codegen_v7_02",
+      "dataset_category": "code_authoring",
+      "task_type": "code_authoring",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "codegen_v7_03",
+      "dataset_category": "code_authoring",
+      "task_type": "code_authoring",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "codegen_v7_04",
+      "dataset_category": "code_authoring",
+      "task_type": "code_authoring",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at experimental tier"
+    },
+    {
+      "task_id": "codegen_v7_05",
+      "dataset_category": "code_authoring",
+      "task_type": "code_authoring",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at experimental tier"
+    }
+  ],
+  "excluded_reasons": {
+    "router confidence below bundle threshold": 1
+  },
+  "bundles": [
+    {
+      "bundle_index": 0,
+      "task_type": "knowledge_qa",
+      "task_ids": [
+        "factual_v7_01",
+        "factual_v7_03",
+        "factual_v7_04",
+        "factual_v7_05",
+        "math_v7_03"
+      ],
+      "max_tokens": 776,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "finish_reason": null,
+      "raw_response": "",
+      "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefe30>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "bundle_index": 1,
+      "task_type": "knowledge_qa",
+      "task_ids": [
+        "math_v7_04",
+        "logic_v7_04"
+      ],
+      "max_tokens": 248,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "finish_reason": null,
+      "raw_response": "",
+      "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d290a0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "bundle_index": 2,
+      "task_type": "math_solving",
+      "task_ids": [
+        "math_v7_01",
+        "math_v7_02",
+        "math_v7_05"
+      ],
+      "max_tokens": 466,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "finish_reason": null,
+      "raw_response": "",
+      "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d29f10>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "bundle_index": 3,
+      "task_type": "sentiment_analysis",
+      "task_ids": [
+        "sentiment_v7_01",
+        "sentiment_v7_02",
+        "sentiment_v7_03",
+        "sentiment_v7_04",
+        "sentiment_v7_05"
+      ],
+      "max_tokens": 324,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "finish_reason": null,
+      "raw_response": "",
+      "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x103e953a0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "bundle_index": 4,
+      "task_type": "summarization",
+      "task_ids": [
+        "summary_v7_01",
+        "summary_v7_02",
+        "summary_v7_03",
+        "summary_v7_04",
+        "summary_v7_05"
+      ],
+      "max_tokens": 444,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "finish_reason": null,
+      "raw_response": "",
+      "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefec0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "bundle_index": 5,
+      "task_type": "entity_extraction",
+      "task_ids": [
+        "ner_v7_01",
+        "ner_v7_02",
+        "ner_v7_03",
+        "ner_v7_04",
+        "ner_v7_05"
+      ],
+      "max_tokens": 658,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "finish_reason": null,
+      "raw_response": "",
+      "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceed20>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "bundle_index": 6,
+      "task_type": "bug_fixing",
+      "task_ids": [
+        "debug_v7_01",
+        "debug_v7_02",
+        "debug_v7_03",
+        "debug_v7_04",
+        "debug_v7_05"
+      ],
+      "max_tokens": 1211,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "finish_reason": null,
+      "raw_response": "",
+      "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceeed0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "bundle_index": 7,
+      "task_type": "logical_puzzles",
+      "task_ids": [
+        "logic_v7_01",
+        "logic_v7_02",
+        "logic_v7_03",
+        "logic_v7_05"
+      ],
+      "max_tokens": 480,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "finish_reason": null,
+      "raw_response": "",
+      "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d298b0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "bundle_index": 8,
+      "task_type": "code_authoring",
+      "task_ids": [
+        "codegen_v7_01",
+        "codegen_v7_02",
+        "codegen_v7_03",
+        "codegen_v7_04",
+        "codegen_v7_05"
+      ],
+      "max_tokens": 1504,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "finish_reason": null,
+      "raw_response": "",
+      "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d2ab70>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "codegen_v7_01",
+      "prompt": "Write a Python function `partition_even_odd(numbers)` that returns a tuple of two lists: all even numbers followed by all odd numbers, preserving their original order within each list.",
+      "task_type": "code_authoring",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ced8e0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d2ab70>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "codegen_v7_02",
+      "prompt": "Write a Python function `compress_runs(items)` that removes only consecutive duplicate values. Example: `[1, 1, 2, 1, 1]` returns `[1, 2, 1]`.",
+      "task_type": "code_authoring",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cee360>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d2ab70>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "codegen_v7_03",
+      "prompt": "Write a Python function `index_by_id(records)` that accepts dictionaries containing an `id` key and returns a dictionary mapping each id to its record. Later records should replace earlier records with the same id. Do not modify the records.",
+      "task_type": "code_authoring",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceec00>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d2ab70>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "codegen_v7_04",
+      "prompt": "Write a Python function `diagonal_sum(matrix)` that returns the sum of the main diagonal of a square matrix. For an empty matrix, return `0`.",
+      "task_type": "code_authoring",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cef3b0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d2ab70>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "codegen_v7_05",
+      "prompt": "Write a Python function `take_until(items, stop_value)` that returns items from the beginning of the list up to but not including the first occurrence of `stop_value`. If it never appears, return a copy of the entire list.",
+      "task_type": "code_authoring",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x103b37e30>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d2ab70>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "debug_v7_01",
+      "prompt": "The function should return the arithmetic mean of a non-empty list, but it divides by the wrong number. Identify the bug and provide a corrected implementation.\n\n```python\ndef mean(values):\n    return sum(values) / (len(values) - 1)\n```",
+      "task_type": "bug_fixing",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cef380>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceeed0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "debug_v7_02",
+      "prompt": "The function should perform a case-insensitive palindrome check, but converting the text to lowercase has no effect. Identify the bug and provide a corrected implementation.\n\n```python\ndef is_palindrome(text):\n    text.lower()\n    return text == text[::-1]\n```",
+      "task_type": "bug_fixing",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cee8d0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceeed0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "debug_v7_03",
+      "prompt": "The function should return a merged dictionary, but it returns `None`. Identify the bug and provide a corrected implementation that does not modify either input.\n\n```python\ndef merge(left, right):\n    result = left.copy()\n    return result.update(right)\n```",
+      "task_type": "bug_fixing",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cedb50>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceeed0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "debug_v7_04",
+      "prompt": "This binary search should return the index of `target` or `-1`, but it can access an index outside the list. Identify the bug and provide a corrected implementation.\n\n```python\ndef binary_search(values, target):\n    low, high = 0, len(values)\n    while low <= high:\n        mid = (low + high) // 2\n        if values[mid] == target:\n            return mid\n        if values[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n```",
+      "task_type": "bug_fixing",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d280e0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceeed0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "debug_v7_05",
+      "prompt": "The function should remove all spaces from a string, but it returns the original string unchanged. Identify the bug and provide a corrected implementation.\n\n```python\ndef remove_spaces(text):\n    text.replace(\" \", \"\")\n    return text\n```",
+      "task_type": "bug_fixing",
+      "safety_tier": "experimental",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x103ce2f60>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceeed0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "factual_v7_01",
+      "prompt": "Why does soap help water remove grease from a surface?",
+      "task_type": "knowledge_qa",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cee3c0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefe30>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "factual_v7_03",
+      "prompt": "Why can a passenger's ears pop during an airplane's ascent or descent?",
+      "task_type": "knowledge_qa",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cee7b0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefe30>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "factual_v7_04",
+      "prompt": "What is the basic difference between a compiler and an interpreter?",
+      "task_type": "knowledge_qa",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cef440>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefe30>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "factual_v7_05",
+      "prompt": "How do greenhouse gases warm Earth's lower atmosphere?",
+      "task_type": "knowledge_qa",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d280e0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefe30>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "logic_v7_01",
+      "prompt": "Ava, Ben, Cora, and Diego each choose a different dessert: cake, ice cream, pie, or pudding.\n- Ava does not choose cake or pudding.\n- Ben chooses pie.\n- Cora does not choose ice cream.\n- Diego chooses pudding.\nWho chooses each dessert?",
+      "task_type": "logical_puzzles",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d291f0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d298b0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "logic_v7_02",
+      "prompt": "Four reports—W, X, Y, and Z—are reviewed in positions 1 through 4.\n- X is reviewed immediately before Y.\n- Z is reviewed first.\n- W is reviewed after Y.\nWhat is the complete order?",
+      "task_type": "logical_puzzles",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cee2a0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d298b0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "logic_v7_03",
+      "prompt": "Elif, Finn, and Gia each adopt a different animal: cat, dog, or rabbit.\n- Elif does not adopt the rabbit.\n- Finn adopts the dog.\n- Gia does not adopt the cat.\nWho adopts each animal?",
+      "task_type": "logical_puzzles",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cee1e0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d298b0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "logic_v7_04",
+      "prompt": "Five packages—A, B, C, D, and E—are stacked from bottom to top.\n- C is in the middle.\n- A is immediately below B.\n- E is on top.\n- D is immediately above C.\nWhat is the order from bottom to top?",
+      "task_type": "knowledge_qa",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefad0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d290a0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "logic_v7_05",
+      "prompt": "Four speakers—Hana, Ivo, Jules, and Kai—present from first to fourth.\n- Kai presents fourth.\n- Ivo presents before Jules.\n- Hana presents immediately after Jules.\nWhat is the presentation order?",
+      "task_type": "logical_puzzles",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d280b0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d298b0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "math_v7_01",
+      "prompt": "A warehouse stores 1,440 batteries. During inspection, 12.5% are found defective, and 75 of the remaining batteries are kept as spares. How many can be shipped?",
+      "task_type": "math_solving",
+      "safety_tier": "safe",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d280e0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d29f10>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "math_v7_02",
+      "prompt": "Red and blue paint are mixed in a ratio of 3:5. If 32 liters of paint are prepared, how many liters are blue?",
+      "task_type": "math_solving",
+      "safety_tier": "safe",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceff80>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d29f10>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "math_v7_03",
+      "prompt": "A student's final grade is based on homework worth 25%, a midterm worth 35%, and a final exam worth 40%. The scores are 88, 76, and 92 respectively. What is the weighted final grade?",
+      "task_type": "knowledge_qa",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cef9e0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefe30>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "math_v7_04",
+      "prompt": "A population of 8,000 increases by 15% in one year and then decreases by 10% the next year. What is the population after the two changes?",
+      "task_type": "knowledge_qa",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceecc0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d290a0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "math_v7_05",
+      "prompt": "Four identical pumps fill 600 liters in 15 minutes. At the same rate, how many liters can six pumps fill in 20 minutes?",
+      "task_type": "math_solving",
+      "safety_tier": "safe",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cef7d0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d29f10>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "ner_v7_01",
+      "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"On 18 January 2026, Camille Laurent represented Ocean Crest Labs in Marseille.\"",
+      "task_type": "entity_extraction",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d28f80>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceed20>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "ner_v7_02",
+      "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"Ravi Menon joined Summit Freight in Mumbai last Tuesday.\"",
+      "task_type": "entity_extraction",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d29730>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceed20>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "ner_v7_03",
+      "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"The Polar Science Network sent Ingrid Dahl to Reykjavik in March.\"",
+      "task_type": "entity_extraction",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cef680>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceed20>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "ner_v7_04",
+      "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"Fatima Zahra will meet Solstice Telecom executives in Casablanca on 7 July.\"",
+      "task_type": "entity_extraction",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cee9f0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceed20>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "ner_v7_05",
+      "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"In 2021, Maple Arts Council appointed Tomasz Zielinski in Warsaw.\"",
+      "task_type": "entity_extraction",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefef0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceed20>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "sentiment_v7_01",
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The tablet is lightweight and responsive, although the speakers sound thin at high volume.\"",
+      "task_type": "sentiment_analysis",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d28fb0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x103e953a0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "sentiment_v7_02",
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The train departs from platform six at 14:20 and arrives at 16:05.\"",
+      "task_type": "sentiment_analysis",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d29a00>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x103e953a0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "sentiment_v7_03",
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The guide was patient, knowledgeable, and made the entire tour far more interesting than expected.\"",
+      "task_type": "sentiment_analysis",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cee090>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x103e953a0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "sentiment_v7_04",
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The replacement part arrived late, did not fit, and customer service never answered my messages.\"",
+      "task_type": "sentiment_analysis",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cedfd0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x103e953a0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "sentiment_v7_05",
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The course material is thorough and useful, but the weekly workload is heavier than advertised.\"",
+      "task_type": "sentiment_analysis",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cef440>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x103e953a0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "summary_v7_01",
+      "prompt": "Summarize the passage in exactly one sentence of no more than 21 words:\n\nA grocery chain added clearer date labels to perishable products. Food discarded by customers fell during a three-month trial, while sales remained steady. Updating packaging required additional design work.",
+      "task_type": "summarization",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d282c0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefec0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "summary_v7_02",
+      "prompt": "Summarize the passage in exactly two bullet points, with no more than 10 words per bullet:\n\nA company introduced standing desks in one office. Employees reported less afternoon discomfort and used the desks regularly. Several workers still preferred traditional seated workstations.",
+      "task_type": "summarization",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d28bf0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefec0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "summary_v7_03",
+      "prompt": "Summarize the passage in one paragraph of at most 25 words:\n\nA town converted an unused rail corridor into a walking and cycling trail. Weekend activity increased, and nearby businesses gained customers. Residents near two entrances complained about parking congestion.",
+      "task_type": "summarization",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104d2a600>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefec0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "summary_v7_04",
+      "prompt": "Write a headline followed by exactly two bullet points labeled Gain and Challenge:\n\nA bank added biometric login to its mobile application. Customers accessed accounts faster and password-reset requests declined. Some older phones could not support the feature.",
+      "task_type": "summarization",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104ceea50>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefec0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    },
+    {
+      "task_id": "summary_v7_05",
+      "prompt": "Summarize the incident using exactly three bullet points labeled Issue, Intervention, and Resolution:\n\nA streaming service produced repeated playback errors because one cache server held corrupted data. Engineers removed the server from rotation and rebuilt its cache. Playback stabilized, and integrity checks were scheduled to run automatically.",
+      "task_type": "summarization",
+      "safety_tier": "cautious",
+      "individual": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefad0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      },
+      "bundled": {
+        "ok": false,
+        "error": "Fireworks call to accounts/fireworks/models/kimi-k2p6 failed: HTTPSConnectionPool(host='api.fireworks.ai', port=443): Max retries exceeded with url: /inference/v1/chat/completions (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x104cefec0>: Failed to resolve 'api.fireworks.ai' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "judge": {
+          "verdict": "skipped",
+          "reason": "",
+          "tokens": 0
+        }
+      }
+    }
+  ]
+}

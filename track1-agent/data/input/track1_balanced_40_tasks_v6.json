@@ -1,0 +1,162 @@
+[
+  {
+    "task_id": "factual_v6_01",
+    "prompt": "Why does a pressure cooker cook food faster than an uncovered pot?"
+  },
+  {
+    "task_id": "factual_v6_02",
+    "prompt": "What is the difference between RAM and persistent storage in a computer?"
+  },
+  {
+    "task_id": "factual_v6_03",
+    "prompt": "Why can condensation form on the outside of a cold glass even when the glass does not leak?"
+  },
+  {
+    "task_id": "factual_v6_04",
+    "prompt": "What does an HTTP status code in the 500 range generally indicate?"
+  },
+  {
+    "task_id": "factual_v6_05",
+    "prompt": "Why are leap years added to the calendar?"
+  },
+  {
+    "task_id": "math_v6_01",
+    "prompt": "A bookstore receives 960 notebooks. It sells 30% during the first week and 144 more during the second week. How many notebooks remain?"
+  },
+  {
+    "task_id": "math_v6_02",
+    "prompt": "A machine produces 45 components every 6 minutes. At the same constant rate, how many components does it produce in 54 minutes?"
+  },
+  {
+    "task_id": "math_v6_03",
+    "prompt": "A phone costs $500 before discounts. A store applies a 12% discount and then subtracts an additional $35 coupon. What is the final price before tax?"
+  },
+  {
+    "task_id": "math_v6_04",
+    "prompt": "A rectangular floor measures 15 meters by 9 meters. Tiles cover 80% of the floor, and the rest is carpeted. How many square meters are carpeted?"
+  },
+  {
+    "task_id": "math_v6_05",
+    "prompt": "A savings account starts with $2,400 and earns simple interest at 5% per year. How much money is in the account after 3 years?"
+  },
+  {
+    "task_id": "sentiment_v6_01",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The headphones are comfortable and clear, but the wireless connection drops occasionally.\""
+  },
+  {
+    "task_id": "sentiment_v6_02",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The committee will publish its decision after the meeting on Thursday.\""
+  },
+  {
+    "task_id": "sentiment_v6_03",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The new dashboard is intuitive, loads quickly, and finally makes the reports easy to understand.\""
+  },
+  {
+    "task_id": "sentiment_v6_04",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The printer jams constantly, wastes paper, and takes several attempts to connect.\""
+  },
+  {
+    "task_id": "sentiment_v6_05",
+    "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The hotel has an excellent location and helpful staff, although the rooms are smaller than advertised.\""
+  },
+  {
+    "task_id": "summary_v6_01",
+    "prompt": "Summarize the passage in exactly one sentence of no more than 22 words:\n\nA hospital introduced text-message appointment reminders. Missed appointments fell by 24% over four months, freeing more slots for patients. Some patients with outdated phone numbers did not receive the messages."
+  },
+  {
+    "task_id": "summary_v6_02",
+    "prompt": "Summarize the passage in exactly two bullet points, with no more than 10 words per bullet:\n\nA factory replaced fluorescent lights with LEDs. Electricity use declined and maintenance calls became less frequent. Workers in one section said the new lighting initially felt too bright."
+  },
+  {
+    "task_id": "summary_v6_03",
+    "prompt": "Summarize the passage in one paragraph of at most 26 words:\n\nA delivery company tested electric vans on urban routes. Fuel spending and local emissions fell, while drivers liked the quieter vehicles. Limited charging capacity prevented the company from expanding the trial immediately."
+  },
+  {
+    "task_id": "summary_v6_04",
+    "prompt": "Write a headline followed by exactly two bullet points labeled Improvement and Drawback:\n\nA museum launched timed-entry tickets to reduce crowding. Visitors spent less time waiting and galleries became easier to navigate. However, guests who arrived late sometimes lost their reserved slots."
+  },
+  {
+    "task_id": "summary_v6_05",
+    "prompt": "Summarize the incident using exactly three bullet points labeled Trigger, Fix, and Outcome:\n\nA news website stopped loading images after an expired access credential blocked its storage service. Engineers replaced the credential and restarted the image proxy. Images became available again, and an automated expiration alert was configured."
+  },
+  {
+    "task_id": "ner_v6_01",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"On 9 April 2026, Aisha Rahman spoke for Silver Pine Systems in Doha.\""
+  },
+  {
+    "task_id": "ner_v6_02",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"Mateo Cruz joined Redwood Analytics in Buenos Aires last November.\""
+  },
+  {
+    "task_id": "ner_v6_03",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"The Global Water Institute sent Hana Petrov to Athens on Wednesday.\""
+  },
+  {
+    "task_id": "ner_v6_04",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"Kenji Mori will present Bright Harbor's plan in Osaka on 21 May.\""
+  },
+  {
+    "task_id": "ner_v6_05",
+    "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"In 2022, Greenfield University appointed Leila Haddad to its campus in Rabat.\""
+  },
+  {
+    "task_id": "debug_v6_01",
+    "prompt": "The function should return the product of every number in a non-empty list, but it always returns zero. Identify the bug and provide a corrected implementation.\n\n```python\ndef product(values):\n    result = 0\n    for value in values:\n        result *= value\n    return result\n```"
+  },
+  {
+    "task_id": "debug_v6_02",
+    "prompt": "The function should return all positive numbers, but it removes elements while iterating and can skip values. Identify the bug and provide a corrected implementation.\n\n```python\ndef positives(values):\n    for value in values:\n        if value <= 0:\n            values.remove(value)\n    return values\n```"
+  },
+  {
+    "task_id": "debug_v6_03",
+    "prompt": "The function should return the final word in a non-empty sentence, but it returns the first word. Identify the bug and provide a corrected implementation.\n\n```python\ndef last_word(sentence):\n    words = sentence.split()\n    return words[0]\n```"
+  },
+  {
+    "task_id": "debug_v6_04",
+    "prompt": "The function should count how many times each item occurs, but repeated items are reset to one. Identify the bug and provide a corrected implementation.\n\n```python\ndef frequencies(items):\n    counts = {}\n    for item in items:\n        counts[item] = 1\n    return counts\n```"
+  },
+  {
+    "task_id": "debug_v6_05",
+    "prompt": "The function should append an item to a newly created list when no list is supplied. Calls without the second argument must not share state. Identify the bug and provide a corrected implementation.\n\n```python\ndef add_item(item, items=[]):\n    items.append(item)\n    return items\n```"
+  },
+  {
+    "task_id": "logic_v6_01",
+    "prompt": "Iris, Jonas, Kira, and Luca each play a different instrument: drums, flute, guitar, or piano.\n- Iris does not play drums or piano.\n- Jonas plays guitar.\n- Kira does not play flute.\n- Luca plays piano.\nWho plays each instrument?"
+  },
+  {
+    "task_id": "logic_v6_02",
+    "prompt": "Five workshops—A, B, C, D, and E—are scheduled in slots 1 through 5.\n- C is in slot 3.\n- A is immediately before B.\n- E is in slot 5.\n- D is immediately after C.\nWhat is the complete order?"
+  },
+  {
+    "task_id": "logic_v6_03",
+    "prompt": "Maya, Niko, and Owen each wear a different color: blue, green, or red.\n- Maya does not wear red.\n- Niko wears blue.\n- Owen does not wear green.\nWho wears each color?"
+  },
+  {
+    "task_id": "logic_v6_04",
+    "prompt": "Four deliveries—J, K, L, and M—arrive from first to fourth.\n- L arrives last.\n- J arrives before K.\n- M arrives immediately after K.\nWhat is the arrival order?"
+  },
+  {
+    "task_id": "logic_v6_05",
+    "prompt": "Four employees—Rosa, Sami, Theo, and Uma—work on Monday through Thursday, one per day.\n- Uma works Thursday.\n- Sami works before Theo.\n- Rosa works immediately after Theo.\nWho works on each day?"
+  },
+  {
+    "task_id": "codegen_v6_01",
+    "prompt": "Write a Python function `merge_counts(left, right)` that returns a new dictionary containing every key from both dictionaries, with values added when a key appears in both. Do not modify either input."
+  },
+  {
+    "task_id": "codegen_v6_02",
+    "prompt": "Write a Python function `pair_sums(numbers)` that returns a list containing the sum of each adjacent non-overlapping pair. Ignore a final unpaired value. Example: `[2, 5, 1, 4, 9]` returns `[7, 5]`."
+  },
+  {
+    "task_id": "codegen_v6_03",
+    "prompt": "Write a Python function `remove_prefix(text, prefix)` that removes `prefix` only when `text` starts with it; otherwise return `text` unchanged."
+  },
+  {
+    "task_id": "codegen_v6_04",
+    "prompt": "Write a Python function `transpose_two_columns(rows)` that accepts a list of two-item sequences and returns two lists: one containing all first items and one containing all second items. For an empty input, return `([], [])`."
+  },
+  {
+    "task_id": "codegen_v6_05",
+    "prompt": "Write a Python function `first_repeated(items)` that returns the first item encountered for a second time while scanning left to right. Return `None` if no item repeats."
+  }
+]

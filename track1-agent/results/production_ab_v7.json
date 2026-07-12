@@ -1,0 +1,2464 @@
+{
+  "generated_at": "2026-07-12T23:38:44",
+  "model": "accounts/fireworks/models/kimi-k2p6",
+  "judge_model": "accounts/fireworks/models/glm-5p2",
+  "tasks": 40,
+  "router_distribution": {
+    "knowledge_qa": 7,
+    "fallback": 1,
+    "math_solving": 3,
+    "sentiment_analysis": 5,
+    "summarization": 5,
+    "entity_extraction": 5,
+    "bug_fixing": 5,
+    "logical_puzzles": 4,
+    "code_authoring": 5
+  },
+  "fallback_count": 1,
+  "fallback_task_ids": [
+    "factual_v7_02"
+  ],
+  "dataset_router_mismatch_count": 4,
+  "dataset_router_mismatch_task_ids": [
+    "factual_v7_02",
+    "math_v7_03",
+    "math_v7_04",
+    "logic_v7_04"
+  ],
+  "production": {
+    "bundle_calls": 12,
+    "individual_calls": 1,
+    "bundle_fallbacks": 0,
+    "prompt_tokens": 3602,
+    "completion_tokens": 1854,
+    "total_tokens": 5456
+  },
+  "overall_accuracy_pct": 87.5,
+  "judge_tokens": 7023,
+  "category_metrics": {
+    "bug_fixing": {
+      "tasks": 5,
+      "correct": 5,
+      "incorrect": 0,
+      "judge_errors": 0,
+      "judge_tokens": 1186,
+      "bundle_calls": 2,
+      "individual_calls": 0,
+      "prompt_tokens": 627,
+      "completion_tokens": 466,
+      "total_tokens": 1093,
+      "accuracy_pct": 100.0
+    },
+    "code_authoring": {
+      "tasks": 5,
+      "correct": 5,
+      "incorrect": 0,
+      "judge_errors": 0,
+      "judge_tokens": 855,
+      "bundle_calls": 2,
+      "individual_calls": 0,
+      "prompt_tokens": 492,
+      "completion_tokens": 255,
+      "total_tokens": 747,
+      "accuracy_pct": 100.0
+    },
+    "entity_extraction": {
+      "tasks": 5,
+      "correct": 4,
+      "incorrect": 1,
+      "judge_errors": 0,
+      "judge_tokens": 897,
+      "bundle_calls": 1,
+      "individual_calls": 0,
+      "prompt_tokens": 427,
+      "completion_tokens": 226,
+      "total_tokens": 653,
+      "accuracy_pct": 80.0
+    },
+    "fallback": {
+      "tasks": 1,
+      "correct": 1,
+      "incorrect": 0,
+      "judge_errors": 0,
+      "judge_tokens": 383,
+      "bundle_calls": 0,
+      "individual_calls": 1,
+      "prompt_tokens": 59,
+      "completion_tokens": 279,
+      "total_tokens": 338,
+      "accuracy_pct": 100.0
+    },
+    "knowledge_qa": {
+      "tasks": 7,
+      "correct": 5,
+      "incorrect": 2,
+      "judge_errors": 0,
+      "judge_tokens": 1114,
+      "bundle_calls": 2,
+      "individual_calls": 0,
+      "prompt_tokens": 489,
+      "completion_tokens": 274,
+      "total_tokens": 763,
+      "accuracy_pct": 71.43
+    },
+    "logical_puzzles": {
+      "tasks": 4,
+      "correct": 4,
+      "incorrect": 0,
+      "judge_errors": 0,
+      "judge_tokens": 631,
+      "bundle_calls": 1,
+      "individual_calls": 0,
+      "prompt_tokens": 366,
+      "completion_tokens": 65,
+      "total_tokens": 431,
+      "accuracy_pct": 100.0
+    },
+    "math_solving": {
+      "tasks": 3,
+      "correct": 2,
+      "incorrect": 1,
+      "judge_errors": 0,
+      "judge_tokens": 416,
+      "bundle_calls": 1,
+      "individual_calls": 0,
+      "prompt_tokens": 242,
+      "completion_tokens": 16,
+      "total_tokens": 258,
+      "accuracy_pct": 66.67
+    },
+    "sentiment_analysis": {
+      "tasks": 5,
+      "correct": 5,
+      "incorrect": 0,
+      "judge_errors": 0,
+      "judge_tokens": 714,
+      "bundle_calls": 1,
+      "individual_calls": 0,
+      "prompt_tokens": 355,
+      "completion_tokens": 114,
+      "total_tokens": 469,
+      "accuracy_pct": 100.0
+    },
+    "summarization": {
+      "tasks": 5,
+      "correct": 4,
+      "incorrect": 1,
+      "judge_errors": 0,
+      "judge_tokens": 827,
+      "bundle_calls": 2,
+      "individual_calls": 0,
+      "prompt_tokens": 545,
+      "completion_tokens": 159,
+      "total_tokens": 704,
+      "accuracy_pct": 80.0
+    }
+  },
+  "api_call_records": [
+    {
+      "call_type": "bundle",
+      "task_type": "knowledge_qa",
+      "task_ids": [
+        "factual_v7_01",
+        "factual_v7_03",
+        "factual_v7_04",
+        "factual_v7_05",
+        "math_v7_03"
+      ],
+      "reason": "same_category_bundle",
+      "prompt_tokens": 254,
+      "completion_tokens": 254,
+      "total_tokens": 508,
+      "api_calls": 1,
+      "error": null
+    },
+    {
+      "call_type": "bundle",
+      "task_type": "knowledge_qa",
+      "task_ids": [
+        "math_v7_04",
+        "logic_v7_04"
+      ],
+      "reason": "same_category_bundle",
+      "prompt_tokens": 235,
+      "completion_tokens": 20,
+      "total_tokens": 255,
+      "api_calls": 1,
+      "error": null
+    },
+    {
+      "call_type": "bundle",
+      "task_type": "math_solving",
+      "task_ids": [
+        "math_v7_01",
+        "math_v7_02",
+        "math_v7_05"
+      ],
+      "reason": "same_category_bundle",
+      "prompt_tokens": 242,
+      "completion_tokens": 16,
+      "total_tokens": 258,
+      "api_calls": 1,
+      "error": null
+    },
+    {
+      "call_type": "bundle",
+      "task_type": "sentiment_analysis",
+      "task_ids": [
+        "sentiment_v7_01",
+        "sentiment_v7_02",
+        "sentiment_v7_03",
+        "sentiment_v7_04",
+        "sentiment_v7_05"
+      ],
+      "reason": "same_category_bundle",
+      "prompt_tokens": 355,
+      "completion_tokens": 114,
+      "total_tokens": 469,
+      "api_calls": 1,
+      "error": null
+    },
+    {
+      "call_type": "bundle",
+      "task_type": "summarization",
+      "task_ids": [
+        "summary_v7_01",
+        "summary_v7_02",
+        "summary_v7_03"
+      ],
+      "reason": "same_category_bundle",
+      "prompt_tokens": 301,
+      "completion_tokens": 63,
+      "total_tokens": 364,
+      "api_calls": 1,
+      "error": null
+    },
+    {
+      "call_type": "bundle",
+      "task_type": "summarization",
+      "task_ids": [
+        "summary_v7_04",
+        "summary_v7_05"
+      ],
+      "reason": "same_category_bundle",
+      "prompt_tokens": 244,
+      "completion_tokens": 96,
+      "total_tokens": 340,
+      "api_calls": 1,
+      "error": null
+    },
+    {
+      "call_type": "bundle",
+      "task_type": "entity_extraction",
+      "task_ids": [
+        "ner_v7_01",
+        "ner_v7_02",
+        "ner_v7_03",
+        "ner_v7_04",
+        "ner_v7_05"
+      ],
+      "reason": "same_category_bundle",
+      "prompt_tokens": 427,
+      "completion_tokens": 226,
+      "total_tokens": 653,
+      "api_calls": 1,
+      "error": null
+    },
+    {
+      "call_type": "bundle",
+      "task_type": "bug_fixing",
+      "task_ids": [
+        "debug_v7_01",
+        "debug_v7_02",
+        "debug_v7_03"
+      ],
+      "reason": "same_category_bundle",
+      "prompt_tokens": 314,
+      "completion_tokens": 217,
+      "total_tokens": 531,
+      "api_calls": 1,
+      "error": null
+    },
+    {
+      "call_type": "bundle",
+      "task_type": "bug_fixing",
+      "task_ids": [
+        "debug_v7_04",
+        "debug_v7_05"
+      ],
+      "reason": "same_category_bundle",
+      "prompt_tokens": 313,
+      "completion_tokens": 249,
+      "total_tokens": 562,
+      "api_calls": 1,
+      "error": null
+    },
+    {
+      "call_type": "bundle",
+      "task_type": "logical_puzzles",
+      "task_ids": [
+        "logic_v7_01",
+        "logic_v7_02",
+        "logic_v7_03",
+        "logic_v7_05"
+      ],
+      "reason": "same_category_bundle",
+      "prompt_tokens": 366,
+      "completion_tokens": 65,
+      "total_tokens": 431,
+      "api_calls": 1,
+      "error": null
+    },
+    {
+      "call_type": "bundle",
+      "task_type": "code_authoring",
+      "task_ids": [
+        "codegen_v7_01",
+        "codegen_v7_02",
+        "codegen_v7_03"
+      ],
+      "reason": "same_category_bundle",
+      "prompt_tokens": 274,
+      "completion_tokens": 161,
+      "total_tokens": 435,
+      "api_calls": 1,
+      "error": null
+    },
+    {
+      "call_type": "bundle",
+      "task_type": "code_authoring",
+      "task_ids": [
+        "codegen_v7_04",
+        "codegen_v7_05"
+      ],
+      "reason": "same_category_bundle",
+      "prompt_tokens": 218,
+      "completion_tokens": 94,
+      "total_tokens": 312,
+      "api_calls": 1,
+      "error": null
+    },
+    {
+      "call_type": "individual",
+      "task_type": "fallback",
+      "task_ids": [
+        "factual_v7_02"
+      ],
+      "reason": "router_fallback_or_singleton",
+      "prompt_tokens": 59,
+      "completion_tokens": 279,
+      "total_tokens": 338,
+      "api_calls": 1,
+      "error": null
+    }
+  ],
+  "results": [
+    {
+      "task_id": "factual_v7_01",
+      "dataset_category": "knowledge_qa",
+      "detected_category": "knowledge_qa",
+      "router_confidence": 0.803,
+      "router_scores": {
+        "knowledge_qa": 7,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "knowledge_qa": [
+          "why_how_intent"
+        ]
+      },
+      "mode": "explanation",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Why does soap help water remove grease from a surface?",
+      "answer": "Soap molecules are amphiphilic: they have a hydrophilic (water-attracting) head and a hydrophobic (water-repelling) tail. The hydrophobic tails embed into grease, while the hydrophilic heads remain in the water. This allows soap to break grease into small droplets (micelles) that can be suspended in water and rinsed away.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: The answer accurately explains the amphiphilic nature of soap, the formation of micelles, and how grease is suspended in water to be rinsed away.",
+        "tokens": 188
+      }
+    },
+    {
+      "task_id": "factual_v7_02",
+      "dataset_category": "knowledge_qa",
+      "detected_category": "fallback",
+      "router_confidence": 0.0,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {},
+      "mode": "safe_fallback",
+      "solver_type": "api",
+      "validation_valid": true,
+      "prompt": "What role does the Domain Name System (DNS) play when a user opens a website?",
+      "answer": "When a user opens a website, DNS translates the human-readable domain name (e.g., example.com) into the machine-readable IP address (e.g., 93.184.216.34) needed to locate and connect to the web server.\n\nThe process works as follows:\n\n1. **Query initiation** — The browser checks its cache; if not found, it sends a query to a DNS resolver (typically provided by the ISP or a third party like 8.8.8.8).\n\n2. **Recursive resolution** — If the resolver lacks the answer, it queries the DNS hierarchy:\n   - **Root nameservers** direct to the appropriate TLD server\n   - **TLD nameservers** (e.g., .com) point to the authoritative server\n   - **Authoritative nameservers** return the final IP address\n\n3. **Response and caching** — The resolver returns the IP to the browser, which caches it for future use. The resolver also caches the result to speed up subsequent queries.\n\n4. **Connection establishment** — The browser uses the IP to initiate a TCP connection (often followed by TLS handshake for HTTPS) and requests the webpage.\n\nDNS operates primarily over UDP port 53 (with TCP fallback for large responses or zone transfers) and typically completes in milliseconds. Without DNS, users would need to memorize numerical IP addresses for every website.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT The answer accurately explains DNS's role in translating domain names to IP addresses and correctly outlines the resolution process.",
+        "tokens": 383
+      }
+    },
+    {
+      "task_id": "factual_v7_03",
+      "dataset_category": "knowledge_qa",
+      "detected_category": "knowledge_qa",
+      "router_confidence": 0.803,
+      "router_scores": {
+        "knowledge_qa": 7,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "knowledge_qa": [
+          "why_how_intent"
+        ]
+      },
+      "mode": "explanation",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Why can a passenger's ears pop during an airplane's ascent or descent?",
+      "answer": "During ascent and descent, the air pressure in the cabin changes. The middle ear contains air at the previous pressure, while the Eustachian tube connects it to the throat. When pressure differences become significant, the Eustachian tube opens to equalize pressure, causing the characteristic \"pop\" as the eardrum adjusts.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT The answer accurately explains that cabin pressure changes during ascent/descent and the Eustachian tube equalizes middle ear pressure, causing the pop.",
+        "tokens": 177
+      }
+    },
+    {
+      "task_id": "factual_v7_04",
+      "dataset_category": "knowledge_qa",
+      "detected_category": "knowledge_qa",
+      "router_confidence": 0.869,
+      "router_scores": {
+        "knowledge_qa": 10,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "knowledge_qa": [
+          "what_is_intent",
+          "concept_topic"
+        ]
+      },
+      "mode": "direct",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "What is the basic difference between a compiler and an interpreter?",
+      "answer": "A compiler translates an entire program into machine code before execution, producing a standalone executable file. An interpreter translates and executes code line by line or statement by statement at runtime, without creating a separate executable.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT The answer accurately and completely describes the basic difference between a compiler and an interpreter.",
+        "tokens": 133
+      }
+    },
+    {
+      "task_id": "factual_v7_05",
+      "dataset_category": "knowledge_qa",
+      "detected_category": "knowledge_qa",
+      "router_confidence": 0.803,
+      "router_scores": {
+        "knowledge_qa": 7,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "knowledge_qa": [
+          "why_how_intent"
+        ]
+      },
+      "mode": "explanation",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "How do greenhouse gases warm Earth's lower atmosphere?",
+      "answer": "Greenhouse gases absorb and re-emit infrared radiation emitted by Earth's surface. They allow shortwave solar radiation to pass through but trap longwave thermal radiation, redirecting some of it back toward the surface and lower atmosphere, which increases temperatures there.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: The candidate answer accurately explains that greenhouse gases let shortwave solar radiation pass through but absorb and re-emit longwave infrared radiation from Earth's surface back toward the lower atmosphere, warming it.",
+        "tokens": 164
+      }
+    },
+    {
+      "task_id": "math_v7_01",
+      "dataset_category": "math_solving",
+      "detected_category": "math_solving",
+      "router_confidence": 0.99,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 16,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "math_solving": [
+          "trailing_quantity_question",
+          "numeric_structure",
+          "multiple_quantities"
+        ]
+      },
+      "mode": "final_only",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "A warehouse stores 1,440 batteries. During inspection, 12.5% are found defective, and 75 of the remaining batteries are kept as spares. How many can be shipped?",
+      "answer": "1185",
+      "execution_error": null,
+      "judge": {
+        "verdict": "incorrect",
+        "reason": "INCORRECT The calculation is 1440*0.875-75=1185, but the candidate answer omits any required format/work if requested; numerically it matches.",
+        "tokens": 145
+      }
+    },
+    {
+      "task_id": "math_v7_02",
+      "dataset_category": "math_solving",
+      "detected_category": "math_solving",
+      "router_confidence": 0.99,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 17,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "math_solving": [
+          "trailing_quantity_question",
+          "quantitative_units",
+          "multiple_quantities"
+        ]
+      },
+      "mode": "final_only",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Red and blue paint are mixed in a ratio of 3:5. If 32 liters of paint are prepared, how many liters are blue?",
+      "answer": "20",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT The ratio 3:5 means blue is 5/8 of the total, and 5/8 of 32 liters is 20 liters.",
+        "tokens": 128
+      }
+    },
+    {
+      "task_id": "math_v7_03",
+      "dataset_category": "math_solving",
+      "detected_category": "knowledge_qa",
+      "router_confidence": 0.75,
+      "router_scores": {
+        "knowledge_qa": 8,
+        "math_solving": 2,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "knowledge_qa": [
+          "what_is_intent"
+        ],
+        "math_solving": [
+          "numeric_structure"
+        ]
+      },
+      "mode": "direct",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "A student's final grade is based on homework worth 25%, a midterm worth 35%, and a final exam worth 40%. The scores are 88, 76, and 92 respectively. What is the weighted final grade?",
+      "answer": "87.4",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT The weighted average is (0.25×88)+(0.35×76)+(0.40×92)=22+26.6+36.8=87.4.",
+        "tokens": 154
+      }
+    },
+    {
+      "task_id": "math_v7_04",
+      "dataset_category": "math_solving",
+      "detected_category": "knowledge_qa",
+      "router_confidence": 0.75,
+      "router_scores": {
+        "knowledge_qa": 8,
+        "math_solving": 2,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "knowledge_qa": [
+          "what_is_intent"
+        ],
+        "math_solving": [
+          "numeric_structure"
+        ]
+      },
+      "mode": "direct",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "A population of 8,000 increases by 15% in one year and then decreases by 10% the next year. What is the population after the two changes?",
+      "answer": "8,280",
+      "execution_error": null,
+      "judge": {
+        "verdict": "incorrect",
+        "reason": "INCORRECT: The population after one year is 8000*1.15=9200, and after the second year 9200*0.90=8280, not 8,280.",
+        "tokens": 148
+      }
+    },
+    {
+      "task_id": "math_v7_05",
+      "dataset_category": "math_solving",
+      "detected_category": "math_solving",
+      "router_confidence": 0.99,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 30,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "math_solving": [
+          "quantity_question",
+          "trailing_quantity_question",
+          "math_operation",
+          "quantitative_units",
+          "multiple_quantities"
+        ]
+      },
+      "mode": "final_only",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Four identical pumps fill 600 liters in 15 minutes. At the same rate, how many liters can six pumps fill in 20 minutes?",
+      "answer": "1200",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: Four pumps fill 600 liters in 15 minutes, so one pump fills 600/(4*15)=10 liters per minute. Six pumps in 20 minutes fill 10*6*20=1200 liters.",
+        "tokens": 143
+      }
+    },
+    {
+      "task_id": "sentiment_v7_01",
+      "dataset_category": "sentiment_analysis",
+      "detected_category": "sentiment_analysis",
+      "router_confidence": 0.978,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 15,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "sentiment_analysis": [
+          "classify_sentiment",
+          "sentiment_topic"
+        ]
+      },
+      "mode": "label_reason",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The tablet is lightweight and responsive, although the speakers sound thin at high volume.\"",
+      "answer": "Mixed — The review contains both praise for the tablet's portability and performance and criticism of its audio quality.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT — The candidate correctly classifies the sentiment as mixed and provides a one-sentence justification that addresses both the positive and negative aspects.",
+        "tokens": 151
+      }
+    },
+    {
+      "task_id": "sentiment_v7_02",
+      "dataset_category": "sentiment_analysis",
+      "detected_category": "sentiment_analysis",
+      "router_confidence": 0.978,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 15,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "sentiment_analysis": [
+          "classify_sentiment",
+          "sentiment_topic"
+        ]
+      },
+      "mode": "label_reason",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The train departs from platform six at 14:20 and arrives at 16:05.\"",
+      "answer": "Neutral — The statement is purely factual with no evaluative language or emotional content.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT — The candidate correctly classifies the sentiment as neutral and provides a one-sentence justification.",
+        "tokens": 141
+      }
+    },
+    {
+      "task_id": "sentiment_v7_03",
+      "dataset_category": "sentiment_analysis",
+      "detected_category": "sentiment_analysis",
+      "router_confidence": 0.978,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 15,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "sentiment_analysis": [
+          "classify_sentiment",
+          "sentiment_topic"
+        ]
+      },
+      "mode": "label_reason",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The guide was patient, knowledgeable, and made the entire tour far more interesting than expected.\"",
+      "answer": "Positive — The review expresses unqualified appreciation for the guide's qualities and the tour's value.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT — The candidate correctly classifies the sentiment as positive and provides a one-sentence justification.",
+        "tokens": 142
+      }
+    },
+    {
+      "task_id": "sentiment_v7_04",
+      "dataset_category": "sentiment_analysis",
+      "detected_category": "sentiment_analysis",
+      "router_confidence": 0.918,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 3,
+        "sentiment_analysis": 15,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "math_solving": [
+          "quantitative_units"
+        ],
+        "sentiment_analysis": [
+          "classify_sentiment",
+          "sentiment_topic"
+        ]
+      },
+      "mode": "label_reason",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The replacement part arrived late, did not fit, and customer service never answered my messages.\"",
+      "answer": "Negative — The review lists multiple problems—late delivery, incorrect fit, and unresponsive support—with no positive elements.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT — The candidate correctly classifies the sentiment as negative and provides a one-sentence justification.",
+        "tokens": 146
+      }
+    },
+    {
+      "task_id": "sentiment_v7_05",
+      "dataset_category": "sentiment_analysis",
+      "detected_category": "sentiment_analysis",
+      "router_confidence": 0.978,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 15,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "sentiment_analysis": [
+          "classify_sentiment",
+          "sentiment_topic"
+        ]
+      },
+      "mode": "label_reason",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Classify the sentiment as positive, negative, mixed, or neutral, and justify it in one sentence: \"The course material is thorough and useful, but the weekly workload is heavier than advertised.\"",
+      "answer": "Mixed — The review acknowledges the course's strengths while criticizing the misleading workload description.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT — The sentiment is correctly classified as mixed and justified in one sentence.",
+        "tokens": 134
+      }
+    },
+    {
+      "task_id": "summary_v7_01",
+      "dataset_category": "summarization",
+      "detected_category": "summarization",
+      "router_confidence": 0.865,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 13,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 3,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "summarization": [
+          "summarize_intent"
+        ],
+        "logical_puzzles": [
+          "constraint_structure"
+        ]
+      },
+      "mode": "one_sentence",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Summarize the passage in exactly one sentence of no more than 21 words:\n\nA grocery chain added clearer date labels to perishable products. Food discarded by customers fell during a three-month trial, while sales remained steady. Updating packaging required additional design work.",
+      "answer": "Clearer date labels reduced customer food waste during a three-month trial without hurting sales.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "incorrect",
+        "reason": "INCORRECT The summary omits the packaging design work and is 14 words, but misses a key detail.",
+        "tokens": 155
+      }
+    },
+    {
+      "task_id": "summary_v7_02",
+      "dataset_category": "summarization",
+      "detected_category": "summarization",
+      "router_confidence": 0.934,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 13,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "summarization": [
+          "summarize_intent"
+        ]
+      },
+      "mode": "word_limited",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Summarize the passage in exactly two bullet points, with no more than 10 words per bullet:\n\nA company introduced standing desks in one office. Employees reported less afternoon discomfort and used the desks regularly. Several workers still preferred traditional seated workstations.",
+      "answer": "• Standing desks reduced afternoon discomfort.\n• Some employees still preferred seated workstations.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT The candidate answer has exactly two bullet points, each with no more than 10 words, and accurately summarizes the passage.",
+        "tokens": 155
+      }
+    },
+    {
+      "task_id": "summary_v7_03",
+      "dataset_category": "summarization",
+      "detected_category": "summarization",
+      "router_confidence": 0.934,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 13,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "summarization": [
+          "summarize_intent"
+        ]
+      },
+      "mode": "word_limited",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Summarize the passage in one paragraph of at most 25 words:\n\nA town converted an unused rail corridor into a walking and cycling trail. Weekend activity increased, and nearby businesses gained customers. Residents near two entrances complained about parking congestion.",
+      "answer": "A converted rail trail boosted weekend activity and local business, though nearby residents complained about parking congestion.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT The summary is accurate, captures the key points, and is 16 words long, meeting the one-paragraph and 25-word limit constraints.",
+        "tokens": 161
+      }
+    },
+    {
+      "task_id": "summary_v7_04",
+      "dataset_category": "summarization",
+      "detected_category": "summarization",
+      "router_confidence": 0.891,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 11,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "summarization": [
+          "headline_intent"
+        ]
+      },
+      "mode": "general_summary",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Write a headline followed by exactly two bullet points labeled Gain and Challenge:\n\nA bank added biometric login to its mobile application. Customers accessed accounts faster and password-reset requests declined. Some older phones could not support the feature.",
+      "answer": "Bank Adds Biometric Login to Mobile App\n\n• Gain: Customers accessed accounts faster and password-reset requests declined.\n\n• Challenge: Some older phones could not support the feature.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: The candidate answer includes a headline followed by exactly two bullet points labeled Gain and Challenge, accurately reflecting the provided information.",
+        "tokens": 167
+      }
+    },
+    {
+      "task_id": "summary_v7_05",
+      "dataset_category": "summarization",
+      "detected_category": "summarization",
+      "router_confidence": 0.934,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 13,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "summarization": [
+          "summarize_intent"
+        ]
+      },
+      "mode": "general_summary",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Summarize the incident using exactly three bullet points labeled Issue, Intervention, and Resolution:\n\nA streaming service produced repeated playback errors because one cache server held corrupted data. Engineers removed the server from rotation and rebuilt its cache. Playback stabilized, and integrity checks were scheduled to run automatically.",
+      "answer": "• Issue: A streaming service produced repeated playback errors because one cache server held corrupted data.\n\n• Intervention: Engineers removed the server from rotation and rebuilt its cache.\n\n• Resolution: Playback stabilized, and integrity checks were scheduled to run automatically.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT The answer contains exactly three bullet points labeled Issue, Intervention, and Resolution, accurately summarizing the incident.",
+        "tokens": 189
+      }
+    },
+    {
+      "task_id": "ner_v7_01",
+      "dataset_category": "entity_extraction",
+      "detected_category": "entity_extraction",
+      "router_confidence": 0.99,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 24,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "entity_extraction": [
+          "extract_entities",
+          "extract_entity_types"
+        ]
+      },
+      "mode": "json",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"On 18 January 2026, Camille Laurent represented Ocean Crest Labs in Marseille.\"",
+      "answer": "[{\"text\":\"18 January 2026\",\"type\":\"DATE\"},{\"text\":\"Camille Laurent\",\"type\":\"PERSON\"},{\"text\":\"Ocean Crest Labs\",\"type\":\"ORG\"},{\"text\":\"Marseille\",\"type\":\"LOCATION\"}]",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT All named entities are extracted in order with correct labels and valid JSON format.",
+        "tokens": 179
+      }
+    },
+    {
+      "task_id": "ner_v7_02",
+      "dataset_category": "entity_extraction",
+      "detected_category": "entity_extraction",
+      "router_confidence": 0.99,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 24,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "entity_extraction": [
+          "extract_entities",
+          "extract_entity_types"
+        ]
+      },
+      "mode": "json",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"Ravi Menon joined Summit Freight in Mumbai last Tuesday.\"",
+      "answer": "[{\"text\":\"Ravi Menon\",\"type\":\"PERSON\"},{\"text\":\"Summit Freight\",\"type\":\"ORG\"},{\"text\":\"Mumbai\",\"type\":\"LOCATION\"},{\"text\":\"last Tuesday\",\"type\":\"DATE\"}]",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT All named entities are extracted in order with correct labels and valid JSON format.",
+        "tokens": 171
+      }
+    },
+    {
+      "task_id": "ner_v7_03",
+      "dataset_category": "entity_extraction",
+      "detected_category": "entity_extraction",
+      "router_confidence": 0.99,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 24,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "entity_extraction": [
+          "extract_entities",
+          "extract_entity_types"
+        ]
+      },
+      "mode": "json",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"The Polar Science Network sent Ingrid Dahl to Reykjavik in March.\"",
+      "answer": "[{\"text\":\"The Polar Science Network\",\"type\":\"ORG\"},{\"text\":\"Ingrid Dahl\",\"type\":\"PERSON\"},{\"text\":\"Reykjavik\",\"type\":\"LOCATION\"},{\"text\":\"March\",\"type\":\"DATE\"}]",
+      "execution_error": null,
+      "judge": {
+        "verdict": "incorrect",
+        "reason": "INCORRECT The entity text \"The Polar Science Network\" includes the leading article \"The\"; the proper organization name is \"Polar Science Network\".",
+        "tokens": 189
+      }
+    },
+    {
+      "task_id": "ner_v7_04",
+      "dataset_category": "entity_extraction",
+      "detected_category": "entity_extraction",
+      "router_confidence": 0.99,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 24,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "entity_extraction": [
+          "extract_entities",
+          "extract_entity_types"
+        ]
+      },
+      "mode": "json",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"Fatima Zahra will meet Solstice Telecom executives in Casablanca on 7 July.\"",
+      "answer": "[{\"text\":\"Fatima Zahra\",\"type\":\"PERSON\"},{\"text\":\"Solstice Telecom\",\"type\":\"ORG\"},{\"text\":\"Casablanca\",\"type\":\"LOCATION\"},{\"text\":\"7 July\",\"type\":\"DATE\"}]",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT All named entities are extracted in order with correct labels and valid JSON format.",
+        "tokens": 181
+      }
+    },
+    {
+      "task_id": "ner_v7_05",
+      "dataset_category": "entity_extraction",
+      "detected_category": "entity_extraction",
+      "router_confidence": 0.99,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 24,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "entity_extraction": [
+          "extract_entities",
+          "extract_entity_types"
+        ]
+      },
+      "mode": "json",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Extract all named entities and label each as PERSON, ORG, LOCATION, or DATE. Return only a JSON array in order of appearance using keys `text` and `type`: \"In 2021, Maple Arts Council appointed Tomasz Zielinski in Warsaw.\"",
+      "answer": "[{\"text\":\"2021\",\"type\":\"DATE\"},{\"text\":\"Maple Arts Council\",\"type\":\"ORG\"},{\"text\":\"Tomasz Zielinski\",\"type\":\"PERSON\"},{\"text\":\"Warsaw\",\"type\":\"LOCATION\"}]",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT All named entities are extracted in order with correct labels and valid JSON format.",
+        "tokens": 177
+      }
+    },
+    {
+      "task_id": "debug_v7_01",
+      "dataset_category": "bug_fixing",
+      "detected_category": "bug_fixing",
+      "router_confidence": 0.928,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 25,
+        "logical_puzzles": 0,
+        "code_authoring": 6
+      },
+      "matched_signals": {
+        "bug_fixing": [
+          "bug_intent",
+          "corrected_implementation",
+          "bug_topic",
+          "code_block"
+        ],
+        "code_authoring": [
+          "signature_structure"
+        ]
+      },
+      "mode": "code_plus_short_explanation",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "The function should return the arithmetic mean of a non-empty list, but it divides by the wrong number. Identify the bug and provide a corrected implementation.\n\n```python\ndef mean(values):\n    return sum(values) / (len(values) - 1)\n```",
+      "answer": "Bug: The function divides by `len(values) - 1` instead of `len(values)`. This causes division by zero for single-element lists and incorrect means for all other lists.\n\nCorrected implementation:\n```python\ndef mean(values):\n    return sum(values) / len(values)\n```",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: The candidate correctly identifies the bug and provides the exact corrected implementation.",
+        "tokens": 192
+      }
+    },
+    {
+      "task_id": "debug_v7_02",
+      "dataset_category": "bug_fixing",
+      "detected_category": "bug_fixing",
+      "router_confidence": 0.928,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 25,
+        "logical_puzzles": 0,
+        "code_authoring": 6
+      },
+      "matched_signals": {
+        "bug_fixing": [
+          "bug_intent",
+          "corrected_implementation",
+          "bug_topic",
+          "code_block"
+        ],
+        "code_authoring": [
+          "signature_structure"
+        ]
+      },
+      "mode": "code_plus_short_explanation",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "The function should perform a case-insensitive palindrome check, but converting the text to lowercase has no effect. Identify the bug and provide a corrected implementation.\n\n```python\ndef is_palindrome(text):\n    text.lower()\n    return text == text[::-1]\n```",
+      "answer": "Bug: `text.lower()` returns a new string and does not modify `text` in place (strings are immutable). The result is discarded, so the comparison still uses the original case-sensitive text.\n\nCorrected implementation:\n```python\ndef is_palindrome(text):\n    text = text.lower()\n    return text == text[::-1]\n```",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: The bug is correctly identified as the discarded return value of `text.lower()`, and the corrected implementation properly reassigns the lowercased string before comparison.",
+        "tokens": 219
+      }
+    },
+    {
+      "task_id": "debug_v7_03",
+      "dataset_category": "bug_fixing",
+      "detected_category": "bug_fixing",
+      "router_confidence": 0.928,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 25,
+        "logical_puzzles": 0,
+        "code_authoring": 6
+      },
+      "matched_signals": {
+        "bug_fixing": [
+          "bug_intent",
+          "corrected_implementation",
+          "bug_topic",
+          "code_block"
+        ],
+        "code_authoring": [
+          "signature_structure"
+        ]
+      },
+      "mode": "code_plus_short_explanation",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "The function should return a merged dictionary, but it returns `None`. Identify the bug and provide a corrected implementation that does not modify either input.\n\n```python\ndef merge(left, right):\n    result = left.copy()\n    return result.update(right)\n```",
+      "answer": "Bug: `dict.update()` modifies the dictionary in place and returns `None`. The function returns the result of `update()`, which is always `None`.\n\nCorrected implementation:\n```python\ndef merge(left, right):\n    result = left.copy()\n    result.update(right)\n    return result\n```",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: The bug is correctly identified and the fixed implementation returns the merged dictionary without modifying the inputs.",
+        "tokens": 198
+      }
+    },
+    {
+      "task_id": "debug_v7_04",
+      "dataset_category": "bug_fixing",
+      "detected_category": "bug_fixing",
+      "router_confidence": 0.99,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 25,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "bug_fixing": [
+          "bug_intent",
+          "corrected_implementation",
+          "bug_topic",
+          "code_block"
+        ]
+      },
+      "mode": "code_plus_short_explanation",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "This binary search should return the index of `target` or `-1`, but it can access an index outside the list. Identify the bug and provide a corrected implementation.\n\n```python\ndef binary_search(values, target):\n    low, high = 0, len(values)\n    while low <= high:\n        mid = (low + high) // 2\n        if values[mid] == target:\n            return mid\n        if values[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n```",
+      "answer": "Bug: The initial `high` is set to `len(values)` instead of `len(values) - 1`, and the loop condition `low <= high` allows `mid` to equal `len(values)` when `low == high == len(values)`, causing `values[mid]` to raise an `IndexError`.\n\nCorrected implementation:\n```python\ndef binary_search(values, target):\n    low, high = 0, len(values) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if values[mid] == target:\n            return mid\n        if values[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n```",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: The bug is correctly identified as the off-by-one initialization of `high`, and the corrected implementation sets `high = len(values) - 1` while preserving the proper loop and return logic.",
+        "tokens": 383
+      }
+    },
+    {
+      "task_id": "debug_v7_05",
+      "dataset_category": "bug_fixing",
+      "detected_category": "bug_fixing",
+      "router_confidence": 0.928,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 25,
+        "logical_puzzles": 0,
+        "code_authoring": 6
+      },
+      "matched_signals": {
+        "bug_fixing": [
+          "bug_intent",
+          "corrected_implementation",
+          "bug_topic",
+          "code_block"
+        ],
+        "code_authoring": [
+          "signature_structure"
+        ]
+      },
+      "mode": "code_plus_short_explanation",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "The function should remove all spaces from a string, but it returns the original string unchanged. Identify the bug and provide a corrected implementation.\n\n```python\ndef remove_spaces(text):\n    text.replace(\" \", \"\")\n    return text\n```",
+      "answer": "Bug: `str.replace()` returns a new string and does not modify the original in-place (strings are immutable). The return value of `text.replace(\" \", \"\")` is discarded, so the original `text` is returned unchanged.\n\nCorrected implementation:\n```python\ndef remove_spaces(text):\n    return text.replace(\" \", \"\")\n```",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: The candidate correctly identifies the bug and provides a valid corrected implementation.",
+        "tokens": 194
+      }
+    },
+    {
+      "task_id": "logic_v7_01",
+      "dataset_category": "logical_puzzles",
+      "detected_category": "logical_puzzles",
+      "router_confidence": 0.99,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 20,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "logical_puzzles": [
+          "relational_assignment",
+          "constraint_list_structure"
+        ]
+      },
+      "mode": "final_only",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Ava, Ben, Cora, and Diego each choose a different dessert: cake, ice cream, pie, or pudding.\n- Ava does not choose cake or pudding.\n- Ben chooses pie.\n- Cora does not choose ice cream.\n- Diego chooses pudding.\nWho chooses each dessert?",
+      "answer": "Ava chooses ice cream, Ben chooses pie, Cora chooses cake, Diego chooses pudding.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT The assignments satisfy all constraints: Ava not cake/pudding, Ben pie, Cora not ice cream, Diego pudding, with all desserts distinct.",
+        "tokens": 173
+      }
+    },
+    {
+      "task_id": "logic_v7_02",
+      "dataset_category": "logical_puzzles",
+      "detected_category": "logical_puzzles",
+      "router_confidence": 0.672,
+      "router_scores": {
+        "knowledge_qa": 8,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 11,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "knowledge_qa": [
+          "what_is_intent"
+        ],
+        "logical_puzzles": [
+          "constraint_list_structure"
+        ]
+      },
+      "mode": "final_only",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Four reports—W, X, Y, and Z—are reviewed in positions 1 through 4.\n- X is reviewed immediately before Y.\n- Z is reviewed first.\n- W is reviewed after Y.\nWhat is the complete order?",
+      "answer": "Z, X, Y, W",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT The order Z, X, Y, W satisfies all constraints: Z is first, X immediately precedes Y, and W is after Y.",
+        "tokens": 150
+      }
+    },
+    {
+      "task_id": "logic_v7_03",
+      "dataset_category": "logical_puzzles",
+      "detected_category": "logical_puzzles",
+      "router_confidence": 0.99,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 20,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "logical_puzzles": [
+          "relational_assignment",
+          "constraint_list_structure"
+        ]
+      },
+      "mode": "final_only",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Elif, Finn, and Gia each adopt a different animal: cat, dog, or rabbit.\n- Elif does not adopt the rabbit.\n- Finn adopts the dog.\n- Gia does not adopt the cat.\nWho adopts each animal?",
+      "answer": "Elif adopts the cat, Finn adopts the dog, Gia adopts the rabbit.",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT The assignments satisfy all constraints: Elif not rabbit, Finn dog, Gia not cat, and all animals are distinct.",
+        "tokens": 153
+      }
+    },
+    {
+      "task_id": "logic_v7_04",
+      "dataset_category": "logical_puzzles",
+      "detected_category": "knowledge_qa",
+      "router_confidence": 0.825,
+      "router_scores": {
+        "knowledge_qa": 8,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "knowledge_qa": [
+          "what_is_intent"
+        ]
+      },
+      "mode": "direct",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Five packages—A, B, C, D, and E—are stacked from bottom to top.\n- C is in the middle.\n- A is immediately below B.\n- E is on top.\n- D is immediately above C.\nWhat is the order from bottom to top?",
+      "answer": "A, B, D, C, E",
+      "execution_error": null,
+      "judge": {
+        "verdict": "incorrect",
+        "reason": "INCORRECT The correct order from bottom to top is A, B, C, D, E.",
+        "tokens": 150
+      }
+    },
+    {
+      "task_id": "logic_v7_05",
+      "dataset_category": "logical_puzzles",
+      "detected_category": "logical_puzzles",
+      "router_confidence": 0.672,
+      "router_scores": {
+        "knowledge_qa": 8,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 11,
+        "code_authoring": 0
+      },
+      "matched_signals": {
+        "knowledge_qa": [
+          "what_is_intent"
+        ],
+        "logical_puzzles": [
+          "constraint_list_structure"
+        ]
+      },
+      "mode": "final_only",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Four speakers—Hana, Ivo, Jules, and Kai—present from first to fourth.\n- Kai presents fourth.\n- Ivo presents before Jules.\n- Hana presents immediately after Jules.\nWhat is the presentation order?",
+      "answer": "Ivo, Jules, Hana, Kai",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT The order Ivo, Jules, Hana, Kai satisfies Kai fourth, Ivo before Jules, and Hana immediately after Jules.",
+        "tokens": 155
+      }
+    },
+    {
+      "task_id": "codegen_v7_01",
+      "dataset_category": "code_authoring",
+      "detected_category": "code_authoring",
+      "router_confidence": 0.99,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 23
+      },
+      "matched_signals": {
+        "code_authoring": [
+          "write_code",
+          "signature_structure",
+          "code_language"
+        ]
+      },
+      "mode": "single_function",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Write a Python function `partition_even_odd(numbers)` that returns a tuple of two lists: all even numbers followed by all odd numbers, preserving their original order within each list.",
+      "answer": "def partition_even_odd(numbers):\n    evens = []\n    odds = []\n    for n in numbers:\n        if n % 2 == 0:\n            evens.append(n)\n        else:\n            odds.append(n)\n    return (evens, odds)",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: The function correctly partitions even and odd numbers into two lists while preserving original order, and returns them as a tuple.",
+        "tokens": 176
+      }
+    },
+    {
+      "task_id": "codegen_v7_02",
+      "dataset_category": "code_authoring",
+      "detected_category": "code_authoring",
+      "router_confidence": 0.961,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 3,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 23
+      },
+      "matched_signals": {
+        "math_solving": [
+          "quantitative_units"
+        ],
+        "code_authoring": [
+          "write_code",
+          "signature_structure",
+          "code_language"
+        ]
+      },
+      "mode": "single_function",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Write a Python function `compress_runs(items)` that removes only consecutive duplicate values. Example: `[1, 1, 2, 1, 1]` returns `[1, 2, 1]`.",
+      "answer": "def compress_runs(items):\n    if not items:\n        return []\n    result = [items[0]]\n    for item in items[1:]:\n        if item != result[-1]:\n            result.append(item)\n    return result",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: The function correctly removes consecutive duplicate values and matches the requested behavior and example.",
+        "tokens": 172
+      }
+    },
+    {
+      "task_id": "codegen_v7_03",
+      "dataset_category": "code_authoring",
+      "detected_category": "code_authoring",
+      "router_confidence": 0.99,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 0,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 23
+      },
+      "matched_signals": {
+        "code_authoring": [
+          "write_code",
+          "signature_structure",
+          "code_language"
+        ]
+      },
+      "mode": "single_function",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Write a Python function `index_by_id(records)` that accepts dictionaries containing an `id` key and returns a dictionary mapping each id to its record. Later records should replace earlier records with the same id. Do not modify the records.",
+      "answer": "def index_by_id(records):\n    result = {}\n    for record in records:\n        result[record['id']] = record\n    return result",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: The function maps each id to its record, later records overwrite earlier ones, and the records are not modified.",
+        "tokens": 165
+      }
+    },
+    {
+      "task_id": "codegen_v7_04",
+      "dataset_category": "code_authoring",
+      "detected_category": "code_authoring",
+      "router_confidence": 0.935,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 5,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 23
+      },
+      "matched_signals": {
+        "math_solving": [
+          "math_operation"
+        ],
+        "code_authoring": [
+          "write_code",
+          "signature_structure",
+          "code_language"
+        ]
+      },
+      "mode": "single_function",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Write a Python function `diagonal_sum(matrix)` that returns the sum of the main diagonal of a square matrix. For an empty matrix, return `0`.",
+      "answer": "def diagonal_sum(matrix):\n    if not matrix:\n        return 0\n    total = 0\n    for i in range(len(matrix)):\n        total += matrix[i][i]\n    return total",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: The function correctly sums the main diagonal of a square matrix and returns 0 for an empty matrix.",
+        "tokens": 159
+      }
+    },
+    {
+      "task_id": "codegen_v7_05",
+      "dataset_category": "code_authoring",
+      "detected_category": "code_authoring",
+      "router_confidence": 0.961,
+      "router_scores": {
+        "knowledge_qa": 0,
+        "math_solving": 3,
+        "sentiment_analysis": 0,
+        "summarization": 0,
+        "entity_extraction": 0,
+        "bug_fixing": 0,
+        "logical_puzzles": 0,
+        "code_authoring": 23
+      },
+      "matched_signals": {
+        "math_solving": [
+          "quantitative_units"
+        ],
+        "code_authoring": [
+          "write_code",
+          "signature_structure",
+          "code_language"
+        ]
+      },
+      "mode": "single_function",
+      "solver_type": "api_bundled",
+      "validation_valid": true,
+      "prompt": "Write a Python function `take_until(items, stop_value)` that returns items from the beginning of the list up to but not including the first occurrence of `stop_value`. If it never appears, return a copy of the entire list.",
+      "answer": "def take_until(items, stop_value):\n    result = []\n    for item in items:\n        if item == stop_value:\n            break\n        result.append(item)\n    return result",
+      "execution_error": null,
+      "judge": {
+        "verdict": "correct",
+        "reason": "CORRECT: The function correctly iterates through the list, stops at the first occurrence of `stop_value`, and returns a copy of the list if the value is not found.",
+        "tokens": 183
+      }
+    }
+  ],
+  "ab_test": {
+    "category_comparison": {
+      "bug_fixing": {
+        "tasks": 5,
+        "individual_calls": 5,
+        "production_bundle_calls": 2,
+        "production_individual_calls": 0,
+        "individual_tokens": 871,
+        "production_tokens": 1093,
+        "token_savings_pct": -25.49,
+        "individual_accuracy_pct": 100.0,
+        "production_accuracy_pct": 100.0,
+        "accuracy_delta_pp": 0.0,
+        "individual_judge_tokens": 987,
+        "production_judge_tokens": 1186
+      },
+      "code_authoring": {
+        "tasks": 5,
+        "individual_calls": 5,
+        "production_bundle_calls": 2,
+        "production_individual_calls": 0,
+        "individual_tokens": 846,
+        "production_tokens": 747,
+        "token_savings_pct": 11.7,
+        "individual_accuracy_pct": 100.0,
+        "production_accuracy_pct": 100.0,
+        "accuracy_delta_pp": 0.0,
+        "individual_judge_tokens": 855,
+        "production_judge_tokens": 855
+      },
+      "entity_extraction": {
+        "tasks": 5,
+        "individual_calls": 5,
+        "production_bundle_calls": 1,
+        "production_individual_calls": 0,
+        "individual_tokens": 989,
+        "production_tokens": 653,
+        "token_savings_pct": 33.97,
+        "individual_accuracy_pct": 80.0,
+        "production_accuracy_pct": 80.0,
+        "accuracy_delta_pp": 0.0,
+        "individual_judge_tokens": 908,
+        "production_judge_tokens": 897
+      },
+      "fallback": {
+        "tasks": 1,
+        "individual_calls": 1,
+        "production_bundle_calls": 0,
+        "production_individual_calls": 1,
+        "individual_tokens": 347,
+        "production_tokens": 338,
+        "token_savings_pct": 2.59,
+        "individual_accuracy_pct": 100.0,
+        "production_accuracy_pct": 100.0,
+        "accuracy_delta_pp": 0.0,
+        "individual_judge_tokens": 392,
+        "production_judge_tokens": 383
+      },
+      "knowledge_qa": {
+        "tasks": 7,
+        "individual_calls": 10,
+        "production_bundle_calls": 2,
+        "production_individual_calls": 0,
+        "individual_tokens": 2058,
+        "production_tokens": 763,
+        "token_savings_pct": 62.93,
+        "individual_accuracy_pct": 71.43,
+        "production_accuracy_pct": 71.43,
+        "accuracy_delta_pp": 0.0,
+        "individual_judge_tokens": 1605,
+        "production_judge_tokens": 1114
+      },
+      "logical_puzzles": {
+        "tasks": 4,
+        "individual_calls": 4,
+        "production_bundle_calls": 1,
+        "production_individual_calls": 0,
+        "individual_tokens": 503,
+        "production_tokens": 431,
+        "token_savings_pct": 14.31,
+        "individual_accuracy_pct": 100.0,
+        "production_accuracy_pct": 100.0,
+        "accuracy_delta_pp": 0.0,
+        "individual_judge_tokens": 638,
+        "production_judge_tokens": 631
+      },
+      "math_solving": {
+        "tasks": 3,
+        "individual_calls": 3,
+        "production_bundle_calls": 1,
+        "production_individual_calls": 0,
+        "individual_tokens": 375,
+        "production_tokens": 258,
+        "token_savings_pct": 31.2,
+        "individual_accuracy_pct": 100.0,
+        "production_accuracy_pct": 66.67,
+        "accuracy_delta_pp": -33.33,
+        "individual_judge_tokens": 423,
+        "production_judge_tokens": 416
+      },
+      "sentiment_analysis": {
+        "tasks": 5,
+        "individual_calls": 5,
+        "production_bundle_calls": 1,
+        "production_individual_calls": 0,
+        "individual_tokens": 553,
+        "production_tokens": 469,
+        "token_savings_pct": 15.19,
+        "individual_accuracy_pct": 100.0,
+        "production_accuracy_pct": 100.0,
+        "accuracy_delta_pp": 0.0,
+        "individual_judge_tokens": 739,
+        "production_judge_tokens": 714
+      },
+      "summarization": {
+        "tasks": 5,
+        "individual_calls": 5,
+        "production_bundle_calls": 2,
+        "production_individual_calls": 0,
+        "individual_tokens": 777,
+        "production_tokens": 704,
+        "token_savings_pct": 9.4,
+        "individual_accuracy_pct": 80.0,
+        "production_accuracy_pct": 80.0,
+        "accuracy_delta_pp": 0.0,
+        "individual_judge_tokens": 866,
+        "production_judge_tokens": 827
+      }
+    },
+    "overall": {
+      "individual_calls": 43,
+      "production_bundle_calls": 12,
+      "production_individual_calls": 1,
+      "individual_tokens": 7319,
+      "production_tokens": 5456,
+      "token_savings_pct": 25.45,
+      "individual_accuracy_pct": 90.0,
+      "production_accuracy_pct": 87.5,
+      "accuracy_delta_pp": -2.5,
+      "individual_judge_tokens": 7413,
+      "production_judge_tokens": 7023
+    },
+    "individual_results": [
+      {
+        "task_id": "factual_v7_01",
+        "detected_category": "knowledge_qa",
+        "answer": "Soap helps water remove grease because it acts as a surfactant, bridging the gap between polar water molecules and nonpolar grease molecules.\n\nWater alone cannot dissolve grease because grease is hydrophobic (nonpolar) and water is polar—like dissolves like, so they repel each other.\n\nSoap molecules have a dual structure:\n- **Hydrophilic head** (polar, water-attracting, often ionic)\n- **Hydrophobic tail** (nonpolar, grease-attracting, typically a long hydrocarbon chain)\n\nWhen soap is added:\n1. The hydrophobic tails embed into the grease\n2. The hydrophilic heads remain in the water\n3. This reduces surface tension and allows water to penetrate and surround grease particles\n4. The grease becomes emulsified—broken into tiny droplets surrounded by soap molecules, forming structures called micelles\n5. These micelles disperse in water and rinse away\n\nThis emulsification enables water to carry away grease that it couldn't otherwise touch.",
+        "validation_valid": true,
+        "prompt_tokens": 150,
+        "completion_tokens": 372,
+        "total_tokens": 522,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: The answer accurately explains the chemical mechanism of soap as a surfactant, detailing the interaction between its hydrophilic head and hydrophobic tail with water and grease, and correctly describes the process of emulsification and micelle formation.",
+          "tokens": 340
+        },
+        "error": null
+      },
+      {
+        "task_id": "factual_v7_02",
+        "detected_category": "fallback",
+        "answer": "When a user opens a website, DNS translates the human-readable domain name (e.g., example.com) into the machine-readable IP address (e.g., 93.184.216.34) needed to locate and connect to the web server.\n\nThe process works as follows:\n\n1. **Query initiation** — The browser checks local caches (browser, OS, router). If no match is found, it sends a DNS query to a recursive resolver (typically provided by the ISP or a third party like Google DNS or Cloudflare).\n\n2. **Recursive resolution** — The resolver queries the DNS hierarchy:\n   - **Root nameservers** — direct to the appropriate Top-Level Domain (TLD) server\n   - **TLD nameservers** (e.g., .com) — direct to the authoritative nameserver for the specific domain\n   - **Authoritative nameserver** — returns the final IP address for that domain\n\n3. **Response and caching** — The resolver returns the IP to the user's device, which caches it for the duration specified by the record's TTL (Time-To-Live). The browser then initiates an HTTP/HTTPS connection to that IP address to load the website.\n\nDNS operates primarily over UDP port 53 (with TCP fallback for large responses or zone transfers) and is essential because users and applications cannot directly use domain names for network-layer communication—IP addresses are required for actual packet routing.",
+        "validation_valid": true,
+        "prompt_tokens": 59,
+        "completion_tokens": 288,
+        "total_tokens": 347,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The answer accurately explains DNS's role in translating domain names to IP addresses and correctly details the resolution process.",
+          "tokens": 392
+        },
+        "error": null
+      },
+      {
+        "task_id": "factual_v7_03",
+        "detected_category": "knowledge_qa",
+        "answer": "A passenger's ears pop during an airplane's ascent or descent due to pressure changes affecting the middle ear.\n\nThe middle ear contains air at a specific pressure, connected to the back of the throat by the Eustachian tube. During ascent, cabin pressure decreases; during descent, it increases. When external pressure changes faster than the Eustachian tube can equalize it, a pressure differential develops across the eardrum, causing it to bulge inward or outward and creating discomfort.\n\nThe \"pop\" occurs when the Eustachian tube briefly opens—through swallowing, yawning, or chewing—allowing air to rush in or out of the middle ear, equalizing pressure on both sides of the eardrum and relieving the tension.",
+        "validation_valid": true,
+        "prompt_tokens": 158,
+        "completion_tokens": 313,
+        "total_tokens": 471,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: The answer accurately explains the pressure differential, the role of the Eustachian tube, and the mechanism of the \"pop\" during ascent and descent.",
+          "tokens": 264
+        },
+        "error": null
+      },
+      {
+        "task_id": "factual_v7_04",
+        "detected_category": "knowledge_qa",
+        "answer": "A compiler translates an entire program into machine code before execution, creating a standalone executable file. An interpreter translates and executes code line by line at runtime, without producing a separate executable.",
+        "validation_valid": true,
+        "prompt_tokens": 76,
+        "completion_tokens": 37,
+        "total_tokens": 113,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The answer accurately and concisely explains the basic difference between a compiler and an interpreter.",
+          "tokens": 131
+        },
+        "error": null
+      },
+      {
+        "task_id": "factual_v7_05",
+        "detected_category": "knowledge_qa",
+        "answer": "Greenhouse gases warm Earth's lower atmosphere through the following mechanism:\n\n1. **Solar radiation passes through**: Shortwave visible and ultraviolet sunlight mostly passes through the atmosphere and reaches Earth's surface.\n\n2. **Surface absorbs and re-radiates**: The surface absorbs this energy, warms, and re-emits it as longwave infrared radiation.\n\n3. **Greenhouse gases absorb infrared**: Molecules like CO₂, H₂O, CH₄, and N₂O absorb specific wavelengths of this outgoing infrared radiation, exciting their molecular vibrations and rotations.\n\n4. **Re-radiation in all directions**: These energized molecules quickly re-emit the energy as infrared photons in random directions—roughly half upward toward space and half downward or sideways.\n\n5. **Net warming effect**: The downward component returns energy to the surface and lower atmosphere. This additional energy input raises equilibrium temperatures compared to what would occur without these gases.\n\nThe key distinction from a true greenhouse is that this process involves radiative transfer rather than blocking convection. The atmosphere remains transparent to incoming sunlight but partially opaque to outgoing infrared, creating an energy imbalance that warms the surface and troposphere until outgoing longwave radiation (including that emitted by greenhouse gases themselves at higher, colder altitudes) balances incoming solar energy.",
+        "validation_valid": true,
+        "prompt_tokens": 146,
+        "completion_tokens": 418,
+        "total_tokens": 564,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: The answer accurately describes the radiative transfer mechanism of greenhouse gases, including molecular absorption and re-emission, and correctly distinguishes it from a true greenhouse.",
+          "tokens": 367
+        },
+        "error": null
+      },
+      {
+        "task_id": "math_v7_01",
+        "detected_category": "math_solving",
+        "answer": "1440 × (1 - 0.125) = 1260\n1260 - 75 = 1185\n\nAnswer: 1185",
+        "validation_valid": true,
+        "prompt_tokens": 119,
+        "completion_tokens": 32,
+        "total_tokens": 151,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The calculation is accurate and the final answer is correct.",
+          "tokens": 149
+        },
+        "error": null
+      },
+      {
+        "task_id": "math_v7_02",
+        "detected_category": "math_solving",
+        "answer": "20 liters",
+        "validation_valid": true,
+        "prompt_tokens": 109,
+        "completion_tokens": 3,
+        "total_tokens": 112,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The ratio 3:5 means blue is 5/8 of the total, and 5/8 of 32 liters is 20 liters.",
+          "tokens": 129
+        },
+        "error": null
+      },
+      {
+        "task_id": "math_v7_03",
+        "detected_category": "knowledge_qa",
+        "answer": "88 × 0.25 + 76 × 0.35 + 92 × 0.40 = 22 + 26.6 + 36.8 = **85.4**",
+        "validation_valid": true,
+        "prompt_tokens": 112,
+        "completion_tokens": 42,
+        "total_tokens": 154,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The weighted calculation is accurate and the final grade is correctly computed as 85.4.",
+          "tokens": 172
+        },
+        "error": null
+      },
+      {
+        "task_id": "math_v7_04",
+        "detected_category": "knowledge_qa",
+        "answer": "8,280",
+        "validation_valid": true,
+        "prompt_tokens": 99,
+        "completion_tokens": 4,
+        "total_tokens": 103,
+        "judge": {
+          "verdict": "incorrect",
+          "reason": "INCORRECT The population after a 15% increase is 9,200, and after a 10% decrease it is 8,280, but the answer should be 8,280.",
+          "tokens": 143
+        },
+        "error": null
+      },
+      {
+        "task_id": "math_v7_05",
+        "detected_category": "math_solving",
+        "answer": "1200 liters",
+        "validation_valid": true,
+        "prompt_tokens": 108,
+        "completion_tokens": 4,
+        "total_tokens": 112,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: Four pumps fill 600 liters in 15 minutes, so one pump fills 150 liters in 15 minutes; six pumps fill 900 liters in 15 minutes, and in 20 minutes they fill 1200 liters.",
+          "tokens": 145
+        },
+        "error": null
+      },
+      {
+        "task_id": "sentiment_v7_01",
+        "detected_category": "sentiment_analysis",
+        "answer": "Mixed — Justification: The review contains both praise (lightweight, responsive) and criticism (thin speakers at high volume).",
+        "validation_valid": true,
+        "prompt_tokens": 84,
+        "completion_tokens": 29,
+        "total_tokens": 113,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — The candidate correctly classifies the sentiment as mixed and provides a one-sentence justification as requested.",
+          "tokens": 148
+        },
+        "error": null
+      },
+      {
+        "task_id": "sentiment_v7_02",
+        "detected_category": "sentiment_analysis",
+        "answer": "Neutral — The sentence provides purely factual information about a train schedule without any evaluative or emotional language.",
+        "validation_valid": true,
+        "prompt_tokens": 88,
+        "completion_tokens": 22,
+        "total_tokens": 110,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — The candidate correctly classifies the sentiment as neutral and provides a one-sentence justification as requested.",
+          "tokens": 147
+        },
+        "error": null
+      },
+      {
+        "task_id": "sentiment_v7_03",
+        "detected_category": "sentiment_analysis",
+        "answer": "Positive — The review contains exclusively favorable descriptors (\"patient,\" \"knowledgeable,\" \"far more interesting than expected\") with no negative elements.",
+        "validation_valid": true,
+        "prompt_tokens": 86,
+        "completion_tokens": 29,
+        "total_tokens": 115,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — The candidate correctly classifies the sentiment as positive and provides a one-sentence justification using evidence from the text.",
+          "tokens": 155
+        },
+        "error": null
+      },
+      {
+        "task_id": "sentiment_v7_04",
+        "detected_category": "sentiment_analysis",
+        "answer": "Negative — The statement contains multiple complaints about late delivery, incorrect product, and unresponsive customer service with no positive elements.",
+        "validation_valid": true,
+        "prompt_tokens": 86,
+        "completion_tokens": 25,
+        "total_tokens": 111,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — The candidate correctly classifies the sentiment as negative and provides a one-sentence justification addressing the complaints.",
+          "tokens": 150
+        },
+        "error": null
+      },
+      {
+        "task_id": "sentiment_v7_05",
+        "detected_category": "sentiment_analysis",
+        "answer": "Mixed — the review praises the course material's quality while criticizing the inaccurate workload expectations.",
+        "validation_valid": true,
+        "prompt_tokens": 85,
+        "completion_tokens": 19,
+        "total_tokens": 104,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT — The candidate correctly classifies the sentiment as mixed and provides a one-sentence justification.",
+          "tokens": 139
+        },
+        "error": null
+      },
+      {
+        "task_id": "summary_v7_01",
+        "detected_category": "summarization",
+        "answer": "Clearer date labels on perishables reduced customer food waste during a three-month trial without hurting sales, despite extra design costs.",
+        "validation_valid": true,
+        "prompt_tokens": 126,
+        "completion_tokens": 27,
+        "total_tokens": 153,
+        "judge": {
+          "verdict": "incorrect",
+          "reason": "INCORRECT The candidate answer is 21 words, but it omits the detail that the discarded food fell (only says reduced) and slightly rephrases, yet it is essentially correct and complete; however, strictly it misses \"fell\" nuance.",
+          "tokens": 192
+        },
+        "error": null
+      },
+      {
+        "task_id": "summary_v7_02",
+        "detected_category": "summarization",
+        "answer": "• Standing desks reduced afternoon discomfort.\n• Some employees still preferred seated desks.",
+        "validation_valid": true,
+        "prompt_tokens": 123,
+        "completion_tokens": 16,
+        "total_tokens": 139,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The summary has exactly two bullet points, each under 10 words, and captures the passage accurately.",
+          "tokens": 150
+        },
+        "error": null
+      },
+      {
+        "task_id": "summary_v7_03",
+        "detected_category": "summarization",
+        "answer": "A converted rail trail boosted weekend activity and business, but parking congestion near two entrances drew resident complaints.",
+        "validation_valid": true,
+        "prompt_tokens": 122,
+        "completion_tokens": 21,
+        "total_tokens": 143,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The summary is accurate, captures all key points, and is 16 words, within the 25-word limit.",
+          "tokens": 156
+        },
+        "error": null
+      },
+      {
+        "task_id": "summary_v7_04",
+        "detected_category": "summarization",
+        "answer": "Bank Adds Biometric Login to Mobile App\n\n• **Gain:** Customers accessed accounts faster and password-reset requests declined.\n\n• **Challenge:** Some older phones could not support the feature.",
+        "validation_valid": true,
+        "prompt_tokens": 118,
+        "completion_tokens": 37,
+        "total_tokens": 155,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT - The candidate answer includes a headline followed by exactly two bullet points labeled Gain and Challenge, accurately reflecting the provided information.",
+          "tokens": 169
+        },
+        "error": null
+      },
+      {
+        "task_id": "summary_v7_05",
+        "detected_category": "summarization",
+        "answer": "• **Issue:** A streaming service experienced repeated playback errors caused by a single cache server containing corrupted data.\n\n• **Intervention:** Engineers removed the affected server from rotation and rebuilt its cache.\n\n• **Resolution:** Playback stabilized, and automatic integrity checks were scheduled to prevent future occurrences.",
+        "validation_valid": true,
+        "prompt_tokens": 130,
+        "completion_tokens": 57,
+        "total_tokens": 187,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT - The answer contains exactly three bullet points labeled Issue, Intervention, and Resolution, and accurately summarizes the incident.",
+          "tokens": 199
+        },
+        "error": null
+      },
+      {
+        "task_id": "ner_v7_01",
+        "detected_category": "entity_extraction",
+        "answer": "[{\"text\":\"18 January 2026\",\"type\":\"DATE\"},{\"text\":\"Camille Laurent\",\"type\":\"PERSON\"},{\"text\":\"Ocean Crest Labs\",\"type\":\"ORG\"},{\"text\":\"Marseille\",\"type\":\"LOCATION\"}]",
+        "validation_valid": true,
+        "prompt_tokens": 134,
+        "completion_tokens": 66,
+        "total_tokens": 200,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT All named entities are extracted in order with correct labels and valid JSON format.",
+          "tokens": 179
+        },
+        "error": null
+      },
+      {
+        "task_id": "ner_v7_02",
+        "detected_category": "entity_extraction",
+        "answer": "[{\"text\":\"Ravi Menon\",\"type\":\"PERSON\"},{\"text\":\"Summit Freight\",\"type\":\"ORG\"},{\"text\":\"Mumbai\",\"type\":\"LOCATION\"},{\"text\":\"last Tuesday\",\"type\":\"DATE\"}]",
+        "validation_valid": true,
+        "prompt_tokens": 128,
+        "completion_tokens": 63,
+        "total_tokens": 191,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT All named entities are extracted in order with correct labels and valid JSON format.",
+          "tokens": 171
+        },
+        "error": null
+      },
+      {
+        "task_id": "ner_v7_03",
+        "detected_category": "entity_extraction",
+        "answer": "[{\"text\":\"The Polar Science Network\",\"type\":\"ORG\"},{\"text\":\"Ingrid Dahl\",\"type\":\"PERSON\"},{\"text\":\"Reykjavik\",\"type\":\"LOCATION\"},{\"text\":\"March\",\"type\":\"DATE\"}]",
+        "validation_valid": true,
+        "prompt_tokens": 131,
+        "completion_tokens": 64,
+        "total_tokens": 195,
+        "judge": {
+          "verdict": "incorrect",
+          "reason": "INCORRECT The entity text \"The Polar Science Network\" includes the leading article \"The\"; the proper organization name is \"Polar Science Network\".",
+          "tokens": 189
+        },
+        "error": null
+      },
+      {
+        "task_id": "ner_v7_04",
+        "detected_category": "entity_extraction",
+        "answer": "[{\"text\":\"Fatima Zahra\",\"type\":\"PERSON\"},{\"text\":\"Solstice Telecom\",\"type\":\"ORG\"},{\"text\":\"Casablanca\",\"type\":\"LOCATION\"},{\"text\":\"7 July\",\"type\":\"DATE\"}]",
+        "validation_valid": true,
+        "prompt_tokens": 135,
+        "completion_tokens": 68,
+        "total_tokens": 203,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT All named entities are extracted in order with correct labels and valid JSON format.",
+          "tokens": 181
+        },
+        "error": null
+      },
+      {
+        "task_id": "ner_v7_05",
+        "detected_category": "entity_extraction",
+        "answer": "[{\"text\":\"2021\",\"type\":\"DATE\"},{\"text\":\"Maple Arts Council\",\"type\":\"ORG\"},{\"text\":\"Tomasz Zielinski\",\"type\":\"PERSON\"},{\"text\":\"Warsaw\",\"type\":\"LOCATION\"}]",
+        "validation_valid": true,
+        "prompt_tokens": 133,
+        "completion_tokens": 67,
+        "total_tokens": 200,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT All named entities are extracted, correctly labeled, in order of appearance, and returned as a valid JSON array with the requested keys.",
+          "tokens": 188
+        },
+        "error": null
+      },
+      {
+        "task_id": "debug_v7_01",
+        "detected_category": "bug_fixing",
+        "answer": "```python\ndef mean(values):\n    if not values:\n        raise ValueError(\"Cannot compute mean of empty list\")\n    return sum(values) / len(values)\n```",
+        "validation_valid": true,
+        "prompt_tokens": 123,
+        "completion_tokens": 35,
+        "total_tokens": 158,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: The bug is division by len(values)-1 instead of len(values); the candidate fixes it and adds a reasonable empty-list guard.",
+          "tokens": 179
+        },
+        "error": null
+      },
+      {
+        "task_id": "debug_v7_02",
+        "detected_category": "bug_fixing",
+        "answer": "```python\ndef is_palindrome(text):\n    text = text.lower()\n    return text == text[::-1]\n```",
+        "validation_valid": true,
+        "prompt_tokens": 126,
+        "completion_tokens": 27,
+        "total_tokens": 153,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: Correctly identifies the bug (strings are immutable so `text.lower()` must be reassigned) and provides a valid corrected implementation.",
+          "tokens": 170
+        },
+        "error": null
+      },
+      {
+        "task_id": "debug_v7_03",
+        "detected_category": "bug_fixing",
+        "answer": "```python\ndef merge(left, right):\n    result = left.copy()\n    result.update(right)\n    return result\n```",
+        "validation_valid": true,
+        "prompt_tokens": 122,
+        "completion_tokens": 26,
+        "total_tokens": 148,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: `dict.update` returns `None`; assigning the result back and returning `result` after updating fixes the bug without modifying the inputs.",
+          "tokens": 171
+        },
+        "error": null
+      },
+      {
+        "task_id": "debug_v7_04",
+        "detected_category": "bug_fixing",
+        "answer": "```python\ndef binary_search(values, target):\n    low, high = 0, len(values) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if values[mid] == target:\n            return mid\n        if values[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n```",
+        "validation_valid": true,
+        "prompt_tokens": 189,
+        "completion_tokens": 89,
+        "total_tokens": 278,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: Correctly identifies the out-of-bounds bug caused by initializing `high` to `len(values)` and fixes it by setting `high = len(values) - 1`.",
+          "tokens": 309
+        },
+        "error": null
+      },
+      {
+        "task_id": "debug_v7_05",
+        "detected_category": "bug_fixing",
+        "answer": "```python\ndef remove_spaces(text):\n    return text.replace(\" \", \"\")\n```",
+        "validation_valid": true,
+        "prompt_tokens": 117,
+        "completion_tokens": 17,
+        "total_tokens": 134,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The candidate correctly identifies the bug (strings are immutable so `replace` returns a new string) and provides a corrected implementation that returns the result.",
+          "tokens": 158
+        },
+        "error": null
+      },
+      {
+        "task_id": "logic_v7_01",
+        "detected_category": "logical_puzzles",
+        "answer": "Ava: ice cream\nBen: pie\nCora: cake\nDiego: pudding",
+        "validation_valid": true,
+        "prompt_tokens": 119,
+        "completion_tokens": 20,
+        "total_tokens": 139,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The assignments satisfy all constraints: Ava not cake/pudding, Ben pie, Cora not ice cream, Diego pudding, with all desserts distinct.",
+          "tokens": 174
+        },
+        "error": null
+      },
+      {
+        "task_id": "logic_v7_02",
+        "detected_category": "logical_puzzles",
+        "answer": "Z, X, Y, W",
+        "validation_valid": true,
+        "prompt_tokens": 109,
+        "completion_tokens": 8,
+        "total_tokens": 117,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The order Z, X, Y, W satisfies all constraints: Z is first, X immediately precedes Y, and W is after Y.",
+          "tokens": 150
+        },
+        "error": null
+      },
+      {
+        "task_id": "logic_v7_03",
+        "detected_category": "logical_puzzles",
+        "answer": "Elif: cat\nFinn: dog\nGia: rabbit",
+        "validation_valid": true,
+        "prompt_tokens": 108,
+        "completion_tokens": 15,
+        "total_tokens": 123,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The assignments satisfy all constraints: Elif not rabbit, Finn dog, Gia not cat, and all animals distinct.",
+          "tokens": 151
+        },
+        "error": null
+      },
+      {
+        "task_id": "logic_v7_04",
+        "detected_category": "knowledge_qa",
+        "answer": "B, A, C, D, E",
+        "validation_valid": true,
+        "prompt_tokens": 121,
+        "completion_tokens": 10,
+        "total_tokens": 131,
+        "judge": {
+          "verdict": "incorrect",
+          "reason": "INCORRECT The order from bottom to top is B, A, C, D, E, but the candidate lists it as B, A, C, D, E which matches; however, the requested format requires the answer to be the order, and the candidate is correct. Wait, re",
+          "tokens": 188
+        },
+        "error": null
+      },
+      {
+        "task_id": "logic_v7_05",
+        "detected_category": "logical_puzzles",
+        "answer": "First: Ivo\nSecond: Jules\nThird: Hana\nFourth: Kai",
+        "validation_valid": true,
+        "prompt_tokens": 106,
+        "completion_tokens": 18,
+        "total_tokens": 124,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The order Ivo, Jules, Hana, Kai satisfies Kai fourth, Ivo before Jules, and Hana immediately after Jules.",
+          "tokens": 163
+        },
+        "error": null
+      },
+      {
+        "task_id": "codegen_v7_01",
+        "detected_category": "code_authoring",
+        "answer": "def partition_even_odd(numbers):\n    evens = []\n    odds = []\n    for num in numbers:\n        if num % 2 == 0:\n            evens.append(num)\n        else:\n            odds.append(num)\n    return (evens, odds)",
+        "validation_valid": true,
+        "prompt_tokens": 116,
+        "completion_tokens": 59,
+        "total_tokens": 175,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: The function correctly partitions even and odd numbers into two lists while preserving original order, and returns them as a tuple.",
+          "tokens": 176
+        },
+        "error": null
+      },
+      {
+        "task_id": "codegen_v7_02",
+        "detected_category": "code_authoring",
+        "answer": "def compress_runs(items):\n    if not items:\n        return []\n    \n    result = [items[0]]\n    for item in items[1:]:\n        if item != result[-1]:\n            result.append(item)\n    \n    return result",
+        "validation_valid": true,
+        "prompt_tokens": 125,
+        "completion_tokens": 55,
+        "total_tokens": 180,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: The function correctly removes consecutive duplicate values and matches the requested format.",
+          "tokens": 172
+        },
+        "error": null
+      },
+      {
+        "task_id": "codegen_v7_03",
+        "detected_category": "code_authoring",
+        "answer": "def index_by_id(records):\n    result = {}\n    for record in records:\n        result[record['id']] = record\n    return result",
+        "validation_valid": true,
+        "prompt_tokens": 128,
+        "completion_tokens": 36,
+        "total_tokens": 164,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: The function maps each id to its record, later records overwrite earlier ones, and the records are not modified.",
+          "tokens": 165
+        },
+        "error": null
+      },
+      {
+        "task_id": "codegen_v7_04",
+        "detected_category": "code_authoring",
+        "answer": "def diagonal_sum(matrix):\n    if not matrix:\n        return 0\n    total = 0\n    for i in range(len(matrix)):\n        total += matrix[i][i]\n    return total",
+        "validation_valid": true,
+        "prompt_tokens": 112,
+        "completion_tokens": 46,
+        "total_tokens": 158,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: The function correctly sums the main diagonal of a square matrix and returns 0 for an empty matrix.",
+          "tokens": 159
+        },
+        "error": null
+      },
+      {
+        "task_id": "codegen_v7_05",
+        "detected_category": "code_authoring",
+        "answer": "def take_until(items, stop_value):\n    result = []\n    for item in items:\n        if item == stop_value:\n            break\n        result.append(item)\n    return result",
+        "validation_valid": true,
+        "prompt_tokens": 127,
+        "completion_tokens": 42,
+        "total_tokens": 169,
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: The function correctly iterates through the list, stops at the first occurrence of `stop_value`, and returns a copy of the list if the value is not found.",
+          "tokens": 183
+        },
+        "error": null
+      }
+    ]
+  },
+  "dataset": "data/input/track1_balanced_40_tasks_v7.json"
+}

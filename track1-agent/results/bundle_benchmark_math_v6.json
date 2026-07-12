@@ -1,0 +1,749 @@
+{
+  "dataset": "data/input/track1_balanced_40_tasks_v6.json",
+  "model": "accounts/fireworks/models/kimi-k2p6",
+  "judge_model": "accounts/fireworks/models/glm-5p2",
+  "tiers": [
+    "safe",
+    "cautious"
+  ],
+  "max_bundle_size": 5,
+  "min_accuracy": 80.0,
+  "max_accuracy_drop": 0.0,
+  "force_ineligible": false,
+  "summary": {
+    "math_solving": {
+      "tasks": 5,
+      "individual_calls": 5,
+      "bundled_calls": 1,
+      "individual_tokens": 694,
+      "bundled_tokens": 314,
+      "individual_correct": 5,
+      "individual_judged": 5,
+      "individual_judge_tokens": 761,
+      "bundled_correct": 3,
+      "bundled_judged": 5,
+      "bundled_judge_tokens": 667,
+      "individual_validation_passed": 5,
+      "bundled_validation_passed": 5,
+      "bundle_failures": 0,
+      "token_savings_pct": 54.76,
+      "individual_accuracy_pct": 100.0,
+      "bundled_accuracy_pct": 60.0,
+      "accuracy_delta_pct_points": -40.0,
+      "recommendation": "reject_below_accuracy_gate"
+    }
+  },
+  "eligibility": [
+    {
+      "task_id": "math_v6_01",
+      "dataset_category": "math_solving",
+      "task_type": "math_solving",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "math_v6_02",
+      "dataset_category": "math_solving",
+      "task_type": "math_solving",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "math_v6_03",
+      "dataset_category": "math_solving",
+      "task_type": "math_solving",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "math_v6_04",
+      "dataset_category": "math_solving",
+      "task_type": "math_solving",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at safe tier"
+    },
+    {
+      "task_id": "math_v6_05",
+      "dataset_category": "math_solving",
+      "task_type": "math_solving",
+      "eligible": true,
+      "forced": false,
+      "reason": "eligible at safe tier"
+    }
+  ],
+  "excluded_reasons": {
+    "excluded by category filter": 35
+  },
+  "bundles": [
+    {
+      "bundle_index": 0,
+      "task_type": "math_solving",
+      "task_ids": [
+        "math_v6_01",
+        "math_v6_02",
+        "math_v6_03",
+        "math_v6_04",
+        "math_v6_05"
+      ],
+      "max_tokens": 632,
+      "prompt_tokens": 270,
+      "completion_tokens": 44,
+      "total_tokens": 314,
+      "finish_reason": "stop",
+      "raw_response": "```json\n{\n  \"0\": \"528\",\n  \"1\": \"405\",\n  \"2\": \"$405\",\n  \"3\": \"27\",\n  \"4\": \"$2,760\"\n}\n```",
+      "error": null
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "math_v6_01",
+      "prompt": "A bookstore receives 960 notebooks. It sells 30% during the first week and 144 more during the second week. How many notebooks remain?",
+      "task_type": "math_solving",
+      "safety_tier": "safe",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "First week sales: 960 × 30% = 288 notebooks\n\nTotal sold: 288 + 144 = 432 notebooks\n\nRemaining: 960 - 432 = 528 notebooks\n\nAnswer: 528",
+          "finish_reason": "stop",
+          "prompt_tokens": 109,
+          "completion_tokens": 45,
+          "total_tokens": 154,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='First week sales: 960 × 30% = 288 notebooks\\n\\nTotal sold: 288 + 144 = 432 notebooks\\n\\nRemaining: 960 - 432 = 528 notebooks\\n\\nAnswer: 528')",
+          "optimization": {
+            "task_type": "math_solving",
+            "confidence": 0.99,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Solve accurately. Preserve units, percentages, rounding instructions, and constraints. DO NOT output any reasoning, explanations, or steps. Return strictly the concise final result only. If no format is specified, end with 'Answer: <value>'.",
+            "max_tokens": 80,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 16,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "math_solving": [
+                  "trailing_quantity_question",
+                  "numeric_structure",
+                  "multiple_quantities"
+                ]
+              },
+              "mode": "final_only",
+              "token_policy_reason": "percentage calculation",
+              "min_tokens": 48,
+              "category_max_tokens": 384,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 34,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The calculations are accurate and the final answer of 528 is correct.",
+          "tokens": 164
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "math_v6_01",
+          "text": "528",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='528')"
+        },
+        "bundle": {
+          "task_type": "math_solving",
+          "safety_tier": "safe",
+          "max_tokens": 632,
+          "prompt_tokens": 270,
+          "completion_tokens": 44,
+          "total_tokens": 314,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"528\",\n  \"1\": \"405\",\n  \"2\": \"$405\",\n  \"3\": \"27\",\n  \"4\": \"$2,760\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "math_v6_01",
+              "text": "528",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='528')"
+            },
+            {
+              "task_id": "math_v6_02",
+              "text": "405",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='405')"
+            },
+            {
+              "task_id": "math_v6_03",
+              "text": "$405",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='$405')"
+            },
+            {
+              "task_id": "math_v6_04",
+              "text": "27",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='27')"
+            },
+            {
+              "task_id": "math_v6_05",
+              "text": "$2,760",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='$2,760')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: 960 - (0.30 * 960) - 144 = 960 - 288 - 144 = 528.",
+          "tokens": 132
+        }
+      }
+    },
+    {
+      "task_id": "math_v6_02",
+      "prompt": "A machine produces 45 components every 6 minutes. At the same constant rate, how many components does it produce in 54 minutes?",
+      "task_type": "math_solving",
+      "safety_tier": "safe",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Answer: 405",
+          "finish_reason": "stop",
+          "prompt_tokens": 107,
+          "completion_tokens": 5,
+          "total_tokens": 112,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Answer: 405')",
+          "optimization": {
+            "task_type": "math_solving",
+            "confidence": 0.99,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Solve accurately. Preserve units, percentages, rounding instructions, and constraints. DO NOT output any reasoning, explanations, or steps. Return strictly the concise final result only. If no format is specified, end with 'Answer: <value>'.",
+            "max_tokens": 160,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 30,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "math_solving": [
+                  "quantity_question",
+                  "trailing_quantity_question",
+                  "math_operation",
+                  "quantitative_units",
+                  "multiple_quantities"
+                ]
+              },
+              "mode": "final_only",
+              "token_policy_reason": "multi-step mathematical problem",
+              "min_tokens": 80,
+              "category_max_tokens": 384,
+              "aggressive": false,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 32,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: 45 components / 6 minutes = 7.5 components per minute; 7.5 * 54 = 405 components.",
+          "tokens": 129
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "math_v6_02",
+          "text": "405",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='405')"
+        },
+        "bundle": {
+          "task_type": "math_solving",
+          "safety_tier": "safe",
+          "max_tokens": 632,
+          "prompt_tokens": 270,
+          "completion_tokens": 44,
+          "total_tokens": 314,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"528\",\n  \"1\": \"405\",\n  \"2\": \"$405\",\n  \"3\": \"27\",\n  \"4\": \"$2,760\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "math_v6_01",
+              "text": "528",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='528')"
+            },
+            {
+              "task_id": "math_v6_02",
+              "text": "405",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='405')"
+            },
+            {
+              "task_id": "math_v6_03",
+              "text": "$405",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='$405')"
+            },
+            {
+              "task_id": "math_v6_04",
+              "text": "27",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='27')"
+            },
+            {
+              "task_id": "math_v6_05",
+              "text": "$2,760",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='$2,760')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: 45 components / 6 minutes = 7.5 components per minute; 7.5 * 54 = 405 components.",
+          "tokens": 126
+        }
+      }
+    },
+    {
+      "task_id": "math_v6_03",
+      "prompt": "A phone costs $500 before discounts. A store applies a 12% discount and then subtracts an additional $35 coupon. What is the final price before tax?",
+      "task_type": "math_solving",
+      "safety_tier": "safe",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "500 * (1 - 0.12) - 35 = 500 * 0.88 - 35 = 440 - 35 = 405\n\nAnswer: $405",
+          "finish_reason": "stop",
+          "prompt_tokens": 113,
+          "completion_tokens": 39,
+          "total_tokens": 152,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='500 * (1 - 0.12) - 35 = 500 * 0.88 - 35 = 440 - 35 = 405\\n\\nAnswer: $405')",
+          "optimization": {
+            "task_type": "math_solving",
+            "confidence": 0.75,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Solve accurately. Preserve units, percentages, rounding instructions, and constraints. DO NOT output any reasoning, explanations, or steps. Return strictly the concise final result only. If no format is specified, end with 'Answer: <value>'.",
+            "max_tokens": 80,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 8,
+                "math_solving": 13,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "knowledge_qa": [
+                  "what_is_intent"
+                ],
+                "math_solving": [
+                  "math_operation",
+                  "numeric_structure",
+                  "multiple_quantities"
+                ]
+              },
+              "mode": "final_only",
+              "token_policy_reason": "percentage calculation",
+              "min_tokens": 48,
+              "category_max_tokens": 384,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 37,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The calculation correctly applies the 12% discount first and then subtracts the $35 coupon, yielding the correct final price of $405.",
+          "tokens": 170
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "math_v6_03",
+          "text": "$405",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='$405')"
+        },
+        "bundle": {
+          "task_type": "math_solving",
+          "safety_tier": "safe",
+          "max_tokens": 632,
+          "prompt_tokens": 270,
+          "completion_tokens": 44,
+          "total_tokens": 314,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"528\",\n  \"1\": \"405\",\n  \"2\": \"$405\",\n  \"3\": \"27\",\n  \"4\": \"$2,760\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "math_v6_01",
+              "text": "528",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='528')"
+            },
+            {
+              "task_id": "math_v6_02",
+              "text": "405",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='405')"
+            },
+            {
+              "task_id": "math_v6_03",
+              "text": "$405",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='$405')"
+            },
+            {
+              "task_id": "math_v6_04",
+              "text": "27",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='27')"
+            },
+            {
+              "task_id": "math_v6_05",
+              "text": "$2,760",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='$2,760')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "incorrect",
+          "reason": "INCORRECT: The correct final price is $405, but the candidate answer lacks the dollar sign formatting consistency and does not show the calculation steps.",
+          "tokens": 132
+        }
+      }
+    },
+    {
+      "task_id": "math_v6_04",
+      "prompt": "A rectangular floor measures 15 meters by 9 meters. Tiles cover 80% of the floor, and the rest is carpeted. How many square meters are carpeted?",
+      "task_type": "math_solving",
+      "safety_tier": "safe",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "15 × 9 = 135 square meters total floor area\n\n100% - 80% = 20% carpeted\n\n135 × 0.20 = 27\n\nAnswer: 27 square meters",
+          "finish_reason": "stop",
+          "prompt_tokens": 115,
+          "completion_tokens": 43,
+          "total_tokens": 158,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='15 × 9 = 135 square meters total floor area\\n\\n100% - 80% = 20% carpeted\\n\\n135 × 0.20 = 27\\n\\nAnswer: 27 square meters')",
+          "optimization": {
+            "task_type": "math_solving",
+            "confidence": 0.99,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Solve accurately. Preserve units, percentages, rounding instructions, and constraints. DO NOT output any reasoning, explanations, or steps. Return strictly the concise final result only. If no format is specified, end with 'Answer: <value>'.",
+            "max_tokens": 80,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 19,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "math_solving": [
+                  "trailing_quantity_question",
+                  "quantitative_units",
+                  "numeric_structure",
+                  "multiple_quantities"
+                ]
+              },
+              "mode": "final_only",
+              "token_policy_reason": "percentage calculation",
+              "min_tokens": 48,
+              "category_max_tokens": 384,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": []
+              },
+              "instruction_tokens_estimate": 36,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The calculation is accurate and the answer is properly formatted.",
+          "tokens": 155
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "math_v6_04",
+          "text": "27",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='27')"
+        },
+        "bundle": {
+          "task_type": "math_solving",
+          "safety_tier": "safe",
+          "max_tokens": 632,
+          "prompt_tokens": 270,
+          "completion_tokens": 44,
+          "total_tokens": 314,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"528\",\n  \"1\": \"405\",\n  \"2\": \"$405\",\n  \"3\": \"27\",\n  \"4\": \"$2,760\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "math_v6_01",
+              "text": "528",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='528')"
+            },
+            {
+              "task_id": "math_v6_02",
+              "text": "405",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='405')"
+            },
+            {
+              "task_id": "math_v6_03",
+              "text": "$405",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='$405')"
+            },
+            {
+              "task_id": "math_v6_04",
+              "text": "27",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='27')"
+            },
+            {
+              "task_id": "math_v6_05",
+              "text": "$2,760",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='$2,760')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "incorrect",
+          "reason": "INCORRECT The carpeted area is 20% of 15 × 9 = 135, which is 27, but the answer lacks units and explanation.",
+          "tokens": 135
+        }
+      }
+    },
+    {
+      "task_id": "math_v6_05",
+      "prompt": "A savings account starts with $2,400 and earns simple interest at 5% per year. How much money is in the account after 3 years?",
+      "task_type": "math_solving",
+      "safety_tier": "safe",
+      "individual": {
+        "ok": true,
+        "result": {
+          "text": "Answer: $2,760",
+          "finish_reason": "stop",
+          "prompt_tokens": 111,
+          "completion_tokens": 7,
+          "total_tokens": 118,
+          "solver_type": "api",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='Answer: $2,760')",
+          "optimization": {
+            "task_type": "math_solving",
+            "confidence": 0.99,
+            "system_prompt": "Answer in English. Follow the user's requested format exactly. No preamble or restatement. Solve accurately. Preserve units, percentages, rounding instructions, and constraints. DO NOT output any reasoning, explanations, or steps. Return strictly the concise final result only. If no format is specified, end with 'Answer: <value>'.",
+            "max_tokens": 80,
+            "validator_name": "basic",
+            "metadata": {
+              "scores": {
+                "knowledge_qa": 0,
+                "math_solving": 28,
+                "sentiment_analysis": 0,
+                "summarization": 0,
+                "entity_extraction": 0,
+                "bug_fixing": 0,
+                "logical_puzzles": 0,
+                "code_authoring": 0
+              },
+              "matched_signals": {
+                "math_solving": [
+                  "quantity_question",
+                  "trailing_quantity_question",
+                  "quantified_state_change",
+                  "numeric_structure",
+                  "multiple_quantities"
+                ]
+              },
+              "mode": "final_only",
+              "token_policy_reason": "percentage calculation",
+              "min_tokens": 48,
+              "category_max_tokens": 384,
+              "aggressive": true,
+              "constraints": {
+                "word_limit": null,
+                "exact_word_count": false,
+                "word_limit_per_bullet": false,
+                "sentence_limit": null,
+                "exact_sentence_count": false,
+                "bullet_count": null,
+                "label_only": false,
+                "explanation_requested": false,
+                "steps_requested": false,
+                "output_format": "text",
+                "code_only": false,
+                "programming_language": null,
+                "allowed_sentiment_labels": [
+                  "Positive",
+                  "Negative",
+                  "Neutral"
+                ],
+                "requested_entity_types": [
+                  "person",
+                  "money"
+                ]
+              },
+              "instruction_tokens_estimate": 32,
+              "payload_tokens_estimate": 0,
+              "postprocess_applied": false
+            }
+          }
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT The simple interest is $2,400 * 0.05 * 3 = $360, so the total is $2,400 + $360 = $2,760.",
+          "tokens": 143
+        }
+      },
+      "bundled": {
+        "ok": true,
+        "result": {
+          "task_id": "math_v6_05",
+          "text": "$2,760",
+          "validation": "ValidationResult(valid=True, errors=[], repaired_output='$2,760')"
+        },
+        "bundle": {
+          "task_type": "math_solving",
+          "safety_tier": "safe",
+          "max_tokens": 632,
+          "prompt_tokens": 270,
+          "completion_tokens": 44,
+          "total_tokens": 314,
+          "finish_reason": "stop",
+          "raw_response": "```json\n{\n  \"0\": \"528\",\n  \"1\": \"405\",\n  \"2\": \"$405\",\n  \"3\": \"27\",\n  \"4\": \"$2,760\"\n}\n```",
+          "outputs": [
+            {
+              "task_id": "math_v6_01",
+              "text": "528",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='528')"
+            },
+            {
+              "task_id": "math_v6_02",
+              "text": "405",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='405')"
+            },
+            {
+              "task_id": "math_v6_03",
+              "text": "$405",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='$405')"
+            },
+            {
+              "task_id": "math_v6_04",
+              "text": "27",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='27')"
+            },
+            {
+              "task_id": "math_v6_05",
+              "text": "$2,760",
+              "validation": "ValidationResult(valid=True, errors=[], repaired_output='$2,760')"
+            }
+          ]
+        },
+        "judge": {
+          "verdict": "correct",
+          "reason": "CORRECT: The simple interest is $2,400 * 0.05 * 3 = $360, so the total is $2,400 + $360 = $2,760.",
+          "tokens": 142
+        }
+      }
+    }
+  ]
+}
