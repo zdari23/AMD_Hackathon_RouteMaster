@@ -7,11 +7,9 @@ Matches the judging harness contract exactly:
   - all answer-generating calls go through FIREWORKS_BASE_URL with a model
     from ALLOWED_MODELS - the router itself runs locally and costs zero tokens
 
-ROUTER_MODE selects how each prompt is routed (env var, default "finetuned"):
-  finetuned        - local DistilBERT classifier (this tutorial's router)
-  baseline         - prompt-based classification via an extra Fireworks call
-  always-cheap     - skip routing, always use MODEL_CHEAP
-  always-expensive - skip routing, always use MODEL_EXPENSIVE
+The optimizer decides whether work can be handled locally or needs the single
+Fireworks model. ``ALLOWED_MODELS`` is supplied by the judging harness; when it
+contains Kimi, Kimi is preferred. Local routing itself consumes zero tokens.
 """
 import json
 import os

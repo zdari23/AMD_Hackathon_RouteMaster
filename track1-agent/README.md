@@ -40,3 +40,27 @@ docker run --env-file .env track1-agent
 ```
 
 The container will automatically execute `eval_agent.py`, which will process the sample dataset, demonstrate the zero-token local solvers, and output the total Fireworks API tokens saved!
+
+## Streamlit demo deployment
+
+The demo is deployed separately from the hackathon Docker image. Streamlit
+Community Cloud runs `demo_app.py` directly from this GitHub repository and
+installs the packages in `requirements.txt`.
+
+1. Open [Streamlit Community Cloud](https://share.streamlit.io/) and create an app.
+2. Select this repository, the `main` branch, and `demo_app.py` as the entrypoint.
+3. In **Advanced settings**, choose Python 3.11 or newer and add these secrets:
+
+```toml
+FIREWORKS_API_KEY = "your_api_key_here"
+MODEL = "accounts/fireworks/models/kimi-k2p6"
+```
+
+`MODEL` is optional because the app defaults to
+`accounts/fireworks/models/kimi-k2p6`. The only required secret is
+`FIREWORKS_API_KEY`. If the deployment environment supplies `ALLOWED_MODELS`,
+the app uses the Kimi entry from that list, matching `agent.py`.
+
+Do not commit `.env` or `.streamlit/secrets.toml`. If the optional fine-tuned
+DistilBERT checkpoint is unavailable, the demo automatically uses the project's
+deterministic local router and identifies that backend in the UI.

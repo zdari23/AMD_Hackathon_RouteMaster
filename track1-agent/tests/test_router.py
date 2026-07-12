@@ -7,6 +7,7 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from src.output_optimizer import detect_task_type, detect_task_type_detailed
+from router.infer_router import predict_with_backend
 
 # Map dataset prefixes/categories to the internal categories used by the router
 CATEGORY_MAP = {
@@ -83,6 +84,11 @@ class WeightedRouterMinimalPairTests(unittest.TestCase):
             "What is the order from bottom to top?"
         )
         self.assertEqual(detect_task_type(prompt), "logical_puzzles")
+
+    def test_demo_router_works_without_optional_checkpoint(self):
+        label, backend = predict_with_backend("Fix this Python function.")
+        self.assertIn(label, {"easy", "hard"})
+        self.assertIn(backend, {"fine-tuned DistilBERT", "deterministic local fallback"})
 
 def main():
     parser = argparse.ArgumentParser(description="Test router accuracy on a dataset.")
