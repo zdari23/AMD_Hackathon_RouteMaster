@@ -1,5 +1,9 @@
 # Track 1: Hybrid Token-Efficient Routing Agent
 
+[![Open the live Streamlit demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://zeynoamd.streamlit.app/)
+
+**Live demo:** [https://zeynoamd.streamlit.app/](https://zeynoamd.streamlit.app/)
+
 This repository contains our submission for the **AMD Developer Hackathon: ACT II (Track 1)**. 
 
 Our agent is a highly optimized hybrid router designed to absolutely minimize Fireworks API token usage. It achieves this through zero-token local deterministic solvers for math/logic, aggressive token starvation (disabling reasoning tokens & stripping tags), and a strict cross-tier fallback mechanism.
